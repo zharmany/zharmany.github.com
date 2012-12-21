@@ -132,7 +132,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   </header>
 
 
-  <div class="entry-content"><p><a href="{% post_url 2012-12-19-blogging-with-octopress %}" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
+  <div class="entry-content"><p><a href="/blog/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
 
 <h2 id="rakefile">Rakefile</h2>
 
@@ -163,15 +163,11 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 <p>which is perfectly fine. However, using the <code>blockquote</code> script, they appear a bit more fancy:</p>
 
-<p>{% blockquote Douglas Adams, The Hitchhiker’s Guide to the Galaxy %}
-Don’t Panic.
-{% endblockquote %}</p>
+<blockquote><p>Don&#8217;t Panic.</p><footer><strong>Douglas Adams</strong> <cite>The Hitchhiker&#8217;s Guide to the Galaxy</cite></footer></blockquote>
 
 <p>This was created using</p>
 
-<pre><code>{% blockquote Douglas Adams, The Hitchhiker's Guide to the Galaxy %}
-Don't Panic.
-{% endblockquote %}
+<pre><code>&lt;blockquote&gt;&lt;p&gt;Don't Panic.&lt;/p&gt;&lt;footer&gt;&lt;strong&gt;Douglas Adams&lt;/strong&gt; &lt;cite&gt;The Hitchhiker's Guide to the Galaxy&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
 </code></pre>
 
 <p>This environment is especially nice for linking to quotes in articles. <a href="http://octopress.org/docs/plugins/blockquote" title="Blockquote - Octopress">See the documentation</a> for usage details.</p>
@@ -182,14 +178,14 @@ Don't Panic.
 
 <p>I used this code at the beginning of the post to generate the URL:</p>
 
-<pre><code>{% post_url 2012-12-19-blogging-with-octopress %}
+<pre><code>/blog/2012/12/19/blogging-with-octopress/
 </code></pre>
 
 <p>Here <code>2012-12-19-blogging-with-octopress</code> is the name of the Markdown file (sans extension, of course) that I used to generate the previous post. Full disclosure, I used the Markdown syntax:</p>
 
 <pre><code>[Last time][BloggingWithOctopress]
 
-[BloggingWithOctopress]: {% post_url 2012-12-19-blogging-with-octopress %} "Blogging With Octopress"
+[BloggingWithOctopress]: /blog/2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
 </code></pre>
 
 </div>
