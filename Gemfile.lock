@@ -25,6 +25,8 @@ GEM
       liquid (~> 2.3)
       maruku (~> 0.5)
     kramdown (0.13.7)
+    jsmin (1.0.1)
+    kramdown (0.13.6)
     liquid (2.3.0)
     maruku (0.6.0)
       syntax (>= 1.0.0)
@@ -35,6 +37,9 @@ GEM
     rack-protection (1.2.0)
       rack
     rake (0.9.2.2)
+    rake-minify (0.3.3)
+      jsmin (~> 1.0.1)
+      rake (>= 0.8.7)
     rb-fsevent (0.9.1)
     rdiscount (1.6.8)
     rubypants (0.2.0)
@@ -62,6 +67,7 @@ DEPENDENCIES
   pygments.rb (~> 0.2.12)
   rack (~> 1.4.1)
   rake (~> 0.9.2)
+  rake-minify
   rb-fsevent (~> 0.9)
   rdiscount (~> 1.6.8)
   rubypants (~> 0.2.0)
