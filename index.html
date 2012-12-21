@@ -7,9 +7,9 @@
   <meta charset="utf-8">
   <title>DrZ.ac</title>
   <meta name="author" content="Zachary T. Harmany, PhD">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
   
-  <meta name="description" content="You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, however infrequently &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,11 +19,8 @@
 
   
   <link rel="canonical" href="http://drz.ac/">
-  <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="DrZ.ac" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -34,6 +31,10 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 </script>
   
 
+  
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
 </head>
 
 <body   >
@@ -59,7 +60,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/archives">Archives</a></li>
 </ul>
 
 </nav>
@@ -67,14 +68,28 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <div id="content">
       <div class="blog-index">
   
+    
+
+
+
   
-  
-    <article>
+
+
+
+
+
+
+
+
+    <article class="linklog">
       
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and Multi-row Cells in LaTeX Tables</a></h1>
-    
+    <h1 class="entry-title">
+
+<a href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and Multi-row Cells in LaTeX Tables</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
     
       <p class="meta">
         
@@ -90,27 +105,42 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 
 <time datetime="2012-12-21T14:32:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
-        
+         &bull; <a rel="bookmark" href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Permalink</a>
       </p>
     
   </header>
 
-
-  <div class="entry-content"><p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, however infrequently enough that I usually need to look up the syntax. This reference should fix that.</p>
+<div class="entry-content"><p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, however infrequently enough that I usually need to look up the syntax. This reference should fix that.</p>
 </div>
-  
-  
+
+  <footer>
+    
+    
+  </footer>
 
 
     </article>
   
-  
-    <article>
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
       
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/20/blogging-with-octopress-part-2/">Blogging With Octopress, Part 2</a></h1>
-    
+    <h1 class="entry-title">
+
+<a href="/2012/12/20/blogging-with-octopress-part-2/">Blogging With Octopress, Part 2</a>
+
+</h1>
+
     
       <p class="meta">
         
@@ -126,13 +156,12 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 
 <time datetime="2012-12-20T23:29:00-06:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
-        
+         &bull; <a rel="bookmark" href="/2012/12/20/blogging-with-octopress-part-2/">Permalink</a>
       </p>
     
   </header>
 
-
-  <div class="entry-content"><p><a href="/blog/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
+<div class="entry-content"><p><a href="/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
 
 <h2 id="rakefile">Rakefile</h2>
 
@@ -178,30 +207,46 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 <p>I used this code at the beginning of the post to generate the URL:</p>
 
-<pre><code>/blog/2012/12/19/blogging-with-octopress/
+<pre><code>/2012/12/19/blogging-with-octopress/
 </code></pre>
 
 <p>Here <code>2012-12-19-blogging-with-octopress</code> is the name of the Markdown file (sans extension, of course) that I used to generate the previous post. Full disclosure, I used the Markdown syntax:</p>
 
 <pre><code>[Last time][BloggingWithOctopress]
 
-[BloggingWithOctopress]: /blog/2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
+[BloggingWithOctopress]: /2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
 </code></pre>
 
 </div>
-  
-  
+
+  <footer>
+    
+    
+  </footer>
 
 
     </article>
   
-  
-    <article>
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
       
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/19/blogging-with-octopress/">Blogging With Octopress</a></h1>
-    
+    <h1 class="entry-title">
+
+<a href="/2012/12/19/blogging-with-octopress/">Blogging With Octopress</a>
+
+</h1>
+
     
       <p class="meta">
         
@@ -217,13 +262,12 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 
 <time datetime="2012-12-19T13:01:00-06:00" pubdate data-updated="true">Dec 19<span>th</span>, 2012</time>
-        
+         &bull; <a rel="bookmark" href="/2012/12/19/blogging-with-octopress/">Permalink</a>
       </p>
     
   </header>
 
-
-  <div class="entry-content"><p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of “A blogging framework for hackers” it immediately appealed to me. Admittedly, I’m still qutie a neophyte when it comes to assemlbing websites, but I think this is a good list of some of the benefits of Octopress:</p>
+<div class="entry-content"><p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of “A blogging framework for hackers” it immediately appealed to me. Admittedly, I’m still qutie a neophyte when it comes to assemlbing websites, but I think this is a good list of some of the benefits of Octopress:</p>
 
 <ul>
   <li>
@@ -281,84 +325,39 @@ rake deploy
 <p>If you want to use a TLD instead of your default GitHub Pages URL, simply <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages">follow these instructions</a>.</p>
 
 </div>
-  
-  
+
+  <footer>
+    
+    
+  </footer>
 
 
     </article>
   
   <div class="pagination">
     
-    <a href="/blog/archives">Blog Archives</a>
+    <a href="/archives/">Blog Archives</a>
     
   </div>
 </div>
+
 <aside class="sidebar">
   
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
     
-      <li class="post">
-        <a href="/blog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/20/blogging-with-octopress-part-2/">Blogging with Octopress, Part 2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/19/blogging-with-octopress/">Blogging with Octopress</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/zharmany">@zharmany</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'zharmany',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
 <section>
   <h1>Latest Tweets</h1>
-  <ul id="tweets">
+  <ul id="tweets" data-user="zacharmany" data-count="4" data-replies="false">
     <li class="loading">Status updating&#8230;</li>
   </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("zacharmany", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
   
-    <a href="http://twitter.com/zacharmany" class="twitter-follow-button" data-show-count="false">Follow @zacharmany</a>
+    <a href="//twitter.com/zacharmany" class="twitter-follow-button" data-show-count="false">Follow @zacharmany</a>
   
 </section>
+
+
+
+
+
 
 
 
@@ -366,6 +365,7 @@ rake deploy
 
   
 </aside>
+
 
     </div>
   </div>
@@ -377,21 +377,6 @@ rake deploy
 </footer>
   
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 

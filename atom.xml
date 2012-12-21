@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/atom.xml" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2012-12-21T15:34:34-06:00</updated>
+  <updated>2012-12-21T17:32:18-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -13,21 +12,35 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <entry>
-    <title type="html"><![CDATA[Multi-column and multi-row cells in LaTeX tables]]></title>
-    <link href="http://drz.ac/blog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/"/>
-    <updated>2012-12-21T14:32:00-06:00</updated>
-    <id>http://drz.ac/blog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables</id>
-    <content type="html"><![CDATA[<p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, however infrequently enough that I usually need to look up the syntax. This reference should fix that.</p>
-]]></content>
-  </entry>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Multi-column and multi-row cells in LaTeX tables &rarr;]]></title>
+<link href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/"/>
+<updated>2012-12-21T14:32:00-06:00</updated>
+<id>http://drz.ac/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables</id>
+<category term="latex" />
+
+      <content type="html"><![CDATA[<p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, however infrequently enough that I usually need to look up the syntax. This reference should fix that.</p>
+<p><a rel="bookmark" href="http://drz.ac/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Blogging with Octopress, Part 2]]></title>
-    <link href="http://drz.ac/blog/2012/12/20/blogging-with-octopress-part-2/"/>
-    <updated>2012-12-20T23:29:00-06:00</updated>
-    <id>http://drz.ac/blog/2012/12/20/blogging-with-octopress-part-2</id>
-    <content type="html"><![CDATA[<p><a href="http://drz.ac/blog/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Blogging with Octopress, Part 2]]></title>
+<link href="http://drz.ac/2012/12/20/blogging-with-octopress-part-2/"/>
+<updated>2012-12-20T23:29:00-06:00</updated>
+<id>http://drz.ac/2012/12/20/blogging-with-octopress-part-2</id>
+<category term="blogging" /><category term="octopress" />
+
+      <content type="html"><![CDATA[<p><a href="http://drz.ac/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
 
 <h2 id="rakefile">Rakefile</h2>
 
@@ -73,25 +86,32 @@
 
 <p>I used this code at the beginning of the post to generate the URL:</p>
 
-<pre><code>/blog/2012/12/19/blogging-with-octopress/
+<pre><code>/2012/12/19/blogging-with-octopress/
 </code></pre>
 
 <p>Here <code>2012-12-19-blogging-with-octopress</code> is the name of the Markdown file (sans extension, of course) that I used to generate the previous post. Full disclosure, I used the Markdown syntax:</p>
 
 <pre><code>[Last time][BloggingWithOctopress]
 
-[BloggingWithOctopress]: /blog/2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
+[BloggingWithOctopress]: /2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
 </code></pre>
 
 ]]></content>
-  </entry>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Blogging with Octopress]]></title>
-    <link href="http://drz.ac/blog/2012/12/19/blogging-with-octopress/"/>
-    <updated>2012-12-19T13:01:00-06:00</updated>
-    <id>http://drz.ac/blog/2012/12/19/blogging-with-octopress</id>
-    <content type="html"><![CDATA[<p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of “A blogging framework for hackers” it immediately appealed to me. Admittedly, I’m still qutie a neophyte when it comes to assemlbing websites, but I think this is a good list of some of the benefits of Octopress:</p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Blogging with Octopress]]></title>
+<link href="http://drz.ac/2012/12/19/blogging-with-octopress/"/>
+<updated>2012-12-19T13:01:00-06:00</updated>
+<id>http://drz.ac/2012/12/19/blogging-with-octopress</id>
+<category term="blogging" /><category term="github" /><category term="octopress" />
+
+      <content type="html"><![CDATA[<p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of “A blogging framework for hackers” it immediately appealed to me. Admittedly, I’m still qutie a neophyte when it comes to assemlbing websites, but I think this is a good list of some of the benefits of Octopress:</p>
 
 <ul>
   <li>
@@ -149,6 +169,6 @@ rake deploy
 <p>If you want to use a TLD instead of your default GitHub Pages URL, simply <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages">follow these instructions</a>.</p>
 
 ]]></content>
-  </entry>
+    </entry>
   
 </feed>

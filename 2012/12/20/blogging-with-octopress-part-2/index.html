@@ -7,9 +7,9 @@
   <meta charset="utf-8">
   <title>Blogging with Octopress, Part 2 - DrZ.ac</title>
   <meta name="author" content="Zachary T. Harmany, PhD">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
   
-  <meta name="description" content="Last time I discussed the basics of setting up my site using Octopress. This time I’m going to go into a bit more detail using some of the Ruby &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,12 +18,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://drz.ac/blog/2012/12/20/blogging-with-octopress-part-2/">
-  <link href="/favicon.png" rel="icon">
+  <link rel="canonical" href="http://drz.ac/2012/12/20/blogging-with-octopress-part-2/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="DrZ.ac" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -34,6 +31,10 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 </script>
   
 
+  
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
 </head>
 
 <body   >
@@ -59,19 +60,33 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/archives">Archives</a></li>
 </ul>
 
 </nav>
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
   
   <header>
-    
-      <h1 class="entry-title">Blogging With Octopress, Part 2</h1>
-    
+    <h1 class="entry-title">
+
+Blogging With Octopress, Part 2
+
+</h1>
+
     
       <p class="meta">
         
@@ -87,13 +102,12 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 
 <time datetime="2012-12-20T23:29:00-06:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
-        
+         &bull; <a rel="bookmark" href="/2012/12/20/blogging-with-octopress-part-2/">Permalink</a>
       </p>
     
   </header>
 
-
-<div class="entry-content"><p><a href="/blog/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
+<div class="entry-content"><p><a href="/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
 
 <h2 id="rakefile">Rakefile</h2>
 
@@ -139,14 +153,14 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 <p>I used this code at the beginning of the post to generate the URL:</p>
 
-<pre><code>/blog/2012/12/19/blogging-with-octopress/
+<pre><code>/2012/12/19/blogging-with-octopress/
 </code></pre>
 
 <p>Here <code>2012-12-19-blogging-with-octopress</code> is the name of the Markdown file (sans extension, of course) that I used to generate the previous post. Full disclosure, I used the Markdown syntax:</p>
 
 <pre><code>[Last time][BloggingWithOctopress]
 
-[BloggingWithOctopress]: /blog/2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
+[BloggingWithOctopress]: /2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
 </code></pre>
 
 </div>
@@ -159,7 +173,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 <span class="byline author vcard">Posted by <span class="fn">Zachary T. Harmany, PhD</span></span>
 
-      
+
 
 
 
@@ -172,7 +186,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 
 <time datetime="2012-12-20T23:29:00-06:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
-      
+
 
 <span class="categories">
   
@@ -181,27 +195,41 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 </span>
 
 
+
+      
+
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://drz.ac/blog/2012/12/20/blogging-with-octopress-part-2/" data-via="zacharmany" data-counturl="http://drz.ac/blog/2012/12/20/blogging-with-octopress-part-2/" >Tweet</a>
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
   
   
   
+  
+
 </div>
 
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/12/19/blogging-with-octopress/" title="Previous Post: Blogging with Octopress">&laquo; Blogging with Octopress</a>
+        <a class="basic-alignment left" href="/2012/12/19/blogging-with-octopress/" title="Previous Post: Blogging with Octopress">&laquo; Blogging with Octopress</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/" title="Next Post: Multi-column and multi-row cells in LaTeX tables">Multi-column and multi-row cells in LaTeX tables &raquo;</a>
+        <a class="basic-alignment right" href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/" title="Next Post: Multi-column and multi-row cells in LaTeX tables">Multi-column and multi-row cells in LaTeX tables &raquo;</a>
       
     </p>
   </footer>
 </article>
+
+<section>
+  <h1>Comments</h1>
+  
+
+  
+</section>
 
 </div>
 
@@ -212,65 +240,35 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a>
+        <a href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/12/20/blogging-with-octopress-part-2/">Blogging with Octopress, Part 2</a>
+        <a href="/2012/12/20/blogging-with-octopress-part-2/">Blogging with Octopress, Part 2</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/12/19/blogging-with-octopress/">Blogging with Octopress</a>
+        <a href="/2012/12/19/blogging-with-octopress/">Blogging with Octopress</a>
       </li>
     
   </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/zharmany">@zharmany</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'zharmany',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
 <section>
   <h1>Latest Tweets</h1>
-  <ul id="tweets">
+  <ul id="tweets" data-user="zacharmany" data-count="4" data-replies="false">
     <li class="loading">Status updating...</li>
   </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("zacharmany", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
   
-    <a href="http://twitter.com/zacharmany" class="twitter-follow-button" data-show-count="false">Follow @zacharmany</a>
+    <a href="//twitter.com/zacharmany" class="twitter-follow-button" data-show-count="false">Follow @zacharmany</a>
   
 </section>
+
+
+
+
+
 
 
 
@@ -290,21 +288,6 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 </footer>
   
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
