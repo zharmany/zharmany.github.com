@@ -3,7 +3,7 @@ layout: post
 title: "Blogging with Octopress, Part 2"
 date: 2012-12-20 23:29
 comments: true
-published: false
+published: true
 categories: [octopress, blogging]
 ---
 

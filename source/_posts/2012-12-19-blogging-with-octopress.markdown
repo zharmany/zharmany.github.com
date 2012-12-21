@@ -53,6 +53,10 @@ and you should see your changes uploaded to your site.
 
 Neat.
 
+## Update: For TLD Forwarding ##
+
+If you want to use a TLD instead of your default GitHub Pages URL, simply [follow these instructions][GitHubPagesCustomDomain].
+
 
 [Octopress]: http://octopress.org/ "Octopress"
 [GitHubPages]: http://pages.github.com "GitHub Pages"
@@ -65,3 +69,4 @@ Neat.
 [RubyDownloads]: http://www.ruby-lang.org/en/downloads/ "Ruby Downloads"
 [ConfiguringOctopress]: http://octopress.org/docs/configuring/ "Configuring Octopress"
 [DeployingtoGitHubPages]: http://octopress.org/docs/deploying/github/ "Deploying to GitHub Pages" 
+[GitHubPagesCustomDomain]: https://help.github.com/articles/setting-up-a-custom-domain-with-pages "Setting up a custom domain with Pages"
