@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | DrZ.ac]]></title>
   <link href="http://drz.ac/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2012-12-21T15:28:02-06:00</updated>
+  <updated>2012-12-21T15:31:21-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -70,6 +70,10 @@ rake deploy
 <p>and you should see your changes uploaded to your site.</p>
 
 <p>Neat.</p>
+
+<h2 id="update-for-tld-forwarding">Update: For TLD Forwarding</h2>
+
+<p>If you want to use a TLD instead of your default GitHub Pages URL, simply <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages">follow these instructions</a>.</p>
 
 ]]></content>
   </entry>
