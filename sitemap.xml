@@ -1,11 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://zharmany.github.com/blog/archives/</loc>
+        <loc>http://drz.ac/blog/2012/12/19/blogging-with-octopress/</loc>
         <lastmod>2012-12-21T15:09:40-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zharmany.github.com/</loc>
-        <lastmod>2012-12-21T15:09:40-06:00</lastmod>
+        <loc>http://drz.ac/blog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/</loc>
+        <lastmod>2012-12-21T15:13:00-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://drz.ac/blog/archives/</loc>
+        <lastmod>2012-12-21T15:13:00-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://drz.ac/</loc>
+        <lastmod>2012-12-21T15:13:00-06:00</lastmod>
     </url>
 </urlset>
