@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/feed.atom" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2012-12-22T01:58:52-06:00</updated>
+  <updated>2012-12-22T02:36:20-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -14,16 +14,7 @@
   
     <entry>
       
-
-
-
-
-<title type="html"><![CDATA[
-	&#x1f169; 
-	
-	Valid XML Atom Feed on GitHub Pages
-	
-]]></title>
+<title type="html"><![CDATA[&#x1f169; Valid XML Atom Feed on GitHub Pages]]></title>
 <link href="http://drz.ac/2012/12/22/valid-xml-atom-feed-on-github-pages/"/>
 <updated>2012-12-22T00:59:00-06:00</updated>
 <id>http://drz.ac/2012/12/22/valid-xml-atom-feed-on-github-pages</id>
@@ -56,16 +47,7 @@
   
     <entry>
       
-
-
-
-
-<title type="html"><![CDATA[
-	&#x1f169; 
-	
-	Feed Titles in Octopress Linked Lists
-	
-]]></title>
+<title type="html"><![CDATA[&#x1f169; Feed Titles in Octopress Linked Lists]]></title>
 <link href="http://drz.ac/2012/12/21/feed-titles-in-octopress-linked-list/"/>
 <updated>2012-12-21T22:53:00-06:00</updated>
 <id>http://drz.ac/2012/12/21/feed-titles-in-octopress-linked-list</id>
@@ -98,17 +80,7 @@
   
     <entry>
       
-
-
-
-
-<title type="html"><![CDATA[
-	
-	
-	Cute Road
-	
-	&#x2794;
-]]></title>
+<title type="html"><![CDATA[Cute Road&#x2794;]]></title>
 <link href="http://goo.gl/maps/lfHd8"/>
 <updated>2012-12-21T20:42:00-06:00</updated>
 <id>http://drz.ac/2012/12/21/cute-road</id>
@@ -120,16 +92,7 @@
   
     <entry>
       
-
-
-
-
-<title type="html"><![CDATA[
-	&#x1f169; 
-	
-	Octopress Linked Lists
-	
-]]></title>
+<title type="html"><![CDATA[&#x1f169; Octopress Linked Lists]]></title>
 <link href="http://drz.ac/2012/12/21/octopress-linked-lists/"/>
 <updated>2012-12-21T17:34:00-06:00</updated>
 <id>http://drz.ac/2012/12/21/octopress-linked-lists</id>
@@ -148,17 +111,7 @@
   
     <entry>
       
-
-
-
-
-<title type="html"><![CDATA[
-	
-	
-	Multi-column and multi-row cells in LaTeX tables
-	
-	&#x2794;
-]]></title>
+<title type="html"><![CDATA[Multi-column and multi-row cells in LaTeX tables&#x2794;]]></title>
 <link href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/"/>
 <updated>2012-12-21T14:32:00-06:00</updated>
 <id>http://drz.ac/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables</id>
@@ -170,16 +123,7 @@
   
     <entry>
       
-
-
-
-
-<title type="html"><![CDATA[
-	&#x1f169; 
-	
-	Blogging with Octopress, Part 2
-	
-]]></title>
+<title type="html"><![CDATA[&#x1f169; Blogging with Octopress, Part 2]]></title>
 <link href="http://drz.ac/2012/12/20/blogging-with-octopress-part-2/"/>
 <updated>2012-12-20T23:29:00-06:00</updated>
 <id>http://drz.ac/2012/12/20/blogging-with-octopress-part-2</id>
@@ -303,16 +247,7 @@ git push origin source
   
     <entry>
       
-
-
-
-
-<title type="html"><![CDATA[
-	&#x1f169; 
-	
-	Blogging with Octopress
-	
-]]></title>
+<title type="html"><![CDATA[&#x1f169; Blogging with Octopress]]></title>
 <link href="http://drz.ac/2012/12/19/blogging-with-octopress/"/>
 <updated>2012-12-19T13:01:00-06:00</updated>
 <id>http://drz.ac/2012/12/19/blogging-with-octopress</id>
