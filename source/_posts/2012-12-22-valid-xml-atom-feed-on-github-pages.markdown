@@ -7,7 +7,7 @@ external-url:
 categories: 
 ---
 
-Attempting to brand my site, I wanted to use &#x24e9; to prepend the post title when the entry was not a linklog item. This wound up breaking the atom feed in [Google Reader][GoogleReader], and hence my favorite Google Reader client [Reeder][Reeder]. I couldn't have that.
+Attempting to brand my site, I wanted to use **&#x1f169;** to prepend the post title when the entry was not a linklog item. This wound up breaking the atom feed in [Google Reader][GoogleReader], and hence my favorite Google Reader client [Reeder][Reeder]. I couldn't have that.
 
 <!-- more -->
 

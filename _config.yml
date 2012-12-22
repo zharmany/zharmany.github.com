@@ -61,8 +61,8 @@ linklog_marker: "&#x2794;" # Heavy wide arrow, so far the winner
 linklog_marker_position: after
 linklog_marker_position_feed: after
 #standard_post_marker: "&#x24CF; " # Circled z
-#standard_post_marker: "&#x1f169; " # Negative circled z
-standard_post_marker: "&#x24e9; " # circled latin small letter z
+standard_post_marker: "&#x1f169; " # Negative circled z
+#standard_post_marker: "&#x24e9; " # circled latin small letter z
 
 
 
