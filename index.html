@@ -108,14 +108,14 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     
   </header>
 
-<div class="entry-content"><p>The <a href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">previous post</a> was an example of a Linked List / Linklog post. The characteristics being that the post title links to an external page, and the formatting is slightly different. It took me a little while to get this feature working in Octopress, as <a href="https://gist.github.com/1812265" title="How to test Octopress' linklog feature">this post on GitHub</a> seems a bit outdated. Thanks to <a href="http://www.nealsheeran.com" title="Neal Sheeran">Neal Sheeran</a> for <a href="http://www.nealsheeran.com/archives/2012/09/linked-list-posts-mt-to-octopress/" title="Linked List Posts: From Movable Type to Octopress">his post</a> suggesting to use the <code>2.1</code> branch instead of the <code>linklog-test</code> branch. After pulling that branch and merging conflicts I was able to get things working properly.</p>
-
-<p>A last note, there are some <a href="http://octopress.org/docs/blogging/linklog/" title="Writing a Linklog - Octopress">configuration options</a> for changing the style of the linked list posts. At some point I’ll have to decide on what side of the Gruber/Armet line I fall. For now I’ll stick with the defaults.</p>
+<div class="entry-content"><p>The <a href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">previous post</a> was an example of a Linked List / Linklog post. The characteristics being that the post title links to an external page, and the formatting is slightly different. </p>
 
 </div>
 
   <footer>
     
+    
+    <p><a rel="full-article" href="/2012/12/21/octopress-linked-lists/">Read on &rarr;</a></p>
     
   </footer>
 
@@ -164,7 +164,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     
   </header>
 
-<div class="entry-content"><p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, however infrequently enough that I usually need to look up the syntax. This reference should fix that.</p>
+<div class="entry-content"><p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, although infrequently enough that I usually need to look up the syntax. This reference should fix that.</p>
 </div>
 
   <footer>
@@ -217,99 +217,12 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 <div class="entry-content"><p><a href="/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
 
-<h2 id="rakefile">Rakefile</h2>
-
-<p>Rakefiles are the Ruby equivalent of Makefiles. As detailed on <a href="http://octopress.org/docs/blogging/" title="Blogging Basics - Octopress">the Octopress site</a>, the Rakefile that ships with Octopress has a number of useful scripts (rake tasks) for generating new posts and deploying your site.</p>
-
-<h3 id="new-posts">New Posts</h3>
-
-<p>Generating a new post is as simple as </p>
-
-<pre><code>rake new_post["title"]
-</code></pre>
-
-<p>which creates a new Markdown file in your <code>source/_posts</code> directory with filename given by the title, prepended by the date. This will already contain useful metadata that Octopress uses (see the YAML front matter section below). Simply edit this Markdown file to fill your post with content. </p>
-
-<h3 id="new-pages">New Pages</h3>
-
-<p>I haven’t added any new pages quite yet, but there is a rake task for creating new pages easily:</p>
-
-<pre><code>rake new_page[filename]
-</code></pre>
-
-<p>This will create the file <code>source/filename/index.markdown</code> that will ultimately be served as <code>filename/index.html</code> on your website.</p>
-
-<h3 id="preview-generate-and-deploy">Preview, Generate, and Deploy</h3>
-
-<p>To use a local webserver to serve all your posts (including ones with the <code>published: false</code> flag), simply run</p>
-
-<pre><code>rake preview
-</code></pre>
-
-<p>and point your browser to <code>http://localhost:4000</code>. One trick that made using this server a bit easier is to use <a href="http://fluidapp.com" title="Fluid">Fluid</a> to create an “Octopress Preview” app. Note that to get MathJax (the subject of a future post) working correctly, I needed to change the User Agent to Safari, otherwise it didn’t seem that it handled JavaScript correctly. </p>
-
-<p>If you’re satisifed with your site, you can generate the html files and deploy it to GitHub Pages by running</p>
-
-<pre><code>rake generate
-rake deploy
-</code></pre>
-
-<p>Very slick.	</p>
-
-<h3 id="yaml-front-matter">YAML front matter</h3>
-
-<p>The special <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter" title="YAML Front Matter">YAML Ain’t Markup Language front matter</a> tells Octopress how to process your Markdown files. The <code>new_post</code> script generates this for you. By default the <code>published:</code> line is omitted. Including <code>published: false</code> will prevent the post from being deployed, but will show when you preview your site locally with <code>rake preview</code>. This is useful if you like to preview your post in a browser before deploying.</p>
-
-<h2 id="plugins">Plugins</h2>
-
-<p>The <code>plugins</code> directory contains some usful scripts. Here I’ll show a few examples. </p>
-
-<h3 id="blockquotes">Blockquotes</h3>
-
-<p>Standard Markdown blockquotes, coded as</p>
-
-<pre><code>&gt; Don't Panic.   
-&gt; **Douglas Adams** - The Hitchhiker's Guide to the Galaxy
-</code></pre>
-
-<p>appears as</p>
-
-<blockquote>
-  <p>Don’t Panic.<br />
-<strong>Douglas Adams</strong> - The Hitchhiker’s Guide to the Galaxy</p>
-</blockquote>
-
-<p>which is perfectly fine. However, using the <code>blockquote</code> script, they appear a bit more fancy:</p>
-
-<blockquote><p>Don&#8217;t Panic.</p><footer><strong>Douglas Adams</strong> <cite>The Hitchhiker&#8217;s Guide to the Galaxy</cite></footer></blockquote>
-
-<p>This was created using</p>
-
-<pre><code>&lt;blockquote&gt;&lt;p&gt;Don't Panic.&lt;/p&gt;&lt;footer&gt;&lt;strong&gt;Douglas Adams&lt;/strong&gt; &lt;cite&gt;The Hitchhiker's Guide to the Galaxy&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
-</code></pre>
-
-<p>This environment is especially nice for linking to quotes in articles. <a href="http://octopress.org/docs/plugins/blockquote" title="Blockquote - Octopress">See the documentation</a> for usage details.</p>
-
-<h3 id="internal-post-linking">Internal post linking</h3>
-
-<p>Thanks to <a href="http://kqueue.org" title="Xi Wang">Xi Wang</a>’s post about <a href="http://kqueue.org/blog/2012/01/05/hello-world/#internal-post-linking" title="Internal Post Linking">internal post linking</a>, I was able to use his linked <code>post_url</code> script to more easily make internal links to posts in this blog. Simply download <a href="https://raw.github.com/michael-groble/jekyll/fix_post_url/lib/jekyll/tags/post_url.rb" title="post_url Script">post_url.rb</a> and place it into your <code>plugins</code> directory.</p>
-
-<p>I used this code at the beginning of the post to generate the URL:</p>
-
-<pre><code>/2012/12/19/blogging-with-octopress/
-</code></pre>
-
-<p>Here <code>2012-12-19-blogging-with-octopress</code> is the name of the Markdown file (sans extension, of course) that I used to generate the previous post. Full disclosure, I used the Markdown syntax:</p>
-
-<pre><code>[Last time][BloggingWithOctopress]
-
-[BloggingWithOctopress]: /2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
-</code></pre>
-
 </div>
 
   <footer>
     
+    
+    <p><a rel="full-article" href="/2012/12/20/blogging-with-octopress-part-2/">Read on &rarr;</a></p>
     
   </footer>
 
@@ -356,67 +269,14 @@ rake deploy
     
   </header>
 
-<div class="entry-content"><p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of “A blogging framework for hackers” it immediately appealed to me. Admittedly, I’m still qutie a neophyte when it comes to assemlbing websites, but I think this is a good list of some of the benefits of Octopress:</p>
-
-<ul>
-  <li>
-    <p>Static site deployment. </p>
-
-    <p>This is great because it reduces strain on your server, it just needs to serve up static websites, maybe with some plugins for displaying twitter information, but much less heavy than a Wordpress style site where blog posts are stored in a database and the html is generated dynamically.</p>
-  </li>
-  <li>
-    <p>Blog posts are stored as text files.</p>
-
-    <p>Maybe, at some unspecified date in the future, I want to migrate my entire website to a different blogging platform. This is easy to do if all the content is simply contained in ASCII text files. Further, any markup is facilitated by using <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>. This makes my content extremely portable and future-proof.</p>
-  </li>
-  <li>
-    <p>Easy to work with <a href="http://pages.github.com" title="GitHub Pages">GitHub Pages</a>.</p>
-
-    <p>I just discovered this recently, but GitHub essentially lets you host a website that is simply a special repository. In my case, I have a github repo named <a href="https://github.com/zharmany/zharmany.github.com" title="zharmany.github.com Repository">zharmany.github.com</a>. GitHub provides you the subdomain corresponding to your repo name, so my site can be accessed at <a href="http://zharmany.github.com" title="zharmany.github.com">zharmany.github.com</a>. Publishing changes to the site simply entails pushing the my changes to github via git. </p>
-  </li>
-</ul>
-
-<p>The remainder of this post details how to get started using Octopress with GitHub Pages.	</p>
-
-<h2 id="setting-up-github-pages">Setting up GitHub Pages</h2>
-
-<p>This was fairly straightforward. I simply created a repository named <code>harmany.github.com</code>. Since I’m a bit new to using GitHub, I used the web interface. If want to quickly fill your site with a template just to make sure things are working, GitHub provides <a href="https://help.github.com/articles/creating-pages-with-the-automatic-generator" title="GitHub Pages Generator">an automatic page generator</a>. You can alsays</p>
-
-<h2 id="setting-up-octopress">Setting up Octopress</h2>
-
-<p>The first task is to ensure that you have git and Ruby installed. I had a little trouble getting Ruby configured. I was following the <a href="http://octopress.org/docs/setup/rbenv/" title="Ruby Setup">Ruby setup instructions</a> on the Octopress site, but had some difficulty installing <code>1.9.3-p0</code>. So I double checked the latest version number <a href="http://www.ruby-lang.org/en/downloads/" title="Ruby Downloads">on the Ruby site</a>, for example the version I installed was <code>1.9.3-p327</code>. As a result, I needed to also run</p>
-
-<pre><code>rbenv global 1.9.3-p327
-</code></pre>
-
-<p>for Ruby to be installed correctly. </p>
-
-<p>Then I followed the rest of the <a href="http://octopress.org/docs/setup/" title="Octopress Setup">Octopress install instructions</a>, with the slight modification to the <code>.rbenv-version</code> file to work with version <code>1.9.3-p327</code> that I had installed. </p>
-
-<h2 id="configuring-and-deploying-to-github-pages">Configuring and Deploying to GitHub Pages</h2>
-
-<p>Next, I followed the instructions on <a href="http://octopress.org/docs/configuring/" title="Configuring Octopress">configuring Octopress</a>, and <a href="http://octopress.org/docs/deploying/github/" title="Deploying to GitHub Pages">deploying to GitHub Pages</a>. </p>
-
-<p>Essentially what’s going on is that there will be two branches of your GitHub Pages site. The <code>source</code> branch will contain all of your raw posts, Ruby scripts, etc. The <code>master</code> branch is what gets served on the webpage. </p>
-
-<p>I’ll go into a bit more detail on actually blogging with Octopress in the future, but if everything is setup correctly, you should be able to make some changes to your site and use Ruby scripts to generate your content and deploy the changes to GitHub Pages. This is simply done via</p>
-
-<pre><code>rake generate
-rake deploy
-</code></pre>
-
-<p>and you should see your changes uploaded to your site.</p>
-
-<p>Neat.</p>
-
-<h2 id="update-for-tld-forwarding">Update: For TLD Forwarding</h2>
-
-<p>If you want to use a TLD instead of your default GitHub Pages URL, simply <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages">follow these instructions</a>.</p>
+<div class="entry-content"><p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of “A blogging framework for hackers” it immediately appealed to me. </p>
 
 </div>
 
   <footer>
     
+    
+    <p><a rel="full-article" href="/2012/12/19/blogging-with-octopress/">Read on &rarr;</a></p>
     
   </footer>
 

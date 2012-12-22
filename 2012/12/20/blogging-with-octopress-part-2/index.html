@@ -109,6 +109,8 @@ Blogging With Octopress, Part 2
 
 <div class="entry-content"><p><a href="/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
 
+<!-- more -->
+
 <h2 id="rakefile">Rakefile</h2>
 
 <p>Rakefiles are the Ruby equivalent of Makefiles. As detailed on <a href="http://octopress.org/docs/blogging/" title="Blogging Basics - Octopress">the Octopress site</a>, the Rakefile that ships with Octopress has a number of useful scripts (rake tasks) for generating new posts and deploying your site.</p>
@@ -151,6 +153,15 @@ rake deploy
 <h3 id="yaml-front-matter">YAML front matter</h3>
 
 <p>The special <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter" title="YAML Front Matter">YAML Ain’t Markup Language front matter</a> tells Octopress how to process your Markdown files. The <code>new_post</code> script generates this for you. By default the <code>published:</code> line is omitted. Including <code>published: false</code> will prevent the post from being deployed, but will show when you preview your site locally with <code>rake preview</code>. This is useful if you like to preview your post in a browser before deploying.</p>
+
+<h3 id="below-the-fold">Below the fold</h3>
+
+<p>If you want to restrict the amount of a post that is shown in your blog index, simply insert the</p>
+
+<pre><code>&lt;!-- more --&gt;
+</code></pre>
+
+<p>tag into your post. The remainder of the post will not be shown in the blog index.</p>
 
 <h2 id="plugins">Plugins</h2>
 
