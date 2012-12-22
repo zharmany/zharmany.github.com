@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/atom.xml" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2012-12-21T20:57:15-06:00</updated>
+  <updated>2012-12-21T21:13:05-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -18,7 +18,7 @@
 
 
 
-<title type="html"><![CDATA[Cute Road &rarr;]]></title>
+<title type="html"><![CDATA[Cute Road &#x1f680;]]></title>
 <link href="http://goo.gl/maps/lfHd8"/>
 <updated>2012-12-21T20:42:00-06:00</updated>
 <id>http://drz.ac/2012/12/21/cute-road</id>
@@ -57,7 +57,7 @@
 
 
 
-<title type="html"><![CDATA[Multi-column and multi-row cells in LaTeX tables &rarr;]]></title>
+<title type="html"><![CDATA[Multi-column and multi-row cells in LaTeX tables &#x1f680;]]></title>
 <link href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/"/>
 <updated>2012-12-21T14:32:00-06:00</updated>
 <id>http://drz.ac/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables</id>
