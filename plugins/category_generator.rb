@@ -60,7 +60,7 @@ module Jekyll
       @site = site
       @base = base
       @dir  = category_dir
-      @name = 'atom.xml'
+      @name = 'feed.atom'
       self.process(@name)
       # Read the YAML data from the layout page.
       self.read_yaml(File.join(base, '_includes/custom'), 'category_feed.xml')

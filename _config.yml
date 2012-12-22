@@ -16,7 +16,7 @@ description:
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
+subscribe_rss: /feed.atom
 subscribe_email:
 category_feeds: false
 # RSS feeds can list your email address if you like
@@ -42,12 +42,46 @@ pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_in_feed: false # Truncate excerpted articles in the atom feed
-permalink_label: "Permalink"
-permalink_label_feed: "&#9875; Permalink"
-linklog_marker: "&rarr;"
+
+# My permalink / linked list settings
+permalink_label: "&#x24e9; permalink"
+permalink_label_feed: "&#x24e9; permalink"
+#linklog_marker: "&rarr;"
+#➔
+#HEAVY WIDE-HEADED RIGHTWARDS ARROW
+#Unicode: U+2794, UTF-8: E2 9E 94
+#➲
+#CIRCLED HEAVY WHITE RIGHTWARDS ARROW
+#Unicode: U+27B2, UTF-8: E2 9E B2
+#linklog_marker: "&#x1f680;" # Rocket ship! Maybe once Emoji get supported in browsers other than Safari
+linklog_marker: "&#x2794;" # Heavy wide arrow, so far the winner
+#linklog_marker: "&#x279c;" # heavy round-tipped arrow
+#linklog_marker: "&#x27B2;" # Circled heavy arrow
+#linklog_marker: "&#x27A4;" # rightward arrowhead
 linklog_marker_position: after
 linklog_marker_position_feed: after
-standard_post_marker:
+#standard_post_marker: "&#x24CF; " # Circled z
+#standard_post_marker: "&#x1f169; " # Negative circled z
+standard_post_marker: "&#x24e9; " # circled latin small letter z
+
+
+
+# Marco Arment
+#permalink_label: "&infin;"
+#permalink_label_feed: "&infin; Permalink"
+#linklog_marker: "&rarr;"
+#linklog_marker_position: after
+#linklog_marker_position_feed: after
+#standard_post_marker:
+
+# John Gruber
+#permalink_label: "&#9733;"
+#permalink_label_feed: "&#9733;"
+#linklog_marker:
+#linklog_marker_position:
+#linklog_marker_position_feed:
+#standard_post_marker: "&#9733; " # Need the space!
+
 
 titlecase: true       # Converts page and post titles to titlecase
 
@@ -103,7 +137,7 @@ disqus_show_comment_count: false
 disqus_developer: 0
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-37209945-1
 
 # Gaug.es Analytics
 gauges_analytics_tracking_id:

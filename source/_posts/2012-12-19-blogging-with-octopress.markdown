@@ -7,7 +7,11 @@ published: true
 categories: [octopress, blogging, github]
 ---
 
-This website is powered by [Octopress][Octopress]. With a tag line of "A blogging framework for hackers" it immediately appealed to me. Admittedly, I'm still qutie a neophyte when it comes to assemlbing websites, but I think this is a good list of some of the benefits of Octopress:
+This website is powered by [Octopress][Octopress]. With a tag line of "A blogging framework for hackers" it immediately appealed to me. 
+
+<!-- more -->
+
+Admittedly, I'm still qutie a neophyte when it comes to assemlbing websites, but I think this is a good list of some of the benefits of Octopress:
 
 - Static site deployment. 
 
