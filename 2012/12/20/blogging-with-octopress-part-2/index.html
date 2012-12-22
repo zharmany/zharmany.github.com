@@ -162,6 +162,17 @@ rake deploy
 
 <p>Very slick.	</p>
 
+<h3 id="dont-forget-to-commit-and-push-your-source">Don’t forget to commit and push your source!</h3>
+
+<p>Lastly, the beauty of having your site as the <code>master</code> branch, and everything else as the <code>source</code> branch is that you can modify your website and use version control without having to publish all your changes. Once you’ve made a new post or page, or some other tweaks to your page source, simply run </p>
+
+<pre><code>git add .
+git commit -m 'your message'
+git push origin source
+</code></pre>
+
+<p>and your progress will be saved on GitHub.	</p>
+
 <h3 id="yaml-front-matter">YAML front matter</h3>
 
 <p>The special <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter" title="YAML Front Matter">YAML Ain’t Markup Language front matter</a> tells Octopress how to process your Markdown files. The <code>new_post</code> script generates this for you. By default the <code>published:</code> line is omitted. Including <code>published: false</code> will prevent the post from being deployed, but will show when you preview your site locally with <code>rake preview</code>. This is useful if you like to preview your post in a browser before deploying.</p>
