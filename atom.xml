@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/atom.xml" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2012-12-21T21:15:56-06:00</updated>
+  <updated>2012-12-21T23:49:40-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -18,14 +18,40 @@
 
 
 
-<title type="html"><![CDATA[Cute Road &rarr;]]></title>
-<link href="http://goo.gl/maps/lfHd8"/>
-<updated>2012-12-21T20:42:00-06:00</updated>
-<id>http://drz.ac/2012/12/21/cute-road</id>
-<category term="external" /><category term="google" /><category term="madison" />
+<title type="html"><![CDATA[
+	&#x1f169; 
+	
+	Feed Titles in Octopress Linked Lists
+	
+]]></title>
+<link href="http://drz.ac/2012/12/21/feed-titles-in-octopress-linked-list/"/>
+<updated>2012-12-21T22:53:00-06:00</updated>
+<id>http://drz.ac/2012/12/21/feed-titles-in-octopress-linked-list</id>
+<category term="github" /><category term="octopress" />
 
-      <content type="html"><![CDATA[<p>I found Lois Lane in Madison.</p>
-<p><a rel="bookmark" href="http://drz.ac/2012/12/21/cute-road/">&#9875; Permalink</a></p>]]></content>
+      <content type="html"><![CDATA[<p>I’ve been experimenting with <a href="http://octopress.org/docs/blogging/linklog/" title="Linklog Customization">linklog customization</a> using the <code>2.1</code> branch of Octopress. From what I can tell, there’s an error in <code>source/_includes/feed_entry.xml</code>.</p>
+
+<!-- more -->
+
+<p>To get the <code>standard_post_marker</code> to function correctly a la <a href="http://daringfireball.net" title="Daring Fireball">Gruber</a>, where it shows up before the title of his post in the RSS feed, I needed to do some digging.</p>
+
+<p>To fix, I think all that you need to do is switch</p>
+
+<pre><code>{% if linklog and site.linklog_marker_position_feed == 'before' %}
+{% unless linklog %}{{ site.standard_post_marker_feed }}{% endunless %}
+</code></pre>
+
+<p>to</p>
+
+<pre><code>{% unless linklog %}{{ site.standard_post_marker}}{% endunless %}
+{% if linklog and site.linklog_marker_position_feed == 'before' %}
+</code></pre>
+
+<p>or else the 2nd line in the original can never execute. </p>
+
+<p>I opened up an issue on the <a href="https://github.com/imathis/octopress/issues/883" title="Issue #883">Octopress GitHub repository</a>. Yay for <a href="http://en.wikipedia.org/wiki/Open-source_software" title="Open source software - Wikipedia">OSS</a>!</p>
+
+]]></content>
     </entry>
   
     <entry>
@@ -34,7 +60,34 @@
 
 
 
-<title type="html"><![CDATA[Octopress Linked Lists]]></title>
+<title type="html"><![CDATA[
+	
+	
+	Cute Road
+	
+	&#x2794;
+]]></title>
+<link href="http://goo.gl/maps/lfHd8"/>
+<updated>2012-12-21T20:42:00-06:00</updated>
+<id>http://drz.ac/2012/12/21/cute-road</id>
+<category term="external" /><category term="google" /><category term="madison" />
+
+      <content type="html"><![CDATA[<p>I found Lois Lane in Madison.</p>
+<p><a rel="bookmark" href="http://drz.ac/2012/12/21/cute-road/">&#x24e9; permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[
+	&#x1f169; 
+	
+	Octopress Linked Lists
+	
+]]></title>
 <link href="http://drz.ac/2012/12/21/octopress-linked-lists/"/>
 <updated>2012-12-21T17:34:00-06:00</updated>
 <id>http://drz.ac/2012/12/21/octopress-linked-lists</id>
@@ -57,14 +110,20 @@
 
 
 
-<title type="html"><![CDATA[Multi-column and multi-row cells in LaTeX tables &rarr;]]></title>
+<title type="html"><![CDATA[
+	
+	
+	Multi-column and multi-row cells in LaTeX tables
+	
+	&#x2794;
+]]></title>
 <link href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/"/>
 <updated>2012-12-21T14:32:00-06:00</updated>
 <id>http://drz.ac/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables</id>
 <category term="external" /><category term="latex" />
 
       <content type="html"><![CDATA[<p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, although infrequently enough that I usually need to look up the syntax. This reference should fix that.</p>
-<p><a rel="bookmark" href="http://drz.ac/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://drz.ac/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">&#x24e9; permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -73,7 +132,12 @@
 
 
 
-<title type="html"><![CDATA[Blogging with Octopress, Part 2]]></title>
+<title type="html"><![CDATA[
+	&#x1f169; 
+	
+	Blogging with Octopress, Part 2
+	
+]]></title>
 <link href="http://drz.ac/2012/12/20/blogging-with-octopress-part-2/"/>
 <updated>2012-12-20T23:29:00-06:00</updated>
 <id>http://drz.ac/2012/12/20/blogging-with-octopress-part-2</id>
@@ -190,7 +254,12 @@ rake deploy
 
 
 
-<title type="html"><![CDATA[Blogging with Octopress]]></title>
+<title type="html"><![CDATA[
+	&#x1f169; 
+	
+	Blogging with Octopress
+	
+]]></title>
 <link href="http://drz.ac/2012/12/19/blogging-with-octopress/"/>
 <updated>2012-12-19T13:01:00-06:00</updated>
 <id>http://drz.ac/2012/12/19/blogging-with-octopress</id>

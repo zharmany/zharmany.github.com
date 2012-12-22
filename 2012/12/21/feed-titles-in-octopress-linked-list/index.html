@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>DrZ.ac</title>
+  <title>Feed Titles in Octopress Linked Lists - DrZ.ac</title>
   <meta name="author" content="Zachary T. Harmany, PhD">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://drz.ac/">
+  <link rel="canonical" href="http://drz.ac/2012/12/21/feed-titles-in-octopress-linked-list/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="DrZ.ac" type="application/atom+xml">
@@ -78,25 +78,24 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
   <header>
     <h1 class="entry-title">
 
-<a href="/2012/12/21/feed-titles-in-octopress-linked-list/">&#x1f169; Feed Titles in Octopress Linked Lists</a>
+&#x1f169; Feed Titles in Octopress Linked Lists
 
 </h1>
 
@@ -122,43 +121,37 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 <div class="entry-content"><p>I’ve been experimenting with <a href="http://octopress.org/docs/blogging/linklog/" title="Linklog Customization">linklog customization</a> using the <code>2.1</code> branch of Octopress. From what I can tell, there’s an error in <code>source/_includes/feed_entry.xml</code>.</p>
 
+<!-- more -->
+
+<p>To get the <code>standard_post_marker</code> to function correctly a la <a href="http://daringfireball.net" title="Daring Fireball">Gruber</a>, where it shows up before the title of his post in the RSS feed, I needed to do some digging.</p>
+
+<p>To fix, I think all that you need to do is switch</p>
+
+<pre><code>{% if linklog and site.linklog_marker_position_feed == 'before' %}
+{% unless linklog %}{{ site.standard_post_marker_feed }}{% endunless %}
+</code></pre>
+
+<p>to</p>
+
+<pre><code>{% unless linklog %}{{ site.standard_post_marker}}{% endunless %}
+{% if linklog and site.linklog_marker_position_feed == 'before' %}
+</code></pre>
+
+<p>or else the 2nd line in the original can never execute. </p>
+
+<p>I opened up an issue on the <a href="https://github.com/imathis/octopress/issues/883" title="Issue #883">Octopress GitHub repository</a>. Yay for <a href="http://en.wikipedia.org/wiki/Open-source_software" title="Open source software - Wikipedia">OSS</a>!</p>
+
 </div>
 
+
   <footer>
-    
-    
-    <p><a rel="full-article" href="/2012/12/21/feed-titles-in-octopress-linked-list/">Read on &rarr;</a></p>
-    
-  </footer>
-
-
-    </article>
-  
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
+    <p class="meta">
       
-  <header>
-    <h1 class="entry-title">
+  
 
-<a href="http://goo.gl/maps/lfHd8">Cute Road</a>
-<span class='linklog-marker'>&#x2794;</span>
-</h1>
+<span class="byline author vcard">Posted by <span class="fn">Zachary T. Harmany, PhD</span></span>
 
-    
-      <p class="meta">
-        
+
 
 
 
@@ -170,243 +163,50 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   
 
 
-<time datetime="2012-12-21T20:42:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/21/cute-road/">&#x24e9; permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I found Lois Lane in Madison.</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
+<time datetime="2012-12-21T22:53:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
 
 
-    </article>
+<span class="categories">
   
-    
+    <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
 
 
 
-
-
-
-
-
-
-
-    <article >
       
-  <header>
-    <h1 class="entry-title">
 
-<a href="/2012/12/21/octopress-linked-lists/">&#x1f169; Octopress Linked Lists</a>
-
-</h1>
-
+    </p>
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+      <div class="sharing">
   
-
-
-<time datetime="2012-12-21T17:34:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/21/octopress-linked-lists/">&#x24e9; permalink</a>
-      </p>
     
-  </header>
-
-<div class="entry-content"><p>The <a href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">previous post</a> was an example of a Linked List / Linklog post. The characteristics being that the post title links to an external page, and the formatting is slightly different. </p>
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+  
+  
 
 </div>
 
-  <footer>
     
-    
-    <p><a rel="full-article" href="/2012/12/21/octopress-linked-lists/">Read on &rarr;</a></p>
-    
-  </footer>
-
-
-    </article>
-  
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
+    <p class="meta">
       
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and Multi-row Cells in LaTeX Tables</a>
-<span class='linklog-marker'>&#x2794;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-21T14:32:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">&#x24e9; permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, although infrequently enough that I usually need to look up the syntax. This reference should fix that.</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
+        <a class="basic-alignment left" href="/2012/12/21/cute-road/" title="Previous Post: Cute Road">&laquo; Cute Road</a>
       
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/12/20/blogging-with-octopress-part-2/">&#x1f169; Blogging With Octopress, Part 2</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-20T23:29:00-06:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/20/blogging-with-octopress-part-2/">&#x24e9; permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p><a href="/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
-
-</div>
-
-  <footer>
-    
-    
-    <p><a rel="full-article" href="/2012/12/20/blogging-with-octopress-part-2/">Read on &rarr;</a></p>
-    
-  </footer>
-
-
-    </article>
-  
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
       
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/12/19/blogging-with-octopress/">&#x1f169; Blogging With Octopress</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-19T13:01:00-06:00" pubdate data-updated="true">Dec 19<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/19/blogging-with-octopress/">&#x24e9; permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of “A blogging framework for hackers” it immediately appealed to me. </p>
-
-</div>
-
-  <footer>
-    
-    
-    <p><a rel="full-article" href="/2012/12/19/blogging-with-octopress/">Read on &rarr;</a></p>
-    
+    </p>
   </footer>
+</article>
 
-
-    </article>
+<section>
+  <h1>Comments</h1>
   
-  <div class="pagination">
-    
-    <a href="/archives/">Blog Archives</a>
-    
-  </div>
+
+  
+</section>
+
 </div>
 
 <aside class="sidebar">
@@ -442,7 +242,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets" data-user="zacharmany" data-count="4" data-replies="false">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
     <a href="//twitter.com/zacharmany" class="twitter-follow-button" data-show-count="false">Follow @zacharmany</a>
