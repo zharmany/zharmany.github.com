@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/feed.atom" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2012-12-22T01:39:35-06:00</updated>
+  <updated>2012-12-22T01:57:17-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -19,7 +19,7 @@
 
 
 <title type="html"><![CDATA[
-	&#x24e9; 
+	&#x1f169; 
 	
 	Valid XML Atom Feed on GitHub Pages
 	
@@ -29,7 +29,7 @@
 <id>http://drz.ac/2012/12/22/valid-xml-atom-feed-on-github-pages</id>
 
 
-      <content type="html"><![CDATA[<p>Attempting to brand my site, I wanted to use ⓩ to prepend the post title when the entry was not a linklog item. This wound up breaking the atom feed in <a href="http://reader.google.com" title="Google Reader">Google Reader</a>, and hence my favorite Google Reader client <a href="http://reederapp.com/" title="Reeder">Reeder</a>. I couldn’t have that.</p>
+      <content type="html"><![CDATA[<p>Attempting to brand my site, I wanted to use &amp;#x1f169 to prepend the post title when the entry was not a linklog item. This wound up breaking the atom feed in <a href="http://reader.google.com" title="Google Reader">Google Reader</a>, and hence my favorite Google Reader client <a href="http://reederapp.com/" title="Reeder">Reeder</a>. I couldn’t have that.</p>
 
 <!-- more -->
 
@@ -61,7 +61,7 @@
 
 
 <title type="html"><![CDATA[
-	&#x24e9; 
+	&#x1f169; 
 	
 	Feed Titles in Octopress Linked Lists
 	
@@ -125,7 +125,7 @@
 
 
 <title type="html"><![CDATA[
-	&#x24e9; 
+	&#x1f169; 
 	
 	Octopress Linked Lists
 	
@@ -175,7 +175,7 @@
 
 
 <title type="html"><![CDATA[
-	&#x24e9; 
+	&#x1f169; 
 	
 	Blogging with Octopress, Part 2
 	
@@ -308,7 +308,7 @@ git push origin source
 
 
 <title type="html"><![CDATA[
-	&#x24e9; 
+	&#x1f169; 
 	
 	Blogging with Octopress
 	
