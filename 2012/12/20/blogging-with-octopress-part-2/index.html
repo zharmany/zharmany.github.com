@@ -111,7 +111,30 @@ Blogging With Octopress, Part 2
 
 <h2 id="rakefile">Rakefile</h2>
 
-<p>Rakefiles are the Ruby equivalent of Makefiles. The Rakefile that ships with Octopress has a number of useful scripts for generating new posts and deploying your site.</p>
+<p>Rakefiles are the Ruby equivalent of Makefiles. As detailed on <a href="http://octopress.org/docs/blogging/" title="Blogging Basics - Octopress">the Octopress site</a>, the Rakefile that ships with Octopress has a number of useful scripts (rake tasks) for generating new posts and deploying your site.</p>
+
+<h3 id="new-posts">New Posts</h3>
+
+<p>Generating a new post is as simple as 
+    rake new_post[“title”]
+which creates a new Markdown file in your <code>source/_posts</code> directory with filename given by the title, prepended by the date. This will already contain useful metadata that Octopress uses (see the YAML front matter section below). Simply edit this Markdown file to fill your post with content. </p>
+
+<h3 id="new-pages">New Pages</h3>
+
+<p>I haven’t added any new pages quite yet, but there is a rake task for creating new pages easily:
+	rake new_page[filename]
+This will create the file <code>source/filename/index.markdown</code> that will ultimately be served as <code>filename/index.html</code> on your website.</p>
+
+<h3 id="preview-generate-and-deploy">Preview, Generate, and Deploy</h3>
+
+<p>To use a local webserver to serve all your posts (including ones with the <code>published: false</code> flag), simply run
+	rake preview
+and point your browser to <code>http://localhost:4000</code>. One trick that made using this server a bit easier is to use [Fluid][Fluid] to create an “Octopress Preview” app. Note that to get MathJax (the subject of a future post) working correctly, I needed to change the User Agent to Safari. </p>
+
+<p>If you’re satisifed with your site, you can generate the html files and deploy it to GitHub Pages by running
+	rake generate
+	rake deploy
+Very slick.	</p>
 
 <h3 id="yaml-front-matter">YAML front matter</h3>
 
@@ -163,6 +186,7 @@ Blogging With Octopress, Part 2
 [BloggingWithOctopress]: /2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
 </code></pre>
 
+<p>[Fluid][Fluid]: http://fluidapp.com “Fluid”</p>
 </div>
 
 
@@ -238,6 +262,10 @@ Blogging With Octopress, Part 2
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/12/21/octopress-linked-lists/">Octopress Linked Lists</a>
+      </li>
     
       <li class="post">
         <a href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a>

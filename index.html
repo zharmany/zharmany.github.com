@@ -72,6 +72,60 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/12/21/octopress-linked-lists/">Octopress Linked Lists</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-21T17:34:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/12/21/octopress-linked-lists/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>The <a href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">previous post</a> was an example of a Linked List / Linklog post. The characteristics being that the post title links to an external page, and the formatting is slightly different. It took me a little while to get this feature working in Octopress, as <a href="https://gist.github.com/1812265" title="How to test Octopress' linklog feature">this post on GitHub</a> seems a bit outdated. Thanks to <a href="http://www.nealsheeran.com" title="Neal Sheeran">Neal Sheeran</a> for <a href="http://www.nealsheeran.com/archives/2012/09/linked-list-posts-mt-to-octopress/" title="Linked List Posts: From Movable Type to Octopress">his post</a> suggesting to use the <code>2.1</code> branch instead of the <code>linklog-test</code> branch. After pulling that branch and merging conflicts I was able to get things working properly.</p>
+
+<p>A last note, there are some <a href="http://octopress.org/docs/blogging/linklog/" title="Writing a Linklog - Octopress">configuration options</a> for changing the style of the linked list posts. At some point I’ll have to decide on what side of the Gruber/Armet line I fall. For now I’ll stick with the defaults.</p>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -165,7 +219,30 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 <h2 id="rakefile">Rakefile</h2>
 
-<p>Rakefiles are the Ruby equivalent of Makefiles. The Rakefile that ships with Octopress has a number of useful scripts for generating new posts and deploying your site.</p>
+<p>Rakefiles are the Ruby equivalent of Makefiles. As detailed on <a href="http://octopress.org/docs/blogging/" title="Blogging Basics - Octopress">the Octopress site</a>, the Rakefile that ships with Octopress has a number of useful scripts (rake tasks) for generating new posts and deploying your site.</p>
+
+<h3 id="new-posts">New Posts</h3>
+
+<p>Generating a new post is as simple as 
+    rake new_post[“title”]
+which creates a new Markdown file in your <code>source/_posts</code> directory with filename given by the title, prepended by the date. This will already contain useful metadata that Octopress uses (see the YAML front matter section below). Simply edit this Markdown file to fill your post with content. </p>
+
+<h3 id="new-pages">New Pages</h3>
+
+<p>I haven’t added any new pages quite yet, but there is a rake task for creating new pages easily:
+	rake new_page[filename]
+This will create the file <code>source/filename/index.markdown</code> that will ultimately be served as <code>filename/index.html</code> on your website.</p>
+
+<h3 id="preview-generate-and-deploy">Preview, Generate, and Deploy</h3>
+
+<p>To use a local webserver to serve all your posts (including ones with the <code>published: false</code> flag), simply run
+	rake preview
+and point your browser to <code>http://localhost:4000</code>. One trick that made using this server a bit easier is to use [Fluid][Fluid] to create an “Octopress Preview” app. Note that to get MathJax (the subject of a future post) working correctly, I needed to change the User Agent to Safari. </p>
+
+<p>If you’re satisifed with your site, you can generate the html files and deploy it to GitHub Pages by running
+	rake generate
+	rake deploy
+Very slick.	</p>
 
 <h3 id="yaml-front-matter">YAML front matter</h3>
 
@@ -217,6 +294,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 [BloggingWithOctopress]: /2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
 </code></pre>
 
+<p>[Fluid][Fluid]: http://fluidapp.com “Fluid”</p>
 </div>
 
   <footer>
@@ -343,7 +421,30 @@ rake deploy
 
 <aside class="sidebar">
   
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
     
+      <li class="post">
+        <a href="/2012/12/21/octopress-linked-lists/">Octopress Linked Lists</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/20/blogging-with-octopress-part-2/">Blogging with Octopress, Part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/19/blogging-with-octopress/">Blogging with Octopress</a>
+      </li>
+    
+  </ul>
+</section>
+
+
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets" data-user="zacharmany" data-count="4" data-replies="false">
