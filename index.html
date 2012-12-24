@@ -97,7 +97,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   <header>
     <h1 class="entry-title">
 
-<a href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">&#x24e9; Valid XML Atom Feed on GitHub Pages</a>
+<a href="/2012/12/24/definitions/">&#x24e9; Definitions</a>
 
 </h1>
 
@@ -115,20 +115,36 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   
 
 
-<time datetime="2012-12-22T00:59:00-06:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">&#x24e9; permalink</a>
+<time datetime="2012-12-24T02:38:00-06:00" pubdate data-updated="true">Dec 24<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/12/24/definitions/">&#x24e9; permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>Attempting to brand my site, I wanted to use <strong>ⓩ</strong> to prepend the title of non-linklog items. This wound up breaking the atom feed in <a href="http://reader.google.com" title="Google Reader">Google Reader</a>, and hence my favorite Google Reader client <a href="http://reederapp.com/" title="Reeder">Reeder</a>. I couldn’t have that.</p>
+<div class="entry-content"><p>Over the past several months, I’ve been on a quest to sure up some of the missing gaps in my knowledge of fundamental mathematics. If you are, like myself, an engineer or physicist by training, one of the most difficult things to get accustomed to when approaching pure mathematics is the importance of <em>definitions</em>. In engineering classes, you can get by describing a concept by just showing a few examples. This usually suffices for the purposes of putting the mathematics to good use. That is, you want to deliver the message, “this thing I just talked about, it’s useful, here’s how.”</p>
 
+<p>The best example I can think of is the Dirac delta function. The way it’s usually motivated is to think of a unit energy pulse. Any shape will do, but for the sake of argument, let’s define a pulse $p$ of duration $T$ as 
+$$ 
+p_T(t) =
+\cases{
+1/T &amp; $|t|, \le T/2$;\cr
+0 &amp; $|t|, &gt; T/2$.}
+$$
+If we define the energy of a pulse $p$ as </p>
+
+<script type="math/tex; mode=display">
+E(p) = \int_{-\infty}^\infty \abs{p(t)} dt, 
+</script>
+
+<p>we see that $E(p_T) = 1$, regardless of $T$. Now we think of an idealized infinitesimal pulse and call that $\delta$. We think of
+$$
+\delta = \lim_{T \to 0} p_T.
+$$
+With this definition, we have that $\delta(t) = 0$ for all $t \ne 0$.</p>
 </div>
 
   <footer>
     
-    
-    <p><a rel="full-article" href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">Read on &rarr;</a></p>
     
   </footer>
 
@@ -525,7 +541,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">Valid XML Atom Feed on GitHub Pages</a>
+        <a href="/2012/12/24/definitions/">Definitions</a>
       </li>
     
       <li class="post">
