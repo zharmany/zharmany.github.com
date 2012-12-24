@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/feed.atom" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2012-12-23T03:02:07-06:00</updated>
+  <updated>2012-12-23T19:50:04-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -11,6 +11,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+<title type="html"><![CDATA[&#x24e9; Valid XML Atom Feed on GitHub Pages]]></title>
+<link href="http://drz.ac/2012/12/22/valid-xml-atom-feed-on-github-pages/"/>
+<updated>2012-12-22T00:59:00-06:00</updated>
+<id>http://drz.ac/2012/12/22/valid-xml-atom-feed-on-github-pages</id>
+<category term="atom" /><category term="github" /><category term="octopress" />
+
+      <content type="html"><![CDATA[<p>Attempting to brand my site, I wanted to use <strong>ⓩ</strong> to prepend the title of non-linklog items. This wound up breaking the atom feed in <a href="http://reader.google.com" title="Google Reader">Google Reader</a>, and hence my favorite Google Reader client <a href="http://reederapp.com/" title="Reeder">Reeder</a>. I couldn’t have that.</p>
+
+<!-- more -->
+
+<p>The strange thing was that Firefox displayed everything correctly, but Google Reader and hence Reeder simply showed <code>&amp;#x24e9;</code> in place of the correct unicode symbol. As it turns out, the feed is encoded as <code>utf-8</code>, however <a href="http://pages.github.com" title="GitHub Pages">GitHub Pages</a> was serving the file as <code>US-ASCII</code>, causing the issue. </p>
+
+<p>Thanks to <a href="http://taylor.fausak.me/" title="Taylor Fausak">Taylor Fausak</a>’s <a href="http://taylor.fausak.me/2012/04/26/serving-atom-feeds-with-github-pages/" title="Serving Atom Feeds with GitHub Pages">post on serving atom feeds at GitHub</a>, I was able to come up with a solution. Simply using the extension <code>.atom</code> will make GitHub serve the correct headers. Rather than use the redundant <code>atom.atom</code>, I elected to shoot for <code>feed.atom</code>. To do this in <a href="http://octopress.org/" title="Octopress">Octopress</a> was fairly straightforward.</p>
+
+<ol>
+  <li>
+    <p>In <code>_config.yml</code>, I changed <code>subscribe_rss: /atom.xml</code> to <code>subscribe_rss: /feed.atom</code>. I thought this would be enough. I was wrong.</p>
+  </li>
+  <li>
+    <p>In the <code>Rakefile</code>, <code>plugins/category_generator.rb</code>, and <code>sitemap_generator.rb</code>, search and replace <code>atom.xml</code> with <code>feed.atom</code>. (Strange these guys are hard coded).</p>
+  </li>
+  <li>
+    <p>In the <code>source</code> directory, rename <code>atom.xml</code> to <code>feed.atom</code>.</p>
+  </li>
+</ol>
+
+<p>Now I have a <a href="http://feed2.w3.org/check.cgi?url=http%3A//drz.ac/feed.atom" title="Feed Validator Results: http://drz.ac/feed.atom">W3C certified valid feed</a> and everything works splendidly. That is, until I break something new.</p>
+
+]]></content>
+    </entry>
   
     <entry>
       
