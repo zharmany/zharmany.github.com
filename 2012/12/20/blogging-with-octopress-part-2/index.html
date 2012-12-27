@@ -120,120 +120,103 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     
   </header>
 
-<div class="entry-content"><p><a href="/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress. </p>
-
+<div class="entry-content"><p><a href='/2012/12/19/blogging-with-octopress/' title='Blogging With Octopress'>Last time</a> I discussed the basics of setting up my site using <a href='http://octopress.org/' title='Octopress'>Octopress</a>. This time I&#8217;m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress.</p>
 <!-- more -->
+<h2 id='rakefile'>Rakefile</h2>
 
-<h2 id="rakefile">Rakefile</h2>
+<p>Rakefiles are the Ruby equivalent of Makefiles. As detailed on <a href='http://octopress.org/docs/blogging/' title='Blogging Basics - Octopress'>the Octopress site</a>, the Rakefile that ships with Octopress has a number of useful scripts (rake tasks) for generating new posts and deploying your site.</p>
 
-<p>Rakefiles are the Ruby equivalent of Makefiles. As detailed on <a href="http://octopress.org/docs/blogging/" title="Blogging Basics - Octopress">the Octopress site</a>, the Rakefile that ships with Octopress has a number of useful scripts (rake tasks) for generating new posts and deploying your site.</p>
+<h3 id='new_posts'>New Posts</h3>
 
-<h3 id="new-posts">New Posts</h3>
+<p>Generating a new post is as simple as</p>
 
-<p>Generating a new post is as simple as </p>
+<pre><code>rake new_post[&quot;title&quot;]</code></pre>
 
-<pre><code>rake new_post["title"]
-</code></pre>
+<p>which creates a new Markdown file in your <code>source/_posts</code> directory with filename given by the title, prepended by the date. This will already contain useful metadata that Octopress uses (see the YAML front matter section below). Simply edit this Markdown file to fill your post with content.</p>
 
-<p>which creates a new Markdown file in your <code>source/_posts</code> directory with filename given by the title, prepended by the date. This will already contain useful metadata that Octopress uses (see the YAML front matter section below). Simply edit this Markdown file to fill your post with content. </p>
+<h3 id='new_pages'>New Pages</h3>
 
-<h3 id="new-pages">New Pages</h3>
+<p>I haven&#8217;t added any new pages quite yet, but there is a rake task for creating new pages easily:</p>
 
-<p>I haven’t added any new pages quite yet, but there is a rake task for creating new pages easily:</p>
-
-<pre><code>rake new_page[filename]
-</code></pre>
+<pre><code>rake new_page[filename]</code></pre>
 
 <p>This will create the file <code>source/filename/index.markdown</code> that will ultimately be served as <code>filename/index.html</code> on your website.</p>
 
-<h3 id="preview-generate-and-deploy">Preview, Generate, and Deploy</h3>
+<h3 id='preview_generate_and_deploy'>Preview, Generate, and Deploy</h3>
 
 <p>To use a local webserver to serve all your posts (including ones with the <code>published: false</code> flag), simply run</p>
 
-<pre><code>rake preview
-</code></pre>
+<pre><code>rake preview</code></pre>
 
-<p>and point your browser to <code>http://localhost:4000</code>. One trick that made using this server a bit easier is to use <a href="http://fluidapp.com" title="Fluid">Fluid</a> to create an “Octopress Preview” app. Note that to get MathJax (the subject of a future post) working correctly, I needed to change the User Agent to Safari, otherwise it didn’t seem that it handled JavaScript correctly. </p>
+<p>and point your browser to <code>http://localhost:4000</code>. One trick that made using this server a bit easier is to use <a href='http://fluidapp.com' title='Fluid'>Fluid</a> to create an &#8220;Octopress Preview&#8221; app. Note that to get MathJax (the subject of a future post) working correctly, I needed to change the User Agent to Safari, otherwise it didn&#8217;t seem that it handled JavaScript correctly.</p>
 
-<p>If you’re satisifed with your site, you can generate the html files and deploy it to GitHub Pages by running</p>
+<p>If you&#8217;re satisifed with your site, you can generate the html files and deploy it to GitHub Pages by running</p>
 
 <pre><code>rake generate
-rake deploy
-</code></pre>
+rake deploy</code></pre>
 
-<p>Very slick.	</p>
+<p>Very slick.</p>
 
-<h3 id="dont-forget-to-commit-and-push-your-source">Don’t forget to commit and push your source!</h3>
+<h3 id='dont_forget_to_commit_and_push_your_source'>Don&#8217;t forget to commit and push your source!</h3>
 
-<p>Lastly, the beauty of having your site as the <code>master</code> branch, and everything else as the <code>source</code> branch is that you can modify your website and use version control without having to publish all your changes. Once you’ve made a new post or page, or some other tweaks to your page source, simply run </p>
+<p>Lastly, the beauty of having your site as the <code>master</code> branch, and everything else as the <code>source</code> branch is that you can modify your website and use version control without having to publish all your changes. Once you&#8217;ve made a new post or page, or some other tweaks to your page source, simply run</p>
 
 <pre><code>git add .
-git commit -m 'your message'
-git push origin source
-</code></pre>
+git commit -m &#39;your message&#39;
+git push origin source</code></pre>
 
-<p>and your progress will be saved on GitHub.	</p>
+<p>and your progress will be saved on GitHub.</p>
 
-<h3 id="yaml-front-matter">YAML front matter</h3>
+<h3 id='yaml_front_matter'>YAML front matter</h3>
 
-<p>The special <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter" title="YAML Front Matter">YAML Ain’t Markup Language front matter</a> tells Octopress how to process your Markdown files. The <code>new_post</code> script generates this for you. By default the <code>published:</code> line is omitted. Including <code>published: false</code> will prevent the post from being deployed, but will show when you preview your site locally with <code>rake preview</code>. This is useful if you like to preview your post in a browser before deploying.</p>
+<p>The special <a href='https://github.com/mojombo/jekyll/wiki/yaml-front-matter' title='YAML Front Matter'>YAML Ain&#8217;t Markup Language front matter</a> tells Octopress how to process your Markdown files. The <code>new_post</code> script generates this for you. By default the <code>published:</code> line is omitted. Including <code>published: false</code> will prevent the post from being deployed, but will show when you preview your site locally with <code>rake preview</code>. This is useful if you like to preview your post in a browser before deploying.</p>
 
-<h3 id="below-the-fold">Below the fold</h3>
+<h3 id='below_the_fold'>Below the fold</h3>
 
 <p>If you want to restrict the amount of a post that is shown in your blog index, simply insert the</p>
 
-<pre><code>&lt;!-- more --&gt;
-</code></pre>
+<pre><code>&lt;!-- more --&gt;</code></pre>
 
 <p>tag into your post. The remainder of the post will not be shown in the blog index.</p>
 
-<h2 id="plugins">Plugins</h2>
+<h2 id='plugins'>Plugins</h2>
 
-<p>The <code>plugins</code> directory contains some usful scripts. Here I’ll show a few examples. </p>
+<p>The <code>plugins</code> directory contains some usful scripts. Here I&#8217;ll show a few examples.</p>
 
-<h3 id="blockquotes">Blockquotes</h3>
+<h3 id='blockquotes'>Blockquotes</h3>
 
 <p>Standard Markdown blockquotes, coded as</p>
 
-<pre><code>&gt; Don't Panic.   
-&gt; **Douglas Adams** - The Hitchhiker's Guide to the Galaxy
-</code></pre>
+<pre><code>&gt; Don&#39;t Panic.   
+&gt; **Douglas Adams** - The Hitchhiker&#39;s Guide to the Galaxy</code></pre>
 
 <p>appears as</p>
 
 <blockquote>
-  <p>Don’t Panic.<br />
-<strong>Douglas Adams</strong> - The Hitchhiker’s Guide to the Galaxy</p>
+<p>Don&#8217;t Panic.<br /><strong>Douglas Adams</strong> - The Hitchhiker&#8217;s Guide to the Galaxy</p>
 </blockquote>
 
 <p>which is perfectly fine. However, using the <code>blockquote</code> script, they appear a bit more fancy:</p>
-
 <blockquote><p>Don&#8217;t Panic.</p><footer><strong>Douglas Adams</strong> <cite>The Hitchhiker&#8217;s Guide to the Galaxy</cite></footer></blockquote>
-
 <p>This was created using</p>
 
-<pre><code>&lt;blockquote&gt;&lt;p&gt;Don't Panic.&lt;/p&gt;&lt;footer&gt;&lt;strong&gt;Douglas Adams&lt;/strong&gt; &lt;cite&gt;The Hitchhiker's Guide to the Galaxy&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
-</code></pre>
+<pre><code>&lt;blockquote&gt;&lt;p&gt;Don&#39;t Panic.&lt;/p&gt;&lt;footer&gt;&lt;strong&gt;Douglas Adams&lt;/strong&gt; &lt;cite&gt;The Hitchhiker&#39;s Guide to the Galaxy&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;</code></pre>
 
-<p>This environment is especially nice for linking to quotes in articles. <a href="http://octopress.org/docs/plugins/blockquote" title="Blockquote - Octopress">See the documentation</a> for usage details.</p>
+<p>This environment is especially nice for linking to quotes in articles. <a href='http://octopress.org/docs/plugins/blockquote' title='Blockquote - Octopress'>See the documentation</a> for usage details.</p>
 
-<h3 id="internal-post-linking">Internal post linking</h3>
+<h3 id='internal_post_linking'>Internal post linking</h3>
 
-<p>Thanks to <a href="http://kqueue.org" title="Xi Wang">Xi Wang</a>’s post about <a href="http://kqueue.org/blog/2012/01/05/hello-world/#internal-post-linking" title="Internal Post Linking">internal post linking</a>, I was able to use his linked <code>post_url</code> script to more easily make internal links to posts in this blog. Simply download <a href="https://raw.github.com/michael-groble/jekyll/fix_post_url/lib/jekyll/tags/post_url.rb" title="post_url Script">post_url.rb</a> and place it into your <code>plugins</code> directory.</p>
+<p>Thanks to <a href='http://kqueue.org' title='Xi Wang'>Xi Wang</a>&#8217;s post about <a href='http://kqueue.org/blog/2012/01/05/hello-world/#internal-post-linking' title='Internal Post Linking'>internal post linking</a>, I was able to use his linked <code>post_url</code> script to more easily make internal links to posts in this blog. Simply download <a href='https://raw.github.com/michael-groble/jekyll/fix_post_url/lib/jekyll/tags/post_url.rb' title='post_url Script'>post_url.rb</a> and place it into your <code>plugins</code> directory.</p>
 
 <p>I used this code at the beginning of the post to generate the URL:</p>
 
-<pre><code>/2012/12/19/blogging-with-octopress/
-</code></pre>
+<pre><code>/2012/12/19/blogging-with-octopress/</code></pre>
 
 <p>Here <code>2012-12-19-blogging-with-octopress</code> is the name of the Markdown file (sans extension, of course) that I used to generate the previous post. Full disclosure, I used the Markdown syntax:</p>
 
 <pre><code>[Last time][BloggingWithOctopress]
 
-[BloggingWithOctopress]: /2012/12/19/blogging-with-octopress/ "Blogging With Octopress"
-</code></pre>
-
-</div>
+[BloggingWithOctopress]: /2012/12/19/blogging-with-octopress/ &quot;Blogging With Octopress&quot;</code></pre></div>
 
 
   <footer>
@@ -299,6 +282,9 @@ git push origin source
   
 
   
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
 </section>
 
 </div>
@@ -308,6 +294,10 @@ git push origin source
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/12/27/shipping-out/">Shipping Out</a>
+      </li>
     
       <li class="post">
         <a href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">Valid XML Atom Feed on GitHub Pages</a>
@@ -323,10 +313,6 @@ git push origin source
     
       <li class="post">
         <a href="/2012/12/21/octopress-linked-lists/">Octopress Linked Lists</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a>
       </li>
     
   </ul>
@@ -365,6 +351,23 @@ git push origin source
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'drzac';
+			var disqus_developer = '0';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://drz.ac/2012/12/20/blogging-with-octopress-part-2/';
+        var disqus_url = 'http://drz.ac/2012/12/20/blogging-with-octopress-part-2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
