@@ -25,7 +25,7 @@ p_T(t) =
 $$
 If we define the energy of a pulse $p$ as 
 $$
-E(p) = \int_{-\infty}^\infty \abs{p(t)} \dd t, 
+E(p) = \int_{-\infty}^\infty \abs{p(t)} \d t, 
 $$
 we see that $E(p_T) = 1$, regardless of $T$. Now we think of an idealized infinitesimal pulse and call that $\delta$. We think of simply taking the limit [^LimitAside]
 $$
@@ -36,11 +36,11 @@ $$
 
 With this approach of explaining how we arrive at $\delta$, we come to the conclusion that we must simultaneously have that $\delta(t) = 0$ for all $t \ne 0$, and 
 $$
-\int_{-\infty}^\infty \delta(t) \dd t = 1.
+\int_{-\infty}^\infty \delta(t) \d t = 1.
 $$
 This typically doesn't jive with the student's previous math classes when they learned integration. Changing the value of the integrand at a single point does not affect the value of the integral, it should be true that
 $$
-\int_{-\infty}^\infty 0 \dd t = \int_{-\infty}^\infty \delta(t) \dd t = 0.
+\int_{-\infty}^\infty 0 \d t = \int_{-\infty}^\infty \delta(t) \d t = 0.
 $$
 The next line is usually the hardest to swallow, "Well, the value of $\delta(0)$ is now *infinitely big*, which fixes everything, you see!" So, in the student's mind, he's thinking that a sensible definition of $\delta$ would be to say
 $$
@@ -50,17 +50,17 @@ As engineers, we don't ponder about how nonsensical this really is, because we i
 
 ## Applications ##
 
-Usually we get taught one of two things next, either the sampling property of $\delta$, or its relation to the unit-step function. I'll touch on the former. The key idea is that *both* rely on using $\delta$ within an integral. Usually before this class, the professor would have defined an inner product of two signals,
+Usually we get taught one of two things next, either the sampling propeerty of $\delta$, or its relation to the unit-step function. I'll touch on the former. The key idea is that *both* rely on using $\delta$ within an integral. Usually before this class, the professor would have defined an inner product of two signals,
 $$
-\inner{x}{y} := \int_{-\infty}^\infty x(t) \ y(t) \dd t.
+\inner{x}{y} := \int_{-\infty}^\infty x(t) \ y(t) \d t.
 $$
 So what hapens when we take the inner product with a $\delta$? The argument is usually something like this:
 
 $$
 \inner{x}{\delta} 
- = \int_{-\infty}^\infty x(t) \ \delta(t) \dd t 
- = \int_{-\infty}^\infty x(0) \ \delta(t) \dd t 
- = x(0) \int_{-\infty}^\infty \ \delta(t) \dd t = x(0).
+ = \int_{-\infty}^\infty x(t) \ \delta(t) \d t 
+ = \int_{-\infty}^\infty x(0) \ \delta(t) \d t 
+ = x(0) \int_{-\infty}^\infty \ \delta(t) \d t = x(0).
 $$
 The argument for the second equality is that since $\delta$ is zero everywhere except zero, we might as well just replace $x(t)$ with $x(0)$. Next, we just use the unit energy property of $\delta$. **Neat**: inner products with $\delta$ return the value of the signal at zero. 
 
@@ -72,8 +72,7 @@ $$
 $$
 and conclude that since $ +\infty \cdot 2 = \infty$, it should be true that $2 \delta = \delta$, and we should expect the same answer of $x(0)$. No, you see poor student, the pulse at the origin is really *twice* infinitely big, and the correct answer is $2 x(0)$. 
 
-
-
+Note: see ``~/Dropbox/MarkedTechNotes/Definitions.md`` for the latest.
 
 
 
