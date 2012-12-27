@@ -34,7 +34,7 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: kramdown
+markdown: maruku
 pygments: false # Jekyll's default Python Pygments have been replaced by pygments.rb. Set to true to use Albino + Pythong Pygments
 
 paginate: 10          # Posts per page on the blog index
@@ -132,7 +132,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: drzac
 disqus_show_comment_count: false
 disqus_developer: 0
 

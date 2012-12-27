@@ -19,8 +19,8 @@ The Sparse Poisson Intensity Reconstruction ALgorithms (SPIRAL) toolbox, ``SPIRA
 - Penalty based on translationally-invariant (cycle-spun) RDPs, denoted SPIRAL-RDP-TI.
 
 For more details, see our paper (available on [IEEE Xplore][SPIRALTIP] and [arXiv][SPIRALarXiv]):
-
-Z. T. Harmany, R. F. Marcia, and R. M. Willett, ``This is SPIRAL-TAP: Sparse Poisson Intensity Reconstruction ALgorithms -- Theory and Practice,'' IEEE Transactions on Image Processing, vol. 21, pp. 1084–1096, Mar. 2012.
+ 
+Z. T. Harmany, R. F. Marcia, and R. M. Willett, "This is SPIRAL-TAP: Sparse Poisson Intensity Reconstruction ALgorithms -- Theory and Practice," IEEE Transactions on Image Processing, vol. 21, pp. 1084–1096, Mar. 2012.
 
 To aid users, we provide a few examples of our algorithm. To view a demonstration, execute in MATLAB
 > SPIRALdemo
