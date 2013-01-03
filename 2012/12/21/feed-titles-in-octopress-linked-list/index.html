@@ -120,23 +120,18 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve been experimenting with <a href='http://octopress.org/docs/blogging/linklog/' title='Linklog Customization'>linklog customization</a> using the <code>2.1</code> branch of Octopress. From what I can tell, there&#8217;s an error in <code>source/_includes/feed_entry.xml</code>.</p>
+<div class="entry-content"><p>I’ve been experimenting with <a href="http://octopress.org/docs/blogging/linklog/" title="Linklog Customization">linklog customization</a> using the <code>2.1</code> branch of Octopress. From what I can tell, there’s an error in <code>source/_includes/feed_entry.xml</code>.</p>
 <!-- more -->
-<p>To get the <code>standard_post_marker</code> to function correctly a la <a href='http://daringfireball.net' title='Daring Fireball'>Gruber</a>, where it shows up before the title of his post in the RSS feed, I needed to do some digging.</p>
 
+<p>To get the <code>standard_post_marker</code> to function correctly a la <a href="http://daringfireball.net" title="Daring Fireball">Gruber</a>, where it shows up before the title of his post in the RSS feed, I needed to do some digging.</p>
 <p>To fix, I think all that you need to do is switch</p>
-
 <pre><code>{% if linklog and site.linklog_marker_position_feed == &#39;before&#39; %}
 {% unless linklog %}{{ site.standard_post_marker_feed }}{% endunless %}</code></pre>
-
 <p>to</p>
-
 <pre><code>{% unless linklog %}{{ site.standard_post_marker}}{% endunless %}
 {% if linklog and site.linklog_marker_position_feed == &#39;before&#39; %}</code></pre>
-
 <p>or else the 2nd line in the original can never execute.</p>
-
-<p>I opened up an issue on the <a href='https://github.com/imathis/octopress/issues/883' title='Issue #883'>Octopress GitHub repository</a>. Yay for <a href='http://en.wikipedia.org/wiki/Open-source_software' title='Open source software - Wikipedia'>OSS</a>!</p></div>
+<p>I opened up an issue on the <a href="https://github.com/imathis/octopress/issues/883" title="Issue #883">Octopress GitHub repository</a>. Yay for <a href="http://en.wikipedia.org/wiki/Open-source_software" title="Open source software - Wikipedia">OSS</a>!</p></div>
 
 
   <footer>
@@ -216,6 +211,10 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/12/27/blogging-with-math/">Blogging with Math: Octopress, MathJax, and Pandoc</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/12/27/shipping-out/">Shipping Out</a>
       </li>
     
@@ -229,10 +228,6 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     
       <li class="post">
         <a href="/2012/12/21/cute-road/">Cute Road</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/12/21/octopress-linked-lists/">Octopress Linked Lists</a>
       </li>
     
   </ul>
@@ -265,7 +260,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Zachary T. Harmany, PhD -
+  Copyright &copy; 2013 - Zachary T. Harmany, PhD -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

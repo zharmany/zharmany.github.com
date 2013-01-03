@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>This is SPIRAL-TAP - DrZ.ac</title>
+  <meta name="author" content="Zachary T. Harmany, PhD">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://drz.ac/code/spiraltap/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+  <link href="/feed.atom" rel="alternate" title="DrZ.ac" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript"
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://drz.ac/javascripts/MathJaxLocal.js">
+</script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37209945-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">DrZ.ac</a></h1>
+  
+    <h2>extraneous punctuation</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/feed.atom" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:drz.ac" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/code">Code</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">This Is SPIRAL-TAP</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-23T02:45:00-06:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2012</time></p>
+  </header>
+  
+  <p><a href="/code/spiraltap/SPIRALTAP.zip" title="SPIRALTAP.zip">Download SPIRALTAP</a></p>
+<h2 id="overview">Overview</h2>
+<p>The Sparse Poisson Intensity Reconstruction ALgorithms (SPIRAL) toolbox, <code>SPIRALTAP</code>, is MATLAB code for recovering sparse signals from Poisson observations. SPIRAL minimizes a regularized negative log-likelihood objective function with various penalty choices for the regularization terms:</p>
+<ul>
+<li>Sparsity (\(\ell_1\) norm) of the coefficients in an orthonormal basis, denoted SPIRAL-ONB,</li>
+<li>Total Variation seminorm (TV) of the image, denoted SPIRAL-TV,</li>
+<li>Penalty based on Recursive Dyadic Partitions (RDPs) denoted SPIRAL-RDP, and</li>
+<li>Penalty based on translationally-invariant (cycle-spun) RDPs, denoted SPIRAL-RDP-TI.</li>
+</ul>
+<p>For more details, see our paper (available on <a href="http://dx.doi.org/10.1109/TIP.2011.2168410" title="SPIRAL on IEEE Xplore">IEEE Xplore</a> and <a href="http://arxiv.org/abs/1005.4274" title="SPIRAL on arXiv">arXiv</a>):</p>
+<p>Z. T. Harmany, R. F. Marcia, and R. M. Willett, <q>This is SPIRAL-TAP: Sparse Poisson Intensity Reconstruction ALgorithms – Theory and Practice,</q> IEEE Transactions on Image Processing, vol. 21, pp. 1084–1096, Mar. 2012.</p>
+<p>To aid users, we provide a few examples of our algorithm. To view a demonstration, execute in MATLAB &gt; SPIRALdemo switching the variable <code>demo</code> in <code>SPIRALdemo.m</code> to <code>1</code>, <code>2</code>, or <code>3</code> selects among three simulations. Details of each can be found below.</p>
+<p><strong>Note</strong>: Some of these demonstrations utilize the <a href="http://dsp.rice.edu/software/rice-wavelet-toolbox" title="Rice Wavelet Toolbox">Rice Wavelet Toolbox</a> (freely available online) to compute the discrete wavelet transform. We include this toolbox here (although it may need to be recompiled on your platform). We also use the <a href="http://ie.technion.ac.il/~becka/papers/tv_fista.zip" title="FISTA">FISTA</a> algorithm (in the <code>denoise</code> directory) of Beck and Teboulle for constrained total variation denoising.</p>
+<h2 id="demonstration-1">Demonstration 1</h2>
+<p>Description: One dimensional compressed sensing example penalizing the sparsity (\(\ell_1\) norm) of the coefficients in the canonical basis. Here the true signal \(f\) is of length 100,000 with 1,500 nonzero entries yielding a sparsity of 1.5%. We take 40,000 compressive measurements in \(y\). The average number of photons per measurement is 15.03, with a maximum of 145. We run SPIRAL until the relative change in the iterates falls below a tolerance of 1e-8, up to a maximum of 100 iterations (however only 37 iterations are required to satisfy the stopping criterion).</p>
+<p>Output: This demonstration automatically displays Figures 1 through 4.</p>
+<figure>
+<img src="/code/spiraltap/figures/demo1_setup.png" alt="Figure 1: Simulation setup (true signal, true detector intensity, observed counts). Note, this figure is zoomed to the first 200 samples only."><figcaption>Figure 1: Simulation setup (true signal, true detector intensity, observed counts). Note, this figure is zoomed to the first 200 samples only.</figcaption>
+</figure>
+<p> </p>
+<figure>
+<img src="/code/spiraltap/figures/demo1_fhatspiral.png" alt="Figure 2: Reconstructed signal (red) overlaid on the true signal (blue). Note, this figure is zoomed to the first 200 samples only."><figcaption>Figure 2: Reconstructed signal (red) overlaid on the true signal (blue). Note, this figure is zoomed to the first 200 samples only.</figcaption>
+</figure>
+<p> </p>
+<figure>
+<img src="/code/spiraltap/figures/demo1_rmseevolution.png" alt="Figure 3: RMS error evolution versus computation time."><figcaption>Figure 3: RMS error evolution versus computation time.</figcaption>
+</figure>
+<p> </p>
+<figure>
+<img src="/code/spiraltap/figures/demo1_objective.png" alt="Figure 4: Objective evolution versus computation time."><figcaption>Figure 4: Objective evolution versus computation time.</figcaption>
+</figure>
+<br>
+<h2 id="demonstration-2">Demonstration 2</h2>
+<p>Description: Here we consider an image deblurring example. The true signal is a 128 \(\times\) 128 Shepp-Logan phantom image with mean intensity 1.22e5. The true detector mean intensity is 45.8, and the observed photon count mean is 45.8 with a maximum of 398. Here we consider four penalization methods:</p>
+<ul>
+<li>Sparsity (\(\ell_1\) norm) of coefficients in an orthogonal (wavelet) basis,</li>
+<li>TV of the image,</li>
+<li>Penalty based on RDPs, and</li>
+<li>Penalty based on translationally-invariant (cycle-spun) RDPs.</li>
+</ul>
+<p>We run all the SPIRAL methods for a minimum of 50 iterations until the relative change in the iterates falls below a tolerance of 1e-8, up to a maximum of 100 iterations (however, only about 70 iterations are required to satisfy the stopping criterion for all methods).</p>
+<p>Output: This demonstration automatically displays Figures 5 though 9. Since this is an image processing example, we explicitly show the outputs.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">  True Signal </th>
+<th style="text-align: center;">  True Detector Intensity </th>
+<th style="text-align: center;">  Observed Photon Counts </th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_f.png" alt="True Signal"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_af.png" alt="True Detector Intensity"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_y.png" alt="Observed Photon Counts"></td>
+</tr>
+</tbody>
+</table>
+<p>Figure 5: Simulation Setup</p>
+<figure>
+<img src="/code/spiraltap/figures/demo2_objective.png" alt="Figure 6: The objective evolution for the methods where explicit computation of the objective is straightforward."><figcaption>Figure 6: The objective evolution for the methods where explicit computation of the objective is straightforward.</figcaption>
+</figure>
+<p> </p>
+<figure>
+<img src="/code/spiraltap/figures/demo2_rmseevolution.png" alt="Figure 7: Normalized RMS error evolution versus computation time."><figcaption>Figure 7: Normalized RMS error evolution versus computation time.</figcaption>
+</figure>
+<p> </p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">SPIRAL-ONB</td>
+<td style="text-align: center;">SPIRAL-TV</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RMSE (%) = 24.83</td>
+<td style="text-align: center;">RMSE (%) = 25.97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_fhatspiralonb.png" alt="SPIRAL-ONB"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_fhatspiralonb.png" alt="SPIRAL-TV"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SPIRAL-RDP</td>
+<td style="text-align: center;">SPIRAL-RDP-TI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RMSE (%) = 24.83</td>
+<td style="text-align: center;">RMSE (%) = 25.97</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_fhatspiralonb.png" alt="SPIRAL-RDP"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_fhatspiralonb.png" alt="SPIRAL-RDP-TI"></td>
+</tr>
+</tbody>
+</table>
+<p>Figure 8: Final reconstructions.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">SPIRAL-ONB</td>
+<td style="text-align: center;">SPIRAL-TV</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RMSE (%) = 24.83</td>
+<td style="text-align: center;">RMSE (%) = 25.97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_diffspiralonb.png" alt="SPIRAL-ONB"> <img src="/code/spiraltap/figures/demo2_colorbar.png" alt="Colorbar"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_diffspiralonb.png" alt="SPIRAL-TV"> <img src="/code/spiraltap/figures/demo2_colorbar.png" alt="Colorbar"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SPIRAL-RDP</td>
+<td style="text-align: center;">SPIRAL-RDP-TI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RMSE (%) = 24.83</td>
+<td style="text-align: center;">RMSE (%) = 25.97</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_diffspiralonb.png" alt="SPIRAL-RDP"> <img src="/code/spiraltap/figures/demo2_colorbar.png" alt="Colorbar"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo2_diffspiralonb.png" alt="SPIRAL-RDP-TI"> <img src="/code/spiraltap/figures/demo2_colorbar.png" alt="Colorbar"></td>
+</tr>
+</tbody>
+</table>
+<p>Figure 9: Magnitude of the error between the final reconstruction and the true phantom image. Note the color scale indicates percentage difference over all reconstructions.</p>
+<h2 id="demonstration-3">Demonstration 3</h2>
+<p>Description: This demonstration is similar to Demonstration 2, but uses the 256 \(\times\) 256 <code>cameraman</code> image instead of the Shepp-Logan phantom. The true signal has a mean intensity of 1.19e5, the true detector mean intensity is 44.4, and the observed photon count mean is 44.4 with a maximum of 111. Due to the larger problem size, we need to alter the termination criteria. We run all the SPIRAL methods for a minimum of 50 iterations until the relative change in the iterates falls below a tolerance of 1e-8, up to a maximum of 300 iterations.</p>
+<p>Output: Like Demonstration 2, this demonstration automatically displays a similar set of images, shown in Figures 10 through 14.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">  True Signal </th>
+<th style="text-align: center;">  True Detector Intensity </th>
+<th style="text-align: center;">  Observed Photon Counts </th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_f.png" alt="True Signal"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_af.png" alt="True Detector Intensity"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_y.png" alt="Observed Photon Counts"></td>
+</tr>
+</tbody>
+</table>
+<p>Figure 10: Simulation Setup</p>
+<figure>
+<img src="/code/spiraltap/figures/demo3_objective.png" alt="Figure 11: The objective evolution for the methods where explicit computation of the objective is straightforward."><figcaption>Figure 11: The objective evolution for the methods where explicit computation of the objective is straightforward.</figcaption>
+</figure>
+<p> </p>
+<figure>
+<img src="/code/spiraltap/figures/demo2_rmseevolution.png" alt="Figure 12: Normalized RMS error evolution versus computation time."><figcaption>Figure 12: Normalized RMS error evolution versus computation time.</figcaption>
+</figure>
+<p> </p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">SPIRAL-ONB</td>
+<td style="text-align: center;">SPIRAL-TV</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RMSE (%) = 24.83</td>
+<td style="text-align: center;">RMSE (%) = 25.97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_fhatspiralonb.png" alt="SPIRAL-ONB"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_fhatspiralonb.png" alt="SPIRAL-TV"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SPIRAL-RDP</td>
+<td style="text-align: center;">SPIRAL-RDP-TI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RMSE (%) = 24.83</td>
+<td style="text-align: center;">RMSE (%) = 25.97</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_fhatspiralonb.png" alt="SPIRAL-RDP"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_fhatspiralonb.png" alt="SPIRAL-RDP-TI"></td>
+</tr>
+</tbody>
+</table>
+<p>Figure 13: Final reconstructions.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">SPIRAL-ONB</td>
+<td style="text-align: center;">SPIRAL-TV</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RMSE (%) = 10.92</td>
+<td style="text-align: center;">RMSE (%) = 9.88</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_diffspiralonb.png" alt="SPIRAL-ONB"> <img src="/code/spiraltap/figures/demo3_colorbar.png" alt="Colorbar"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_diffspiralonb.png" alt="SPIRAL-TV"> <img src="/code/spiraltap/figures/demo3_colorbar.png" alt="Colorbar"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SPIRAL-RDP</td>
+<td style="text-align: center;">SPIRAL-RDP-TI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RMSE (%) = 11.44</td>
+<td style="text-align: center;">RMSE (%) = 9.99</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_diffspiralonb.png" alt="SPIRAL-RDP"> <img src="/code/spiraltap/figures/demo3_colorbar.png" alt="Colorbar"></td>
+<td style="text-align: center;"><img src="/code/spiraltap/figures/demo3_diffspiralonb.png" alt="SPIRAL-RDP-TI"> <img src="/code/spiraltap/figures/demo3_colorbar.png" alt="Colorbar"></td>
+</tr>
+</tbody>
+</table>
+<p>Figure 14: Magnitude of the error between the final reconstruction and the true phantom image. Note the color scale indicates percentage difference over all reconstructions.</p>
+  
+    <footer>
+      <p class="meta">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Zachary T. Harmany, PhD</span></span>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-23T02:45:00-06:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2012</time>
+
+
+</p>
+      
+        <div class="sharing">
+  
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+  
+  
+
+</div>
+
+      
+    </footer>
+  
+</article>
+
+
+<section>
+  <h1>Comments</h1>
+  
+
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/12/27/blogging-with-math/">Blogging with Math: Octopress, MathJax, and Pandoc</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/27/shipping-out/">Shipping Out</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">Valid XML Atom Feed on GitHub Pages</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/21/feed-titles-in-octopress-linked-list/">Feed Titles in Octopress Linked Lists</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/21/cute-road/">Cute Road</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets" data-user="zacharmany" data-count="4" data-replies="false">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+    <a href="//twitter.com/zacharmany" class="twitter-follow-button" data-show-count="false">Follow @zacharmany</a>
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Zachary T. Harmany, PhD -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'drzac';
+			var disqus_developer = '0';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://drz.ac/code/spiraltap/index.html';
+        var disqus_url = 'http://drz.ac/code/spiraltap/index.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+</body>
+</html>

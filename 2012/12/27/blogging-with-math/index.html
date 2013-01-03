@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Blogging with Math: Octopress, MathJax, and Pandoc - DrZ.ac</title>
+  <meta name="author" content="Zachary T. Harmany, PhD">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://drz.ac/2012/12/27/blogging-with-math/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+  <link href="/feed.atom" rel="alternate" title="DrZ.ac" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript"
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://drz.ac/javascripts/MathJaxLocal.js">
+</script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37209945-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">DrZ.ac</a></h1>
+  
+    <h2>extraneous punctuation</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/feed.atom" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:drz.ac" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/code">Code</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
+  
+  <header>
+    <h1 class="entry-title">
+
+&#x24e9; Blogging With Math: Octopress, MathJax, and Pandoc
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-27T13:44:00-06:00" pubdate data-updated="true">Dec 27<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/12/27/blogging-with-math/">&#x24e9; permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I’ve been trying to achieve mathematical writing nirvana, as <a href="http://rousette.org.uk/blog/archives/pandoc-workflow/" title="Pandoc workflow">others</a> have <a href="http://boolesrings.org/krautzberger/2011/08/03/why-markdown-not-latex/" title="Why markdown, not LaTeX?">tried before</a> me. My hope is to eventually use a single system for all my technical writing, be it for the web or print. Being an experienced LaTeX user, I would expect no less in terms of flexibility and typesetting of mathematical expressions. However, making LaTeX play nice on the web can be a challenge. Here’s my solution thus far.</p>
+<!-- more -->
+
+<h2 id="configuring-octopress-for-use-with-mathjax">Configuring Octopress for use with MathJax</h2>
+<p>There’s two parts here. The first is getting Octopress to work nicely with <a href="http://www.mathjax.org" title="MathJax">MathJax</a>. This is relatively easy. Octopress has a folder for custom html files. On my install, it’s located at</p>
+<pre><code>/source/_includes/custom/</code></pre>
+<p>In this folder, find the <code>head.html</code> file, and append the following:</p>
+<pre><code>&lt;!--- MathJax Configuration --&gt;
+&lt;script type=&quot;text/javascript&quot;
+src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://drz.ac/javascripts/MathJaxLocal.js&quot;&gt;
+&lt;/script&gt;</code></pre>
+<p>This does two things, first it loads MathJax from the MathJax CDN, then loads my custom preferences, which includes a whole slew of macros. <a href="/javascripts/MathJaxLocal.js" title="MathJaxLocal.js">My custom preferences</a> are placed in the javascript folder,</p>
+<pre><code>/source/javascript/</code></pre>
+<p>notice that I need to specify the path to my local configuration in <code>head.html</code>, and also at the end of the <code>MathJaxLocal.js</code> script itself:</p>
+<pre><code>MathJax.Ajax.loadComplete(&quot;http://drz.ac/javascripts/MathJaxLocal.js&quot;);</code></pre>
+<p>With all this, I should now be able to write some beautiful mathematics, and the result should be rendered with MathJax: \[
+F(\omega) = \int_{-\infty}^\infty f(t) e^{-i \omega t} \d t.
+\]</p>
+<p>Some may be content with this. However, there were a few other things that troubled me, such as some errors that I would get due to the Markdown processing and the ability to preview my content offline.</p>
+<h2 id="markdown-with-mathjax-using-pandoc">Markdown with MathJax using Pandoc</h2>
+<p>In order to render your Markdown file as HTML, you need a Markdown interpreter. There are several options, rdiscount, kramdown, maruku, multimarkdown, and pandoc are ones that I’ve tried. Out of the box, Octopress can be easily configured to use either rdiscount, kramdown, or maruku. Being resistant to change, my goal was to be able to write equations exactly how I would in LaTeX. That is, by using the dollar sign characters for inline equations, and double dollar signs for display equations. This is specified in the <code>MathJaxLocal.js</code> file. Initially it seemed that maruku handled the interplay with MathJax the best. However, oftentimes things would break. Often if I had an underscore in a math equation, markdown would think the text should be italicized, since that’s part of the markdown spec. At the end of this section, I have a test case which would oftentimes not be converted correctly.</p>
+<p>As it turns out, <a href="http://johnmacfarlane.net/pandoc/" title="Pandoc">pandoc</a> is a more robust solution for interpreting markdown with mathjax syntax. However, Octopress is not configured to use pandoc out of the box. The first step is to <a href="http://johnmacfarlane.net/pandoc/installing.html" title="Pandoc - Installing">install the latest version of pandoc</a>. Next, we need to figure out how to use pandoc with Octopress. Thanks to <a href="https://github.com/fauno/jekyll-pandoc-multiple-formats" title="Jekyll pandoc plugin">this jekyll plugin</a>, I was able to get started. Simply place this plugin in your <code>plugins</code> directory. The pdf generation wasn’t working correctly for me, so I simply stripped out that portion of the code. So my <code>pandoc.rb</code> reads</p>
+<pre><code>require &#39;open3&#39;
+module Jekyll
+# Just return html5
+class MarkdownConverter
+def convert(content)
+    flags  = @config[&#39;pandoc&#39;][&#39;flags&#39;]
+    output = &#39;&#39;
+    Open3::popen3(&quot;pandoc -t html5 #{flags}&quot;) do |stdin, stdout, stderr|
+        stdin.puts content
+        stdin.close
+        output = stdout.read.strip
+    end
+    output
+    end
+end
+end</code></pre>
+<p>Then I needed to change my <code>_config.yml</code> as follows:</p>
+<pre><code>markdown: pandoc 
+pandoc:
+    skip: false
+    flags: &#39;--smart --mathjax&#39;</code></pre>
+<p>now using the same rake commands, the markdown files are processed by pandoc. One interesting feature about pandoc, that I may discuss in the future, is that it supports the use of bibliographies using BibTeX.</p>
+<h3 id="test-case">Test case</h3>
+<p>This is a test case of markdown / MathJax weirdness.</p>
+<ul>
+<li>The first error is with square brackets. Sometimes they are processed as Markdown and disappear and MathJax incorrectly processes them.</li>
+</ul>
+<p>Example: \(y = [z &gt; 0]\).</p>
+<ul>
+<li>The second error is with underscores. Markdown interprets these as adding emphasis, and hence they break.</li>
+</ul>
+<p>Example:</p>
+<p>If I have one integral here: \[
+\int_{-\infty}^\infty f(x) \d x,
+\] and a second integral here \[
+\int_{-\infty}^\infty g(t) \d t, 
+\] we may introduce an issue.</p>
+<p>Hopefully everything is displayed as it should!</p>
+<h2 id="offline-editing">Offline editing</h2>
+<p>With an internet connection, I can use the Octopress preview web host to check out how my draft is progressing. However, once an internet connection is unavailable, the MathJax typesetting breaks since it is essentially loading the configuration I’ve deployed to render the content I’m previewing. That is, the localhost server loads the MathJax configuration that’s actually located at <code>http://drz.ac/javascripts/MathJaxLocal.js</code>. So once I don’t have wifi available, it can’t find this page, and my maths break.</p>
+<p>My ideal solution would be to write my posts in a text editor then preview them offline without requiring the overly complex local webserver. While it’s great to see how things look before deploying a post, it can be distracting to deal with when I’m just trying to get my ideas down.</p>
+<p>Enter <a href="http://markedapp.com" title="Marked">Marked</a>, a companion app for previewing Markdown content. Marked looks for changes in your markdown file, upon a change, converts it to HTML, and displays it in a nice preview window. By default, marked uses multimarkdown. Unfortunately, I would encounter similar issues with MathJax equations that I felt that I should just configure Marked to use pandoc instead. This is aided by using a small bash script as a wrapper for pandoc.</p>
+<pre><code>#!/bin/bash
+# Wrapper for using pandoc with Marked
+cat - | pandoc -S -f markdown -t html --mathjax</code></pre>
+<p>Simply use this script (making sure to <code>chmod a+x</code>) as the custom markdown processor in the Marked preferences, and everything should work great. Now to get the equation support, I downloaded the latest version of MathJax and simply keep it in my Dropbox folder (<code>~/Dropbox/MathJax/</code>). Within this MathJax folder, I also keep a copy of my <code>MathJaxLocal.js</code> script, however one needs to change the last line to</p>
+<pre><code>MathJax.Ajax.loadComplete(&quot;file:///users/zac/Dropbox/MathJax/MathJaxLocal.js&quot;);</code></pre>
+<p>with the appropriate changes for your install. Then when I’m writing offline, I simply include my local MathJax install within the markdown file itself.</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;
+src=&quot;file:///users/zac/Dropbox/MathJax/
+MathJax.js?config=TeX-AMS-MML_HTMLorMML,
+file:///users/zac/Dropbox/MathJax/MathJaxLocal.js&quot;&gt;
+&lt;/script&gt;</code></pre>
+<p>So far, works great!</p>
+<h2 id="markup-nirvana">Markup Nirvana?</h2>
+<p>For now I’m going to stick with this solution. The only drawback is that I seem to need to always include the javascript to use my local MathJax configuration. It’s a little inelegant to have to include it every time, but that’s not too much of a headache. On the plus side I now have</p>
+<ol type="1">
+<li><p>My Octopress blog configured to use MathJax,</p></li>
+<li><p>I can seemingly write nearly identically in style to standard LaTeX, and</p></li>
+<li><p>Offline composing is made simple by using Marked.</p></li>
+</ol></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Zachary T. Harmany, PhD</span></span>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-27T13:44:00-06:00" pubdate data-updated="true">Dec 27<span>th</span>, 2012</time>
+
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/blogging/'>blogging</a>, <a class='category' href='/blog/categories/math/'>math</a>, <a class='category' href='/blog/categories/mathjax/'>mathjax</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/pandoc/'>pandoc</a>
+  
+</span>
+
+
+
+      
+
+    </p>
+    
+      <div class="sharing">
+  
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+  
+  
+
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2012/12/27/shipping-out/" title="Previous Post: Shipping Out">&laquo; Shipping Out</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+<section>
+  <h1>Comments</h1>
+  
+
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/12/27/blogging-with-math/">Blogging with Math: Octopress, MathJax, and Pandoc</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/27/shipping-out/">Shipping Out</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">Valid XML Atom Feed on GitHub Pages</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/21/feed-titles-in-octopress-linked-list/">Feed Titles in Octopress Linked Lists</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/21/cute-road/">Cute Road</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets" data-user="zacharmany" data-count="4" data-replies="false">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+    <a href="//twitter.com/zacharmany" class="twitter-follow-button" data-show-count="false">Follow @zacharmany</a>
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Zachary T. Harmany, PhD -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'drzac';
+			var disqus_developer = '0';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://drz.ac/2012/12/27/blogging-with-math/';
+        var disqus_url = 'http://drz.ac/2012/12/27/blogging-with-math/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+</body>
+</html>
