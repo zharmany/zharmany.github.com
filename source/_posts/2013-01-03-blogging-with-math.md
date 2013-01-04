@@ -6,7 +6,6 @@ comments: true
 published: true
 external-url: 
 categories: [blogging, octopress, mathjax, pandoc, math]
-body_id: archive
 ---
 
 I've been trying to achieve mathematical writing nirvana, as [others][bsag] have [tried before][krautz] me. My hope is to eventually use a single system for all my technical writing, be it for the web or print. Being an experienced LaTeX user, I would expect no less in terms of flexibility and typesetting of mathematical expressions. However, making LaTeX play nice on the web can be a challenge. Here's my solution thus far. 
