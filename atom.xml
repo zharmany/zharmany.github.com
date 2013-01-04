@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
+
   <title><![CDATA[DrZ.ac]]></title>
-  <link href="http://drz.ac/feed.atom" rel="self"/>
+  <link href="http://drz.ac/atom.xml" rel="self"/>
   <link href="http://drz.ac/"/>
   <updated>2013-01-03T19:22:13-06:00</updated>
   <id>http://drz.ac/</id>
@@ -12,15 +13,12 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-    <entry>
-      
-<title type="html"><![CDATA[&#x24e9; Blogging with Math: Octopress, MathJax, and Pandoc]]></title>
-<link href="http://drz.acblog/2013/01/03/blogging-with-math/"/>
-<updated>2013-01-03T16:12:00-06:00</updated>
-<id>http://drz.acblog/2013/01/03/blogging-with-math</id>
-<category term="blogging" /><category term="math" /><category term="mathjax" /><category term="octopress" /><category term="pandoc" />
-
-      <content type="html"><![CDATA[<p>I’ve been trying to achieve mathematical writing nirvana, as <a href="http://rousette.org.uk/blog/archives/pandoc-workflow/" title="Pandoc workflow">others</a> have <a href="http://boolesrings.org/krautzberger/2011/08/03/why-markdown-not-latex/" title="Why markdown, not LaTeX?">tried before</a> me. My hope is to eventually use a single system for all my technical writing, be it for the web or print. Being an experienced LaTeX user, I would expect no less in terms of flexibility and typesetting of mathematical expressions. However, making LaTeX play nice on the web can be a challenge. Here’s my solution thus far.</p>
+  <entry>
+    <title type="html"><![CDATA[Blogging with Math: Octopress, MathJax, and Pandoc]]></title>
+    <link href="http://drz.acblog/2013/01/03/blogging-with-math/"/>
+    <updated>2013-01-03T16:12:00-06:00</updated>
+    <id>http://drz.acblog/2013/01/03/blogging-with-math</id>
+    <content type="html"><![CDATA[<p>I’ve been trying to achieve mathematical writing nirvana, as <a href="http://rousette.org.uk/blog/archives/pandoc-workflow/" title="Pandoc workflow">others</a> have <a href="http://boolesrings.org/krautzberger/2011/08/03/why-markdown-not-latex/" title="Why markdown, not LaTeX?">tried before</a> me. My hope is to eventually use a single system for all my technical writing, be it for the web or print. Being an experienced LaTeX user, I would expect no less in terms of flexibility and typesetting of mathematical expressions. However, making LaTeX play nice on the web can be a challenge. Here’s my solution thus far.</p>
 <!-- more -->
 
 <h2 id="configuring-octopress-for-use-with-mathjax">Configuring Octopress for use with MathJax</h2>
@@ -103,35 +101,29 @@ file:///users/zac/Dropbox/MathJax/MathJaxLocal.js&quot;&gt;
 <li><p>I can seemingly write nearly identically in style to standard LaTeX, and</p></li>
 <li><p>Offline composing is made simple by using Marked.</p></li>
 </ol>]]></content>
-    </entry>
+  </entry>
   
-    <entry>
-      
-<title type="html"><![CDATA[Shipping Out&#x2794;]]></title>
-<link href="http://harpers.org/wp-content/uploads/2008/09/HarpersMagazine-1996-01-0007859.pdf"/>
-<updated>2012-12-27T09:16:00-06:00</updated>
-<id>http://drz.acblog/2012/12/27/shipping-out</id>
-<category term="external" /><category term="vacation" /><category term="writing" />
-
-      <content type="html"><![CDATA[<p>Thanks to <a href="https://twitter.com/mdreid/status/282667051535958016" title="Mark Reid @mdreid">Mark Reid’s tweet</a>, I came across this great piece in Harper’s by David Foster Wallace. My favorite section is when he’s describing his cabin; the toilet in his bathroom in particular:</p>
+  <entry>
+    <title type="html"><![CDATA[Shipping Out]]></title>
+    <link href="http://drz.acblog/2012/12/27/shipping-out/"/>
+    <updated>2012-12-27T09:16:00-06:00</updated>
+    <id>http://drz.acblog/2012/12/27/shipping-out</id>
+    <content type="html"><![CDATA[<p>Thanks to <a href="https://twitter.com/mdreid/status/282667051535958016" title="Mark Reid @mdreid">Mark Reid’s tweet</a>, I came across this great piece in Harper’s by David Foster Wallace. My favorite section is when he’s describing his cabin; the toilet in his bathroom in particular:</p>
 <blockquote><p>
 The toilet’s flush produces a brief but traumatizing sound, a kind of held high-B gargle, as of some gastric disturbance on a cosmic scale. Along with this sound comes a suction so awesomely powerful that it’s both scary and strangely comforting: your waste seems less removed than hurled from you, and with a velocity that lets you feel as though the waste is going to end up someplace so far away that it will have become an abstraction, a kind of existential sewage-treatment system.
 </p>
 <footer><strong>David Foster Wallace</strong> <cite>Shipping Out</cite></footer>
 </blockquote>
 
-<p>Harper’s has other <a href="http://harpers.org/blog/2008/09/david-foster-wallace/" title="David Foster Wallace | Harper&#39;s Magazine">articles by David Foster Wallace</a> available online.</p><p><a rel="bookmark" href="http://drz.acblog/2012/12/27/shipping-out/">&#x24e9; permalink</a></p>]]></content>
-    </entry>
+<p>Harper’s has other <a href="http://harpers.org/blog/2008/09/david-foster-wallace/" title="David Foster Wallace | Harper&#39;s Magazine">articles by David Foster Wallace</a> available online.</p>]]></content>
+  </entry>
   
-    <entry>
-      
-<title type="html"><![CDATA[&#x24e9; Valid XML Atom Feed on GitHub Pages]]></title>
-<link href="http://drz.acblog/2012/12/22/valid-xml-atom-feed-on-github-pages/"/>
-<updated>2012-12-22T00:59:00-06:00</updated>
-<id>http://drz.acblog/2012/12/22/valid-xml-atom-feed-on-github-pages</id>
-<category term="atom" /><category term="github" /><category term="octopress" />
-
-      <content type="html"><![CDATA[<p>Attempting to brand my site, I wanted to use <strong>ⓩ</strong> to prepend the title of non-linklog items. This wound up breaking the atom feed in <a href="http://reader.google.com" title="Google Reader">Google Reader</a>, and hence my favorite Google Reader client <a href="http://reederapp.com/" title="Reeder">Reeder</a>. I couldn’t have that.</p>
+  <entry>
+    <title type="html"><![CDATA[Valid XML Atom Feed on GitHub Pages]]></title>
+    <link href="http://drz.acblog/2012/12/22/valid-xml-atom-feed-on-github-pages/"/>
+    <updated>2012-12-22T00:59:00-06:00</updated>
+    <id>http://drz.acblog/2012/12/22/valid-xml-atom-feed-on-github-pages</id>
+    <content type="html"><![CDATA[<p>Attempting to brand my site, I wanted to use <strong>ⓩ</strong> to prepend the title of non-linklog items. This wound up breaking the atom feed in <a href="http://reader.google.com" title="Google Reader">Google Reader</a>, and hence my favorite Google Reader client <a href="http://reederapp.com/" title="Reeder">Reeder</a>. I couldn’t have that.</p>
 <!-- more -->
 
 <p>The strange thing was that Firefox displayed everything correctly, but Google Reader and hence Reeder simply showed <code>&amp;#x24e9;</code> in place of the correct unicode symbol. As it turns out, the feed is encoded as <code>utf-8</code>, however <a href="http://pages.github.com" title="GitHub Pages">GitHub Pages</a> was serving the file as <code>US-ASCII</code>, causing the issue.</p>
@@ -142,17 +134,14 @@ The toilet’s flush produces a brief but traumatizing sound, a kind of held hig
 <li><p>In the <code>source</code> directory, rename <code>atom.xml</code> to <code>feed.atom</code>.</p></li>
 </ol>
 <p>Now I have a <a href="http://feed2.w3.org/check.cgi?url=http%3A//drz.ac/feed.atom" title="Feed Validator Results: http://drz.ac/feed.atom">W3C certified valid feed</a> and everything works splendidly. That is, until I break something new.</p>]]></content>
-    </entry>
+  </entry>
   
-    <entry>
-      
-<title type="html"><![CDATA[&#x24e9; Feed Titles in Octopress Linked Lists]]></title>
-<link href="http://drz.acblog/2012/12/21/feed-titles-in-octopress-linked-list/"/>
-<updated>2012-12-21T22:53:00-06:00</updated>
-<id>http://drz.acblog/2012/12/21/feed-titles-in-octopress-linked-list</id>
-<category term="github" /><category term="octopress" />
-
-      <content type="html"><![CDATA[<p>I’ve been experimenting with <a href="http://octopress.org/docs/blogging/linklog/" title="Linklog Customization">linklog customization</a> using the <code>2.1</code> branch of Octopress. From what I can tell, there’s an error in <code>source/_includes/feed_entry.xml</code>.</p>
+  <entry>
+    <title type="html"><![CDATA[Feed Titles in Octopress Linked Lists]]></title>
+    <link href="http://drz.acblog/2012/12/21/feed-titles-in-octopress-linked-list/"/>
+    <updated>2012-12-21T22:53:00-06:00</updated>
+    <id>http://drz.acblog/2012/12/21/feed-titles-in-octopress-linked-list</id>
+    <content type="html"><![CDATA[<p>I’ve been experimenting with <a href="http://octopress.org/docs/blogging/linklog/" title="Linklog Customization">linklog customization</a> using the <code>2.1</code> branch of Octopress. From what I can tell, there’s an error in <code>source/_includes/feed_entry.xml</code>.</p>
 <!-- more -->
 
 <p>To get the <code>standard_post_marker</code> to function correctly a la <a href="http://daringfireball.net" title="Daring Fireball">Gruber</a>, where it shows up before the title of his post in the RSS feed, I needed to do some digging.</p>
@@ -164,54 +153,42 @@ The toilet’s flush produces a brief but traumatizing sound, a kind of held hig
 {% if linklog and site.linklog_marker_position_feed == &#39;before&#39; %}</code></pre>
 <p>or else the 2nd line in the original can never execute.</p>
 <p>I opened up an issue on the <a href="https://github.com/imathis/octopress/issues/883" title="Issue #883">Octopress GitHub repository</a>. Yay for <a href="http://en.wikipedia.org/wiki/Open-source_software" title="Open source software - Wikipedia">OSS</a>!</p>]]></content>
-    </entry>
+  </entry>
   
-    <entry>
-      
-<title type="html"><![CDATA[Cute Road&#x2794;]]></title>
-<link href="http://goo.gl/maps/lfHd8"/>
-<updated>2012-12-21T20:42:00-06:00</updated>
-<id>http://drz.acblog/2012/12/21/cute-road</id>
-<category term="external" /><category term="google" /><category term="madison" />
-
-      <content type="html"><![CDATA[<p>I found Lois Lane in Madison.</p><p><a rel="bookmark" href="http://drz.acblog/2012/12/21/cute-road/">&#x24e9; permalink</a></p>]]></content>
-    </entry>
+  <entry>
+    <title type="html"><![CDATA[Cute Road]]></title>
+    <link href="http://drz.acblog/2012/12/21/cute-road/"/>
+    <updated>2012-12-21T20:42:00-06:00</updated>
+    <id>http://drz.acblog/2012/12/21/cute-road</id>
+    <content type="html"><![CDATA[<p>I found Lois Lane in Madison.</p>]]></content>
+  </entry>
   
-    <entry>
-      
-<title type="html"><![CDATA[&#x24e9; Octopress Linked Lists]]></title>
-<link href="http://drz.acblog/2012/12/21/octopress-linked-lists/"/>
-<updated>2012-12-21T17:34:00-06:00</updated>
-<id>http://drz.acblog/2012/12/21/octopress-linked-lists</id>
-<category term="bogging" /><category term="octopress" />
-
-      <content type="html"><![CDATA[<p>The <a href="blog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">previous post</a> was an example of a Linked List / Linklog post. The characteristics being that the post title links to an external page, and the formatting is slightly different.</p>
+  <entry>
+    <title type="html"><![CDATA[Octopress Linked Lists]]></title>
+    <link href="http://drz.acblog/2012/12/21/octopress-linked-lists/"/>
+    <updated>2012-12-21T17:34:00-06:00</updated>
+    <id>http://drz.acblog/2012/12/21/octopress-linked-lists</id>
+    <content type="html"><![CDATA[<p>The <a href="blog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">previous post</a> was an example of a Linked List / Linklog post. The characteristics being that the post title links to an external page, and the formatting is slightly different.</p>
 <!-- more -->
 
 <p>It took me a little while to get this feature working in Octopress, as <a href="https://gist.github.com/1812265" title="How to test Octopress&#39; linklog feature">this post on GitHub</a> seems a bit outdated. Thanks to <a href="http://www.nealsheeran.com" title="Neal Sheeran">Neal Sheeran</a> for <a href="http://www.nealsheeran.com/archives/2012/09/linked-list-posts-mt-to-octopress/" title="Linked List Posts: From Movable Type to Octopress">his post</a> suggesting to use the <code>2.1</code> branch instead of the <code>linklog-test</code> branch. After pulling that branch and merging conflicts I was able to get things working properly.</p>
 <p>A last note, there are some <a href="http://octopress.org/docs/blogging/linklog/" title="Writing a Linklog - Octopress">configuration options</a> for changing the style of the linked list posts. At some point I’ll have to decide on what side of the Gruber/Armet line I fall. For now I’ll stick with the defaults.</p>]]></content>
-    </entry>
+  </entry>
   
-    <entry>
-      
-<title type="html"><![CDATA[Multi-column and multi-row cells in LaTeX tables&#x2794;]]></title>
-<link href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/"/>
-<updated>2012-12-21T14:32:00-06:00</updated>
-<id>http://drz.acblog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables</id>
-<category term="external" /><category term="latex" />
-
-      <content type="html"><![CDATA[<p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, although infrequently enough that I usually need to look up the syntax. This reference should fix that.</p><p><a rel="bookmark" href="http://drz.acblog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">&#x24e9; permalink</a></p>]]></content>
-    </entry>
+  <entry>
+    <title type="html"><![CDATA[Multi-column and multi-row cells in LaTeX tables]]></title>
+    <link href="http://drz.acblog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/"/>
+    <updated>2012-12-21T14:32:00-06:00</updated>
+    <id>http://drz.acblog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables</id>
+    <content type="html"><![CDATA[<p>You can make great looking tables in LaTeX by going the extra mile with the formatting. I often use these environments to do so, although infrequently enough that I usually need to look up the syntax. This reference should fix that.</p>]]></content>
+  </entry>
   
-    <entry>
-      
-<title type="html"><![CDATA[&#x24e9; Blogging with Octopress, Part 2]]></title>
-<link href="http://drz.acblog/2012/12/20/blogging-with-octopress-part-2/"/>
-<updated>2012-12-20T23:29:00-06:00</updated>
-<id>http://drz.acblog/2012/12/20/blogging-with-octopress-part-2</id>
-<category term="blogging" /><category term="octopress" />
-
-      <content type="html"><![CDATA[<p><a href="blog/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress.</p>
+  <entry>
+    <title type="html"><![CDATA[Blogging with Octopress, Part 2]]></title>
+    <link href="http://drz.acblog/2012/12/20/blogging-with-octopress-part-2/"/>
+    <updated>2012-12-20T23:29:00-06:00</updated>
+    <id>http://drz.acblog/2012/12/20/blogging-with-octopress-part-2</id>
+    <content type="html"><![CDATA[<p><a href="blog/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress.</p>
 <!-- more -->
 
 <h2 id="rakefile">Rakefile</h2>
@@ -272,17 +249,14 @@ Don’t Panic.
 <pre><code>[Last time][BloggingWithOctopress]
 
 [BloggingWithOctopress]: blog/2012/12/19/blogging-with-octopress/ &quot;Blogging With Octopress&quot;</code></pre>]]></content>
-    </entry>
+  </entry>
   
-    <entry>
-      
-<title type="html"><![CDATA[&#x24e9; Blogging with Octopress]]></title>
-<link href="http://drz.acblog/2012/12/19/blogging-with-octopress/"/>
-<updated>2012-12-19T13:01:00-06:00</updated>
-<id>http://drz.acblog/2012/12/19/blogging-with-octopress</id>
-<category term="blogging" /><category term="github" /><category term="octopress" />
-
-      <content type="html"><![CDATA[<p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of <q>A blogging framework for hackers</q> it immediately appealed to me.</p>
+  <entry>
+    <title type="html"><![CDATA[Blogging with Octopress]]></title>
+    <link href="http://drz.acblog/2012/12/19/blogging-with-octopress/"/>
+    <updated>2012-12-19T13:01:00-06:00</updated>
+    <id>http://drz.acblog/2012/12/19/blogging-with-octopress</id>
+    <content type="html"><![CDATA[<p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of <q>A blogging framework for hackers</q> it immediately appealed to me.</p>
 <!-- more -->
 
 <p>Admittedly, I’m still qutie a neophyte when it comes to assemlbing websites, but I think this is a good list of some of the benefits of Octopress:</p>
@@ -312,6 +286,6 @@ rake deploy</code></pre>
 <p>Neat.</p>
 <h2 id="update-for-tld-forwarding">Update: For TLD Forwarding</h2>
 <p>If you want to use a TLD instead of your default GitHub Pages URL, simply <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages">follow these instructions</a>.</p>]]></content>
-    </entry>
+  </entry>
   
 </feed>
