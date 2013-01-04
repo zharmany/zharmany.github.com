@@ -1,59 +1,67 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://drz.ac/2012/12/19/blogging-with-octopress/</loc>
-        <lastmod>2012-12-21T18:25:28-06:00</lastmod>
+        <loc>http://drz.acblog/2012/12/19/blogging-with-octopress/</loc>
+        <lastmod>2013-01-03T17:24:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/2012/12/20/blogging-with-octopress-part-2/</loc>
-        <lastmod>2012-12-22T01:39:27-06:00</lastmod>
+        <loc>http://drz.acblog/2012/12/20/blogging-with-octopress-part-2/</loc>
+        <lastmod>2013-01-03T17:24:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/</loc>
-        <lastmod>2012-12-21T18:25:07-06:00</lastmod>
+        <loc>http://drz.acblog/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/</loc>
+        <lastmod>2013-01-03T17:24:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/2012/12/21/octopress-linked-lists/</loc>
-        <lastmod>2012-12-21T18:24:50-06:00</lastmod>
+        <loc>http://drz.acblog/2012/12/21/octopress-linked-lists/</loc>
+        <lastmod>2013-01-03T17:24:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/2012/12/21/cute-road/</loc>
-        <lastmod>2012-12-21T20:43:23-06:00</lastmod>
+        <loc>http://drz.acblog/2012/12/21/cute-road/</loc>
+        <lastmod>2013-01-03T17:24:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/2012/12/21/feed-titles-in-octopress-linked-list/</loc>
-        <lastmod>2012-12-21T23:09:49-06:00</lastmod>
+        <loc>http://drz.acblog/2012/12/21/feed-titles-in-octopress-linked-list/</loc>
+        <lastmod>2013-01-03T17:24:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/2012/12/22/valid-xml-atom-feed-on-github-pages/</loc>
-        <lastmod>2012-12-22T15:44:20-06:00</lastmod>
+        <loc>http://drz.acblog/2012/12/22/valid-xml-atom-feed-on-github-pages/</loc>
+        <lastmod>2013-01-03T17:24:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/2012/12/27/shipping-out/</loc>
-        <lastmod>2012-12-27T09:37:57-06:00</lastmod>
+        <loc>http://drz.acblog/2012/12/27/shipping-out/</loc>
+        <lastmod>2013-01-03T17:24:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/2012/12/27/blogging-with-math/</loc>
-        <lastmod>2013-01-03T15:41:01-06:00</lastmod>
+        <loc>http://drz.acblog/2013/01/03/blogging-with-math/</loc>
+        <lastmod>2013-01-03T18:07:26-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/archives/</loc>
-        <lastmod>2013-01-03T15:41:01-06:00</lastmod>
+        <lastmod>2013-01-03T18:07:26-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/blog/archives/</loc>
-        <lastmod>2013-01-03T15:41:01-06:00</lastmod>
+        <loc>http://drz.ac/blog/</loc>
+        <lastmod>2013-01-03T18:07:26-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/code/</loc>
-        <lastmod>2013-01-03T12:37:53-06:00</lastmod>
+        <lastmod>2013-01-03T18:08:45-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/code/spiraltap/</loc>
-        <lastmod>2013-01-03T14:42:56-06:00</lastmod>
+        <lastmod>2013-01-03T18:09:55-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://drz.ac/index.html.bak</loc>
+        <lastmod>2013-01-03T16:39:18-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://drz.ac/index.html.old</loc>
+        <lastmod>2013-01-03T17:03:28-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/</loc>
-        <lastmod>2013-01-03T15:41:01-06:00</lastmod>
+        <lastmod>2013-01-03T17:59:59-06:00</lastmod>
     </url>
 </urlset>
