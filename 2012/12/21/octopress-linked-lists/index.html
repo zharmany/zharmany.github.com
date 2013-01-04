@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Feed Titles in Octopress Linked Lists - DrZ.ac</title>
+  <title>Octopress Linked Lists - DrZ.ac</title>
   <meta name="author" content="Zachary T. Harmany, PhD">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://drz.acblog/2012/12/21/feed-titles-in-octopress-linked-list/">
+  <link rel="canonical" href="http://drz.ac/2012/12/21/octopress-linked-lists/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/feed.atom" rel="alternate" title="DrZ.ac" type="application/atom+xml">
@@ -96,7 +96,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   <header>
     <h1 class="entry-title">
 
-&#x24e9; Feed Titles in Octopress Linked Lists
+&#x24e9; Octopress Linked Lists
 
 </h1>
 
@@ -114,24 +114,17 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   
 
 
-<time datetime="2012-12-21T22:53:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
-         &bull; <a rel="bookmark" href="blog/2012/12/21/feed-titles-in-octopress-linked-list/">&#x24e9; permalink</a>
+<time datetime="2012-12-21T17:34:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/12/21/octopress-linked-lists/">&#x24e9; permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>I’ve been experimenting with <a href="http://octopress.org/docs/blogging/linklog/" title="Linklog Customization">linklog customization</a> using the <code>2.1</code> branch of Octopress. From what I can tell, there’s an error in <code>source/_includes/feed_entry.xml</code>.</p>
+<div class="entry-content"><p>The <a href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">previous post</a> was an example of a Linked List / Linklog post. The characteristics being that the post title links to an external page, and the formatting is slightly different.</p>
 <!-- more -->
 
-<p>To get the <code>standard_post_marker</code> to function correctly a la <a href="http://daringfireball.net" title="Daring Fireball">Gruber</a>, where it shows up before the title of his post in the RSS feed, I needed to do some digging.</p>
-<p>To fix, I think all that you need to do is switch</p>
-<pre><code>{% if linklog and site.linklog_marker_position_feed == &#39;before&#39; %}
-{% unless linklog %}{{ site.standard_post_marker_feed }}{% endunless %}</code></pre>
-<p>to</p>
-<pre><code>{% unless linklog %}{{ site.standard_post_marker}}{% endunless %}
-{% if linklog and site.linklog_marker_position_feed == &#39;before&#39; %}</code></pre>
-<p>or else the 2nd line in the original can never execute.</p>
-<p>I opened up an issue on the <a href="https://github.com/imathis/octopress/issues/883" title="Issue #883">Octopress GitHub repository</a>. Yay for <a href="http://en.wikipedia.org/wiki/Open-source_software" title="Open source software - Wikipedia">OSS</a>!</p></div>
+<p>It took me a little while to get this feature working in Octopress, as <a href="https://gist.github.com/1812265" title="How to test Octopress&#39; linklog feature">this post on GitHub</a> seems a bit outdated. Thanks to <a href="http://www.nealsheeran.com" title="Neal Sheeran">Neal Sheeran</a> for <a href="http://www.nealsheeran.com/archives/2012/09/linked-list-posts-mt-to-octopress/" title="Linked List Posts: From Movable Type to Octopress">his post</a> suggesting to use the <code>2.1</code> branch instead of the <code>linklog-test</code> branch. After pulling that branch and merging conflicts I was able to get things working properly.</p>
+<p>A last note, there are some <a href="http://octopress.org/docs/blogging/linklog/" title="Writing a Linklog - Octopress">configuration options</a> for changing the style of the linked list posts. At some point I’ll have to decide on what side of the Gruber/Armet line I fall. For now I’ll stick with the defaults.</p></div>
 
 
   <footer>
@@ -153,12 +146,12 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   
 
 
-<time datetime="2012-12-21T22:53:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
+<time datetime="2012-12-21T17:34:00-06:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+    <a class='category' href='/blog/categories/bogging/'>bogging</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
   
 </span>
 
@@ -183,10 +176,10 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="blog/2012/12/21/cute-road/" title="Previous Post: Cute Road">&laquo; Cute Road</a>
+        <a class="basic-alignment left" href="/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/" title="Previous Post: Multi-column and multi-row cells in LaTeX tables">&laquo; Multi-column and multi-row cells in LaTeX tables</a>
       
       
-        <a class="basic-alignment right" href="blog/2012/12/22/valid-xml-atom-feed-on-github-pages/" title="Next Post: Valid XML Atom Feed on GitHub Pages">Valid XML Atom Feed on GitHub Pages &raquo;</a>
+        <a class="basic-alignment right" href="/2012/12/21/cute-road/" title="Next Post: Cute Road">Cute Road &raquo;</a>
       
     </p>
   </footer>
@@ -211,23 +204,23 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="blog/2013/01/03/blogging-with-math/">Blogging with Math: Octopress, MathJax, and Pandoc</a>
+        <a href="/2013/01/03/blogging-with-math/">Blogging with Math: Octopress, MathJax, and Pandoc</a>
       </li>
     
       <li class="post">
-        <a href="blog/2012/12/27/shipping-out/">Shipping Out</a>
+        <a href="/2012/12/27/shipping-out/">Shipping Out</a>
       </li>
     
       <li class="post">
-        <a href="blog/2012/12/22/valid-xml-atom-feed-on-github-pages/">Valid XML Atom Feed on GitHub Pages</a>
+        <a href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">Valid XML Atom Feed on GitHub Pages</a>
       </li>
     
       <li class="post">
-        <a href="blog/2012/12/21/feed-titles-in-octopress-linked-list/">Feed Titles in Octopress Linked Lists</a>
+        <a href="/2012/12/21/feed-titles-in-octopress-linked-list/">Feed Titles in Octopress Linked Lists</a>
       </li>
     
       <li class="post">
-        <a href="blog/2012/12/21/cute-road/">Cute Road</a>
+        <a href="/2012/12/21/cute-road/">Cute Road</a>
       </li>
     
   </ul>
@@ -273,8 +266,8 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://drz.acblog/2012/12/21/feed-titles-in-octopress-linked-list/';
-        var disqus_url = 'http://drz.acblog/2012/12/21/feed-titles-in-octopress-linked-list/';
+        var disqus_identifier = 'http://drz.ac/2012/12/21/octopress-linked-lists/';
+        var disqus_url = 'http://drz.ac/2012/12/21/octopress-linked-lists/';
         var disqus_script = 'embed.js';
       
     (function () {
