@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Valid XML Atom Feed on GitHub Pages - DrZ.ac</title>
+  <title>Category: robots - DrZ.ac</title>
   <meta name="author" content="Zachary T. Harmany, PhD">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://drz.ac/2012/12/22/valid-xml-atom-feed-on-github-pages/">
+  <link rel="canonical" href="http://drz.acblog/categories/robots/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/feed.atom" rel="alternate" title="DrZ.ac" type="application/atom+xml">
@@ -49,7 +49,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   <link href="/octopress-favicon.png" rel="icon">
 </head>
 
-<body   >
+<body  id="archive"   >
   <header role="banner"><hgroup>
   <h1><a href="/">DrZ.ac</a></h1>
   
@@ -80,70 +80,19 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   <div id="main">
     <div id="content">
       <div>
-
-
-
-
-
-
-
-
-
-
-
-<article class="hentry " role="article">
+<article role="article">
   
   <header>
-    <h1 class="entry-title">
-
-&#x24e9; Valid XML Atom Feed on GitHub Pages
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-22T00:59:00-06:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">&#x24e9; permalink</a>
-      </p>
+    <h1 class="entry-title">Category: Robots</h1>
     
   </header>
-
-<div class="entry-content"><p>Attempting to brand my site, I wanted to use <strong>ⓩ</strong> to prepend the title of non-linklog items. This wound up breaking the atom feed in <a href="http://reader.google.com" title="Google Reader">Google Reader</a>, and hence my favorite Google Reader client <a href="http://reederapp.com/" title="Reeder">Reeder</a>. I couldn’t have that.</p>
-<!-- more -->
-
-<p>The strange thing was that Firefox displayed everything correctly, but Google Reader and hence Reeder simply showed <code>&amp;#x24e9;</code> in place of the correct unicode symbol. As it turns out, the feed is encoded as <code>utf-8</code>, however <a href="http://pages.github.com" title="GitHub Pages">GitHub Pages</a> was serving the file as <code>US-ASCII</code>, causing the issue.</p>
-<p>Thanks to <a href="http://taylor.fausak.me/" title="Taylor Fausak">Taylor Fausak</a>’s <a href="http://taylor.fausak.me/2012/04/26/serving-atom-feeds-with-github-pages/" title="Serving Atom Feeds with GitHub Pages">post on serving atom feeds at GitHub</a>, I was able to come up with a solution. Simply using the extension <code>.atom</code> will make GitHub serve the correct headers. Rather than use the redundant <code>atom.atom</code>, I elected to shoot for <code>feed.atom</code>. To do this in <a href="http://octopress.org/" title="Octopress">Octopress</a> was fairly straightforward.</p>
-<ol type="1">
-<li><p>In <code>_config.yml</code>, I changed <code>subscribe_rss: /atom.xml</code> to <code>subscribe_rss: /feed.atom</code>. I thought this would be enough. I was wrong.</p></li>
-<li><p>In the <code>Rakefile</code>, <code>plugins/category_generator.rb</code>, and <code>sitemap_generator.rb</code>, search and replace <code>atom.xml</code> with <code>feed.atom</code>. (Strange these guys are hard coded).</p></li>
-<li><p>In the <code>source</code> directory, rename <code>atom.xml</code> to <code>feed.atom</code>.</p></li>
-</ol>
-<p>Now I have a <a href="http://feed2.w3.org/check.cgi?url=http%3A//drz.ac/feed.atom" title="Feed Validator Results: http://drz.ac/feed.atom">W3C certified valid feed</a> and everything works splendidly. That is, until I break something new.</p></div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Zachary T. Harmany, PhD</span></span>
-
+  <div id="blog-archives" class="category">
 
 
 
-
+  
+  <h2>2013</h2>
 
 
 
@@ -152,54 +101,39 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   
 
 
-<time datetime="2012-12-22T00:59:00-06:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
 
 
-<span class="categories">
+
+
+
+
+<article class='linklog'>
   
-    <a class='category' href='/blog/categories/atom/'>atom</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+<h1 class="entry-title">
+
+<a href="http://www.theverge.com/2013/1/4/3836944/robot-band-compressorhead-plays-motorhead-ace-of-spades">Compressorhead</a>
+<span class='linklog-marker'>&#x2794;</span>
+</h1>
+
+<time datetime="2013-01-05T20:03:00-06:00" pubdate><span class='month'>Jan</span> <span class='day'>05</span> <span class='year'>2013</span></time>
+<footer>
   
-</span>
-
-
-
-      
-
-    </p>
-    
-      <div class="sharing">
-  
-    
-      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
-    
+  <a rel="bookmark" href="/2013/01/05/compressorhead/">&#x24e9; permalink</a>
   
   
+   &bull; 
+  <span class="categories">posted in <a class='category' href='/blog/categories/external/'>external</a>, <a class='category' href='/blog/categories/metal/'>metal</a>, <a class='category' href='/blog/categories/robots/'>robots</a></span>
   
-  
+</footer>
 
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/2012/12/21/feed-titles-in-octopress-linked-list/" title="Previous Post: Feed Titles in Octopress Linked Lists">&laquo; Feed Titles in Octopress Linked Lists</a>
-      
-      
-        <a class="basic-alignment right" href="/2012/12/27/shipping-out/" title="Next Post: Shipping Out">Shipping Out &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
-<section>
-  <h1>Comments</h1>
-  
+</div>
 
   
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-  
-</section>
+</article>
+
+
 
 </div>
 
@@ -271,10 +205,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 			var disqus_developer = '0';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://drz.ac/2012/12/22/valid-xml-atom-feed-on-github-pages/';
-        var disqus_url = 'http://drz.ac/2012/12/22/valid-xml-atom-feed-on-github-pages/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
