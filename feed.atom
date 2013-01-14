@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/feed.atom" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2013-01-05T20:20:49-06:00</updated>
+  <updated>2013-01-14T10:56:27-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -11,6 +11,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+<title type="html"><![CDATA[&#x24e9; Dropbox Humor]]></title>
+<link href="http://drz.ac/2013/01/14/dropbox-humor/"/>
+<updated>2013-01-14T10:51:00-06:00</updated>
+<id>http://drz.ac/2013/01/14/dropbox-humor</id>
+<category term="dropbox" /><category term="humor" />
+
+      <content type="html"><![CDATA[<p>I love that Dropbox has a sense of humor.</p>
+<figure>
+<img src="http://drz.ac/blog/images/DropboxHumor.png" alt="Grab a Snickers"><figcaption>Grab a Snickers</figcaption>
+</figure>]]></content>
+    </entry>
   
     <entry>
       
