@@ -4,7 +4,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/atom.xml" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2013-01-14T13:11:48-06:00</updated>
+  <updated>2013-01-14T17:33:58-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -21,7 +21,9 @@
     <content type="html"><![CDATA[<p>I love that Dropbox has a sense of humor.</p>
 <figure>
 <img src="http://drz.ac/blog/images/DropboxHumor.png" alt="Grab a Snickers"><figcaption>Grab a Snickers</figcaption>
-</figure>]]></content>
+</figure>
+<p>This should appear as text.</p>
+<p>\(\text{This should appear as text}\)</p>]]></content>
   </entry>
   
   <entry>

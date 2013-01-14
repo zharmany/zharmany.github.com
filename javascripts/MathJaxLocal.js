@@ -137,6 +137,6 @@ MathJax.Hub.Config({
 					'\\end{aligned}', 4]
 	      }
 		},
-	"HTML-CSS": { availableFonts: ["TeX"] }
+	"HTML-CSS": { availableFonts: ["PT Sans"] }
 	});
 	MathJax.Ajax.loadComplete("http://drz.ac/javascripts/MathJaxLocal.js");
