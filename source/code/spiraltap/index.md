@@ -10,7 +10,7 @@ body_id: archive
 
 [Download SPIRALTAP][SPIRALTAPDownload]
 
-## Overview ##
+# Overview #
 
 The Sparse Poisson Intensity Reconstruction ALgorithms (SPIRAL) toolbox, ``SPIRALTAP``, is MATLAB code for recovering sparse signals from Poisson observations. SPIRAL minimizes a regularized negative log-likelihood objective function with various penalty choices for the regularization terms:
 
@@ -31,7 +31,7 @@ switching the variable ``demo`` in ``SPIRALdemo.m`` to ``1``, ``2``, or ``3`` se
 
 **Note**: Some of these demonstrations utilize the [Rice Wavelet Toolbox][RWT] (freely available online) to compute the discrete wavelet transform. We include this toolbox here (although it may need to be recompiled on your platform). We also use the [FISTA][FISTA] algorithm (in the ``denoise`` directory) of Beck and Teboulle for constrained total variation denoising.
 
-## Demonstration 1 ##
+# Demonstration 1 #
 
 Description: One dimensional compressed sensing example penalizing the sparsity ($\ell_1$ norm) of the coefficients in the canonical basis. Here the true signal $f$ is of length 100,000 with 1,500 nonzero entries yielding a sparsity of 1.5%. We take 40,000 compressive measurements in $y$. The average number of photons per measurement is 15.03, with a maximum of 145. We run SPIRAL until the relative change in the iterates falls below a tolerance of 1e-8, up to a maximum of 100 iterations (however only 37 iterations are required to satisfy the stopping criterion). 
 
@@ -54,7 +54,7 @@ Output: This demonstration automatically displays Figures 1 through 4.
 \
 
 
-## Demonstration 2 ##
+# Demonstration 2 #
 
 Description: Here we consider an image deblurring example. The true signal is a 128 $\times$ 128 Shepp-Logan phantom image with mean intensity 1.22e5. The true detector mean intensity is 45.8, and the observed photon count mean is 45.8 with a maximum of 398. Here we consider four penalization methods:
 
@@ -103,7 +103,7 @@ Figure 8: Final reconstructions.
 
 Figure 9: Magnitude of the error between the final reconstruction and the true phantom image. Note the color scale indicates percentage difference over all reconstructions.
 
-## Demonstration 3 ##
+# Demonstration 3 #
 
 Description: This demonstration is similar to Demonstration 2, but uses the 256 $\times$ 256 ``cameraman`` image instead of the Shepp-Logan phantom. The true signal has a mean intensity of 1.19e5, the true detector mean intensity is 44.4, and the observed photon count mean is 44.4 with a maximum of 111. Due to the larger problem size, we need to alter the termination criteria. We run all the SPIRAL methods for a minimum of 50 iterations until the relative change in the iterates falls below a tolerance of 1e-8, up to a maximum of 300 iterations. 
 
