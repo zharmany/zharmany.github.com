@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>DrZ.ac</title>
+  <meta name="author" content="Zachary T. Harmany, PhD">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://drz.ac/page/2/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+  <link href="/feed.atom" rel="alternate" title="DrZ.ac" type="application/atom+xml">
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" type="text/css">
+<!-- Old Google Web Fonts
+<link href="http://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+-->
+<!--- MathJax Configuration -->
+<script type="text/javascript"
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://drz.ac/javascripts/MathJaxLocal.js">
+</script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37209945-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+
+   
+  <link href="/favicon.ico" rel="icon">
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">DrZ.ac</a></h1>
+  
+    <h2>misplaced, punctuation</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/feed.atom" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:drz.ac" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/code">Code</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="">Liquid error: undefined method `titlecase&#8217; for nil:NilClass</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-20T23:29:00-06:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="">permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p><a href="/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress.</p>
+<!-- more -->
+
+<h2 id="rakefile">Rakefile</h2>
+<p>Rakefiles are the Ruby equivalent of Makefiles. As detailed on <a href="http://octopress.org/docs/blogging/" title="Blogging Basics - Octopress">the Octopress site</a>, the Rakefile that ships with Octopress has a number of useful scripts (rake tasks) for generating new posts and deploying your site.</p>
+<h3 id="new-posts">New Posts</h3>
+<p>Generating a new post is as simple as</p>
+<pre><code>rake new_post[&quot;title&quot;]</code></pre>
+<p>which creates a new Markdown file in your <code>source/_posts</code> directory with filename given by the title, prepended by the date. This will already contain useful metadata that Octopress uses (see the YAML front matter section below). Simply edit this Markdown file to fill your post with content.</p>
+<h3 id="new-pages">New Pages</h3>
+<p>I haven’t added any new pages quite yet, but there is a rake task for creating new pages easily:</p>
+<pre><code>rake new_page[filename]</code></pre>
+<p>This will create the file <code>source/filename/index.markdown</code> that will ultimately be served as <code>filename/index.html</code> on your website.</p>
+<h3 id="preview-generate-and-deploy">Preview, Generate, and Deploy</h3>
+<p>To use a local webserver to serve all your posts (including ones with the <code>published: false</code> flag), simply run</p>
+<pre><code>rake preview</code></pre>
+<p>and point your browser to <code>http://localhost:4000</code>. One trick that made using this server a bit easier is to use <a href="http://fluidapp.com" title="Fluid">Fluid</a> to create an <q>Octopress Preview</q> app. Note that to get MathJax (the subject of a future post) working correctly, I needed to change the User Agent to Safari, otherwise it didn’t seem that it handled JavaScript correctly.</p>
+<p>If you’re satisifed with your site, you can generate the html files and deploy it to GitHub Pages by running</p>
+<pre><code>rake generate
+rake deploy</code></pre>
+<p>Very slick.</p>
+<h3 id="dont-forget-to-commit-and-push-your-source">Don’t forget to commit and push your source!</h3>
+<p>Lastly, the beauty of having your site as the <code>master</code> branch, and everything else as the <code>source</code> branch is that you can modify your website and use version control without having to publish all your changes. Once you’ve made a new post or page, or some other tweaks to your page source, simply run</p>
+<pre><code>git add .
+git commit -m &#39;your message&#39;
+git push origin source</code></pre>
+<p>and your progress will be saved on GitHub.</p>
+<h3 id="yaml-front-matter">YAML front matter</h3>
+<p>The special <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter" title="YAML Front Matter">YAML Ain’t Markup Language front matter</a> tells Octopress how to process your Markdown files. The <code>new_post</code> script generates this for you. By default the <code>published:</code> line is omitted. Including <code>published: false</code> will prevent the post from being deployed, but will show when you preview your site locally with <code>rake preview</code>. This is useful if you like to preview your post in a browser before deploying.</p>
+<h3 id="below-the-fold">Below the fold</h3>
+<p>If you want to restrict the amount of a post that is shown in your blog index, simply insert the</p>
+<pre><code>&lt;!-- more --&gt;</code></pre>
+<p>tag into your post. The remainder of the post will not be shown in the blog index.</p>
+<h2 id="plugins">Plugins</h2>
+<p>The <code>plugins</code> directory contains some usful scripts. Here I’ll show a few examples.</p>
+<h3 id="blockquotes">Blockquotes</h3>
+<p>Standard Markdown blockquotes, coded as</p>
+<pre><code>&gt; Don&#39;t Panic.   
+&gt; **Douglas Adams** - The Hitchhiker&#39;s Guide to the Galaxy</code></pre>
+<p>appears as</p>
+<blockquote>
+<p>Don’t Panic.<br><strong>Douglas Adams</strong> - The Hitchhiker’s Guide to the Galaxy</p>
+</blockquote>
+<p>which is perfectly fine. However, using the <code>blockquote</code> script, they appear a bit more fancy:</p>
+<blockquote><p>
+Don’t Panic.
+</p>
+<footer><strong>Douglas Adams</strong> <cite>The Hitchhiker’s Guide to the Galaxy</cite></footer>
+</blockquote>
+
+<p>This was created using</p>
+<pre><code>&lt;blockquote&gt;&lt;p&gt;Don&#39;t Panic.&lt;/p&gt;&lt;footer&gt;&lt;strong&gt;Douglas Adams&lt;/strong&gt; &lt;cite&gt;The Hitchhiker&#39;s Guide to the Galaxy&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;</code></pre>
+<p>This environment is especially nice for linking to quotes in articles. <a href="http://octopress.org/docs/plugins/blockquote" title="Blockquote - Octopress">See the documentation</a> for usage details.</p>
+<h3 id="internal-post-linking">Internal post linking</h3>
+<p>Thanks to <a href="http://kqueue.org" title="Xi Wang">Xi Wang</a>’s post about <a href="http://kqueue.org/blog/2012/01/05/hello-world/#internal-post-linking" title="Internal Post Linking">internal post linking</a>, I was able to use his linked <code>post_url</code> script to more easily make internal links to posts in this blog. Simply download <a href="https://raw.github.com/michael-groble/jekyll/fix_post_url/lib/jekyll/tags/post_url.rb" title="post_url Script">post_url.rb</a> and place it into your <code>plugins</code> directory.</p>
+<p>I used this code at the beginning of the post to generate the URL:</p>
+<pre><code>/2012/12/19/blogging-with-octopress/</code></pre>
+<p>Here <code>2012-12-19-blogging-with-octopress</code> is the name of the Markdown file (sans extension, of course) that I used to generate the previous post. Full disclosure, I used the Markdown syntax:</p>
+<pre><code>[Last time][BloggingWithOctopress]
+
+[BloggingWithOctopress]: /2012/12/19/blogging-with-octopress/ &quot;Blogging With Octopress&quot;</code></pre></div>
+
+  <footer>
+    
+    
+    <p><a rel="full-article" href="">Read on &rarr;</a></p>
+    
+  </footer>
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="">Liquid error: undefined method `titlecase&#8217; for nil:NilClass</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-19T13:01:00-06:00" pubdate data-updated="true">Dec 19<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="">permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>This website is powered by <a href="http://octopress.org/" title="Octopress">Octopress</a>. With a tag line of <q>A blogging framework for hackers</q> it immediately appealed to me.</p>
+<!-- more -->
+
+<p>Admittedly, I’m still qutie a neophyte when it comes to assemlbing websites, but I think this is a good list of some of the benefits of Octopress:</p>
+<ul>
+<li><p>Static site deployment.</p>
+<p>This is great because it reduces strain on your server, it just needs to serve up static websites, maybe with some plugins for displaying twitter information, but much less heavy than a Wordpress style site where blog posts are stored in a database and the html is generated dynamically.</p></li>
+<li><p>Blog posts are stored as text files.</p>
+<p>Maybe, at some unspecified date in the future, I want to migrate my entire website to a different blogging platform. This is easy to do if all the content is simply contained in ASCII text files. Further, any markup is facilitated by using <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>. This makes my content extremely portable and future-proof.</p></li>
+<li><p>Easy to work with <a href="http://pages.github.com" title="GitHub Pages">GitHub Pages</a>.</p>
+<p>I just discovered this recently, but GitHub essentially lets you host a website that is simply a special repository. In my case, I have a github repo named <a href="https://github.com/zharmany/zharmany.github.com" title="zharmany.github.com Repository">zharmany.github.com</a>. GitHub provides you the subdomain corresponding to your repo name, so my site can be accessed at <a href="http://zharmany.github.com" title="zharmany.github.com">zharmany.github.com</a>. Publishing changes to the site simply entails pushing the my changes to github via git.</p></li>
+</ul>
+<p>The remainder of this post details how to get started using Octopress with GitHub Pages.</p>
+<h2 id="setting-up-github-pages">Setting up GitHub Pages</h2>
+<p>This was fairly straightforward. I simply created a repository named <code>harmany.github.com</code>. Since I’m a bit new to using GitHub, I used the web interface. If want to quickly fill your site with a template just to make sure things are working, GitHub provides <a href="https://help.github.com/articles/creating-pages-with-the-automatic-generator" title="GitHub Pages Generator">an automatic page generator</a>. You can alsays</p>
+<h2 id="setting-up-octopress">Setting up Octopress</h2>
+<p>The first task is to ensure that you have git and Ruby installed. I had a little trouble getting Ruby configured. I was following the <a href="http://octopress.org/docs/setup/rbenv/" title="Ruby Setup">Ruby setup instructions</a> on the Octopress site, but had some difficulty installing <code>1.9.3-p0</code>. So I double checked the latest version number <a href="http://www.ruby-lang.org/en/downloads/" title="Ruby Downloads">on the Ruby site</a>, for example the version I installed was <code>1.9.3-p327</code>. As a result, I needed to also run</p>
+<pre><code>rbenv global 1.9.3-p327</code></pre>
+<p>for Ruby to be installed correctly.</p>
+<p>Then I followed the rest of the <a href="http://octopress.org/docs/setup/" title="Octopress Setup">Octopress install instructions</a>, with the slight modification to the <code>.rbenv-version</code> file to work with version <code>1.9.3-p327</code> that I had installed.</p>
+<h2 id="configuring-and-deploying-to-github-pages">Configuring and Deploying to GitHub Pages</h2>
+<p>Next, I followed the instructions on <a href="http://octopress.org/docs/configuring/" title="Configuring Octopress">configuring Octopress</a>, and <a href="http://octopress.org/docs/deploying/github/" title="Deploying to GitHub Pages">deploying to GitHub Pages</a>.</p>
+<p>Essentially what’s going on is that there will be two branches of your GitHub Pages site. The <code>source</code> branch will contain all of your raw posts, Ruby scripts, etc. The <code>master</code> branch is what gets served on the webpage.</p>
+<p>I’ll go into a bit more detail on actually blogging with Octopress in the future, but if everything is setup correctly, you should be able to make some changes to your site and use Ruby scripts to generate your content and deploy the changes to GitHub Pages. This is simply done via</p>
+<pre><code>rake generate
+rake deploy</code></pre>
+<p>and you should see your changes uploaded to your site.</p>
+<p>Neat.</p>
+<h2 id="update-for-tld-forwarding">Update: For TLD Forwarding</h2>
+<p>If you want to use a TLD instead of your default GitHub Pages URL, simply <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages">follow these instructions</a>.</p></div>
+
+  <footer>
+    
+    
+    <p><a rel="full-article" href="">Read on &rarr;</a></p>
+    
+  </footer>
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Zachary T. Harmany, PhD -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'drzac';
+			var disqus_developer = '0';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+</body>
+</html>
