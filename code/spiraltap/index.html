@@ -78,7 +78,9 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <ul class="main-navigation">
   <li><a href="/blog">Blog</a></li>
   <li><a href="/archives">Archives</a></li>
+  <li><a href="/publications">Publications</a></li>
   <li><a href="/code">Code</a></li>
+  <li><a href="/bio">Bio</a></li>
 </ul>
 
 </nav>
@@ -93,7 +95,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   </header>
   
   <p><a href="/code/spiraltap/SPIRALTAP.zip" title="SPIRALTAP.zip">Download SPIRALTAP</a></p>
-<h2 id="overview">Overview</h2>
+<h1 id="overview">Overview</h1>
 <p>The Sparse Poisson Intensity Reconstruction ALgorithms (SPIRAL) toolbox, <code>SPIRALTAP</code>, is MATLAB code for recovering sparse signals from Poisson observations. SPIRAL minimizes a regularized negative log-likelihood objective function with various penalty choices for the regularization terms:</p>
 <ul>
 <li>Sparsity (\(\ell_1\) norm) of the coefficients in an orthonormal basis, denoted SPIRAL-ONB,</li>
@@ -107,7 +109,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <pre><code>SPIRALdemo</code></pre>
 <p>switching the variable <code>demo</code> in <code>SPIRALdemo.m</code> to <code>1</code>, <code>2</code>, or <code>3</code> selects among three simulations. Details of each can be found below.</p>
 <p><strong>Note</strong>: Some of these demonstrations utilize the <a href="http://dsp.rice.edu/software/rice-wavelet-toolbox" title="Rice Wavelet Toolbox">Rice Wavelet Toolbox</a> (freely available online) to compute the discrete wavelet transform. We include this toolbox here (although it may need to be recompiled on your platform). We also use the <a href="http://ie.technion.ac.il/~becka/papers/tv_fista.zip" title="FISTA">FISTA</a> algorithm (in the <code>denoise</code> directory) of Beck and Teboulle for constrained total variation denoising.</p>
-<h2 id="demonstration-1">Demonstration 1</h2>
+<h1 id="demonstration-1">Demonstration 1</h1>
 <p>Description: One dimensional compressed sensing example penalizing the sparsity (\(\ell_1\) norm) of the coefficients in the canonical basis. Here the true signal \(f\) is of length 100,000 with 1,500 nonzero entries yielding a sparsity of 1.5%. We take 40,000 compressive measurements in \(y\). The average number of photons per measurement is 15.03, with a maximum of 145. We run SPIRAL until the relative change in the iterates falls below a tolerance of 1e-8, up to a maximum of 100 iterations (however only 37 iterations are required to satisfy the stopping criterion).</p>
 <p>Output: This demonstration automatically displays Figures 1 through 4.</p>
 <figure>
@@ -126,7 +128,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <img src="/code/spiraltap/figures/demo1_objective.png" alt="Figure 4: Objective evolution versus computation time."><figcaption>Figure 4: Objective evolution versus computation time.</figcaption>
 </figure>
 <br>
-<h2 id="demonstration-2">Demonstration 2</h2>
+<h1 id="demonstration-2">Demonstration 2</h1>
 <p>Description: Here we consider an image deblurring example. The true signal is a 128 \(\times\) 128 Shepp-Logan phantom image with mean intensity 1.22e5. The true detector mean intensity is 45.8, and the observed photon count mean is 45.8 with a maximum of 398. Here we consider four penalization methods:</p>
 <ul>
 <li>Sparsity (\(\ell_1\) norm) of coefficients in an orthogonal (wavelet) basis,</li>
@@ -219,7 +221,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 </tbody>
 </table>
 <p>Figure 9: Magnitude of the error between the final reconstruction and the true phantom image. Note the color scale indicates percentage difference over all reconstructions.</p>
-<h2 id="demonstration-3">Demonstration 3</h2>
+<h1 id="demonstration-3">Demonstration 3</h1>
 <p>Description: This demonstration is similar to Demonstration 2, but uses the 256 \(\times\) 256 <code>cameraman</code> image instead of the Shepp-Logan phantom. The true signal has a mean intensity of 1.19e5, the true detector mean intensity is 44.4, and the observed photon count mean is 44.4 with a maximum of 111. Due to the larger problem size, we need to alter the termination criteria. We run all the SPIRAL methods for a minimum of 50 iterations until the relative change in the iterates falls below a tolerance of 1e-8, up to a maximum of 300 iterations.</p>
 <p>Output: Like Demonstration 2, this demonstration automatically displays a similar set of images, shown in Figures 10 through 14.</p>
 <table>
