@@ -122,26 +122,12 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   </header>
 
 <div class="entry-content"><p><a href="http://www.mathjax.org" title="MathJax">MathJax</a> is great, but one of the drawbacks is when using plain text within an equation (with the <code>\text{}</code> command), the typeface would not match the surrounding content. If you like the MathJax typeface, the easiest way to solve this subtle problem is to use the MathJax typeface for your content.</p>
-<p>In <a href="http://octopress.org/" title="Octopress">Octopress</a>, this is fairly straightforward to do, thanks to <a href="https://groups.google.com/forum/?fromgroups=#!topic/mathjax-users/jqQxrmeG48o" title="MathJax Users Google Group">this post</a>, the bit of CSS one needs is</p>
-<pre><code>@font-face {
-    font-family: &#39;MJX_Main&#39;;
-        src: url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot&#39;); /* IE9 Compat Modes */
-        src: url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot?iefix&#39;) format(&#39;eot&#39;),
-            url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff&#39;)  format(&#39;woff&#39;),
-            url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf&#39;)  format(&#39;opentype&#39;),
-            url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/svg/MathJax_Main-Regular.svg#MathJax_Main-Regular&#39;) format(&#39;svg&#39;);
-}</code></pre>
-<p>Since Octopress uses <a href="http://sass-lang.com/" title="Sass">Sass</a>, this is best placed in <code>/sass/custom/_styles.scss</code>. I simply appended the code to the end. This defines a font-family <code>MJX_Main</code>, which we can use for our serif styling by adding</p>
-<pre><code>$serif: &quot;MJX_Main&quot;, serif;</code></pre>
-<p>to <code>/sass/custom/_fonts.scss</code>.</p>
-<p>So now the typeface used in this post will match that used in equations. For example, when I define \(\ind{A}\) as the binary indicator function of the event \(A\): \[
-    \ind{A} = \cases{
-        1 &amp; if $A$ is true,\cr
-        0 &amp; otherwise,}
-\] the &#8220;otherwise’’ here is the same as in the equation. This makes the math a bit more seamless. It seems that going the opposite direction (styling MathJax to match your content) may be a bit more difficult.</p></div>
+</div>
 
   <footer>
     
+    
+    <p><a rel="full-article" href="/2013/01/14/matching-content-to-mathjax/">Read on &rarr;</a></p>
     
   </footer>
 
