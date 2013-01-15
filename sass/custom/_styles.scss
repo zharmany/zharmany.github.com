@@ -79,3 +79,9 @@ a[rel=bookmark] { font-family: $sans; text-decoration: none; }
        url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf')  format('opentype'),
        url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/svg/MathJax_Main-Regular.svg#MathJax_Main-Regular') format('svg');
 }
+
+header[role="banner"] {
+     //background-image: url(/images/Randall.jpg);
+     background-image: url(/images/Terrace2.jpg);
+     background-repeat: no-repeat;
+}
