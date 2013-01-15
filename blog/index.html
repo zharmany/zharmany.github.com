@@ -25,7 +25,6 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX" rel="stylesheet" type="text/css">
 <!--- MathJax Configuration -->
 <script type="text/javascript"
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://drz.ac/javascripts/MathJaxLocal.js">
@@ -98,6 +97,73 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/01/14/matching-content-to-mathjax/">Matching Content to MathJax</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-14T18:15:00-06:00" pubdate data-updated="true">Jan 14<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/01/14/matching-content-to-mathjax/">permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p><a href="http://www.mathjax.org" title="MathJax">MathJax</a> is great, but one of the drawbacks is when using plain text within an equation (with the <code>\text{}</code> command), the typeface would not match the surrounding content. If you like the MathJax typeface, the easiest way to solve this subtle problem is to use the MathJax typeface for your content.</p>
+<p>In <a href="http://octopress.org/" title="Octopress">Octopress</a>, this is fairly straightforward to do, thanks to <a href="https://groups.google.com/forum/?fromgroups=#!topic/mathjax-users/jqQxrmeG48o" title="MathJax Users Google Group">this post</a>, the bit of CSS one needs is</p>
+<pre><code>@font-face {
+    font-family: &#39;MJX_Main&#39;;
+        src: url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot&#39;); /* IE9 Compat Modes */
+        src: url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot?iefix&#39;) format(&#39;eot&#39;),
+            url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff&#39;)  format(&#39;woff&#39;),
+            url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf&#39;)  format(&#39;opentype&#39;),
+            url(&#39;http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/svg/MathJax_Main-Regular.svg#MathJax_Main-Regular&#39;) format(&#39;svg&#39;);
+}</code></pre>
+<p>Since Octopress uses <a href="http://sass-lang.com/" title="Sass">Sass</a>, this is best placed in <code>/sass/custom/_styles.scss</code>. I simply appended the code to the end. This defines a font-family <code>MJX_Main</code>, which we can use for our serif styling by adding</p>
+<pre><code>$serif: &quot;MJX_Main&quot;, serif;</code></pre>
+<p>to <code>/sass/custom/_fonts.scss</code>.</p>
+<p>So now the typeface used in this post will match that used in equations. For example, when I define \(\ind{A}\) as the binary indicator function of the event \(A\): \[
+    \ind{A} = \cases{
+        1 &amp; if $A$ is true,\cr
+        0 &amp; otherwise,}
+\] the &#8220;otherwise’’ here is the same as in the equation. This makes the math a bit more seamless. It seems that going the opposite direction (styling MathJax to match your content) may be a bit more difficult.</p></div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/01/14/dropbox-humor/">Dropbox Humor</a>
 
 </h1>
@@ -125,9 +191,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <div class="entry-content"><p>I love that Dropbox has a sense of humor.</p>
 <figure>
 <img src="/blog/images/DropboxHumor.png" alt="Grab a Snickers"><figcaption>Grab a Snickers</figcaption>
-</figure>
-<p>This should appear as text.</p>
-<p>\(\text{This should appear as text}\)</p></div>
+</figure></div>
 
   <footer>
     
@@ -567,59 +631,6 @@ The toilet’s flush produces a brief but traumatizing sound, a kind of held hig
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/12/20/blogging-with-octopress-part-2/">Blogging With Octopress, Part 2</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-20T23:29:00-06:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/20/blogging-with-octopress-part-2/">permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p><a href="/2012/12/19/blogging-with-octopress/" title="Blogging With Octopress">Last time</a> I discussed the basics of setting up my site using <a href="http://octopress.org/" title="Octopress">Octopress</a>. This time I’m going to go into a bit more detail using some of the Ruby scripts that ship with Octopress.</p>
-</div>
-
-  <footer>
-    
-    
-    <p><a rel="full-article" href="/2012/12/20/blogging-with-octopress-part-2/">Read on &rarr;</a></p>
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -636,6 +647,10 @@ The toilet’s flush produces a brief but traumatizing sound, a kind of held hig
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/01/14/matching-content-to-mathjax/">Matching Content to MathJax</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/01/14/dropbox-humor/">Dropbox Humor</a>
       </li>
     
@@ -649,10 +664,6 @@ The toilet’s flush produces a brief but traumatizing sound, a kind of held hig
     
       <li class="post">
         <a href="/2012/12/27/shipping-out/">Shipping Out</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/12/22/valid-xml-atom-feed-on-github-pages/">Valid XML Atom Feed on GitHub Pages</a>
       </li>
     
   </ul>

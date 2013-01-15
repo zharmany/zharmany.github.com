@@ -139,4 +139,5 @@ MathJax.Hub.Config({
 		},
 	"HTML-CSS": { availableFonts: ["TeX"] }
 	});
+	MathJax.fontVariant = "MathJax_SansSerif";
 	MathJax.Ajax.loadComplete("http://drz.ac/javascripts/MathJaxLocal.js");
