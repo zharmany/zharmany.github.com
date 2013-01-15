@@ -9,4 +9,4 @@ categories: [dropbox, humor]
 
 I love that Dropbox has a sense of humor. 
 
-![Grab a Snickers](/blog/images/DropboxHumor.png)
+![Grab a Snickers](/images/DropboxHumor.png)
