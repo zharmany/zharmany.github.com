@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/feed.atom" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2013-01-15T02:19:15-06:00</updated>
+  <updated>2013-01-15T02:22:02-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -52,7 +52,7 @@
 
       <content type="html"><![CDATA[<p>I love that Dropbox has a sense of humor.</p>
 <figure>
-<img src="http://drz.ac/blog/images/DropboxHumor.png" alt="Grab a Snickers"><figcaption>Grab a Snickers</figcaption>
+<img src="http://drz.ac/images/DropboxHumor.png" alt="Grab a Snickers"><figcaption>Grab a Snickers</figcaption>
 </figure>]]></content>
     </entry>
   
