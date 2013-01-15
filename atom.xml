@@ -4,7 +4,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/atom.xml" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2013-01-14T19:12:15-06:00</updated>
+  <updated>2013-01-14T19:13:59-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -18,7 +18,7 @@
     <link href="http://drz.ac/2013/01/14/matching-content-to-mathjax/"/>
     <updated>2013-01-14T18:15:00-06:00</updated>
     <id>http://drz.ac/2013/01/14/matching-content-to-mathjax</id>
-    <content type="html"><![CDATA[<p><a href="http://www.mathjax.org" title="MathJax">MathJax</a> is great, but one small annoyince is when using plain text within an equation (with the <code>\text{}</code> command), the typeface would not match the surrounding content. If you like the MathJax typeface, the easiest way to solve this subtle problem is to use the MathJax typeface for your content.</p>
+    <content type="html"><![CDATA[<p><a href="http://www.mathjax.org" title="MathJax">MathJax</a> is great, but one small annoyance is when using plain text within an equation (with the <code>\text{}</code> command), the typeface would not match the surrounding content. If you like the MathJax typeface, the easiest way to solve this subtle problem is to use the MathJax typeface for your content.</p>
 <!-- more -->
 
 <p>In <a href="http://octopress.org/" title="Octopress">Octopress</a>, this is fairly straightforward to do, thanks to <a href="https://groups.google.com/forum/?fromgroups=#!topic/mathjax-users/jqQxrmeG48o" title="MathJax Users Google Group">this post</a>, the bit of CSS one needs is</p>
