@@ -7,7 +7,7 @@ external-url:
 categories: [MathJax, Octopress]
 ---
 
-[MathJax][MathJax] is great, but one small annoyince is when using plain text within an equation (with the `\text{}` command), the typeface would not match the surrounding content. If you like the MathJax typeface, the easiest way to solve this subtle problem is to use the MathJax typeface for your content. 
+[MathJax][MathJax] is great, but one small annoyance is when using plain text within an equation (with the `\text{}` command), the typeface would not match the surrounding content. If you like the MathJax typeface, the easiest way to solve this subtle problem is to use the MathJax typeface for your content. 
 
 <!-- more -->
 
