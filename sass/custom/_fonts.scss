@@ -4,8 +4,16 @@
 
 //$sans: "Optima", sans-serif;
 //$serif: "Baskerville", serif;
-$serif: "MJX_Main", serif;
 //$mono: "Courier", monospace;
 //$heading-font-family: "Verdana", sans-serif;
 //$header-title-font-family: "Futura", sans-serif;
 //$header-subtitle-font-family: "Futura", sans-serif;
+
+//ZTH Additions:
+$sans: "Varela Round", "Helvetica Neue", Arial, sans-serif !default;
+$serif: "MJX_Main", Georgia, Times, "Times New Roman", serif !default;
+$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
+
+$heading-font-family: "Varela Round", "Helvetica Neue", Arial, sans-serif !default;
+$header-title-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
+$header-subtitle-font-family: $header-title-font-family !default;
