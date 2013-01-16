@@ -4,7 +4,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/atom.xml" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2013-01-15T18:59:42-06:00</updated>
+  <updated>2013-01-15T22:36:48-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -38,7 +38,16 @@ citation:
 <p>And now it works, no troubles. For instance the example</p>
 <p>B. Brothman, <q>Orders of value: probing the theoretical terms of Archival Practice</q>, <i>Archivaria</i>, vol. 32, no. 1, 1991.</p>
 <p>was generated using</p>
-<pre><code>B. Brothman, “Orders of value: probing the theoretical terms of Archival Practice”, &lt;i&gt;Archivaria&lt;/i&gt;, vol. 32, no. 1, 1991.</code></pre>
+<pre><code>{% bibtex %}
+@article{brothman1991orders,
+  title={Orders of value: probing the theoretical terms of Archival Practice},
+  author={Brothman, B.},
+  journal={Archivaria},
+  volume={32},
+  number={1},
+  year={1991}
+}
+{% endbibtex %}</code></pre>
 <p>Although it seems that to make a longer list I need to enclose each item in it’s own liquid block. So for now, it’s not the greatest solution.</p>]]></content>
   </entry>
   
