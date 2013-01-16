@@ -41,6 +41,11 @@ pandoc:
   flags: '--smart --mathjax'
   #flags: '--smart --mathjax --bibliography=/Users/zac/Dropbox/BiblioDatabase/Alexandria.bib'
 pygments: false # Jekyll's default Python Pygments have been replaced by pygments.rb. Set to true to use Albino + Pythong Pygments
+# BibTex Citation plugin
+citation:
+    citation_style: plugins/ieee.csl
+    citation_locale: en
+
 
 paginate: 10          # Posts per page on the blog index
 pagination_dir:  # Directory base for pagination URLs eg. /blog/page/2/
