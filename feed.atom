@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/feed.atom" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2013-01-15T03:45:06-06:00</updated>
+  <updated>2013-01-15T18:59:42-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -11,6 +11,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+<title type="html"><![CDATA[Publication List using BibTeX in Octopress]]></title>
+<link href="http://drz.ac/2013/01/15/publication-list-using-bibtex-in-octopress/"/>
+<updated>2013-01-15T17:36:00-06:00</updated>
+<id>http://drz.ac/2013/01/15/publication-list-using-bibtex-in-octopress</id>
+<category term="bibtex" /><category term="octopress" />
+
+      <content type="html"><![CDATA[<p>I was looking for a nice way to use BibTeX within Octopress to generate my <a href="http://drz.ac/publications" title="Publications">list of publications</a>, and came across the <a href="https://github.com/archome/jekyll-citation" title="jekyll-citation">jekyll-citation</a> plugin.</p>
+<!-- more -->
+
+<p>It was fairly easy to setup, first simply install <code>citeproc-ruby</code> and <code>bibtex-ruby</code> gems by running</p>
+<pre><code>gem install citeproc-ruby
+gem install bibtex-ruby</code></pre>
+<p>in the terminal, then add them to your <code>Gemfile</code> by adding the two lines:</p>
+<pre><code>gem &#39;bibtex-ruby&#39;
+gem &#39;citeproc-ruby&#39;</code></pre>
+<p>then you should be set to use them with Octopress. To configure, I grabbed the IEEE format from <a href="https://github.com/citation-style-language/styles" title="Citation Style Language">the citation style language repository</a> and placed it in <code>plugins/ieee.csl</code>, then I added these lines to <code>_config.yml</code>:</p>
+<pre><code># BibTex Citation plugin
+citation:
+    citation_style: plugins/ieee.csl
+    citation_locale: en</code></pre>
+<p>I was getting an error when using <code>citation.rb</code>, and it seems the issue was that it was reading the data as a string and not an array, and hence the <code>.join</code> method was failing. So on Line 31 in <code>citation.rb</code> I simply changed</p>
+<pre><code>  #content = super.join
+  content = super</code></pre>
+<p>And now it works, no troubles. For instance the example</p>
+<p>B. Brothman, <q>Orders of value: probing the theoretical terms of Archival Practice</q>, <i>Archivaria</i>, vol. 32, no. 1, 1991.</p>
+<p>was generated using</p>
+<pre><code>B. Brothman, “Orders of value: probing the theoretical terms of Archival Practice”, &lt;i&gt;Archivaria&lt;/i&gt;, vol. 32, no. 1, 1991.</code></pre>
+<p>Although it seems that to make a longer list I need to enclose each item in it’s own liquid block. So for now, it’s not the greatest solution.</p>]]></content>
+    </entry>
   
     <entry>
       
