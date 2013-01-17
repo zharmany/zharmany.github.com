@@ -62,7 +62,7 @@
     </url>
     <url>
         <loc>http://drz.ac/bio/</loc>
-        <lastmod>2013-01-15T03:40:05-06:00</lastmod>
+        <lastmod>2013-01-17T05:08:43-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/blog/</loc>
@@ -70,22 +70,30 @@
     </url>
     <url>
         <loc>http://drz.ac/code/</loc>
-        <lastmod>2013-01-14T11:50:20-06:00</lastmod>
+        <lastmod>2013-01-17T05:07:21-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/code/spiraltap/</loc>
-        <lastmod>2013-01-15T03:01:42-06:00</lastmod>
+        <lastmod>2013-01-17T05:07:41-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/</loc>
-        <lastmod>2013-01-15T22:36:17-06:00</lastmod>
+        <lastmod>2013-01-17T05:08:12-06:00</lastmod>
     </url>
     <url>
-        <loc>http://drz.ac/</loc>
-        <lastmod>2013-01-05T20:18:59-06:00</lastmod>
+        <loc>http://drz.ac/index_old.html</loc>
+        <lastmod>2013-01-03T20:32:35-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://drz.ac/notes/convexsets.html</loc>
+        <lastmod>2013-01-17T05:52:00-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://drz.ac/notes/</loc>
+        <lastmod>2013-01-17T05:51:13-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/publications/</loc>
-        <lastmod>2013-01-15T03:55:01-06:00</lastmod>
+        <lastmod>2013-01-17T05:25:16-06:00</lastmod>
     </url>
 </urlset>
