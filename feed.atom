@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/feed.atom" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2013-01-17T05:52:08-06:00</updated>
+  <updated>2013-01-17T08:12:32-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -11,6 +11,100 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+<title type="html"><![CDATA[LaTeX Theorem-like Environments for the Web]]></title>
+<link href="http://drz.ac/2013/01/17/latex-theorem-like-environments-for-the-web/"/>
+<updated>2013-01-17T06:41:00-06:00</updated>
+<id>http://drz.ac/2013/01/17/latex-theorem-like-environments-for-the-web</id>
+<category term="css" /><category term="latex" /><category term="mathjax" />
+
+      <content type="html"><![CDATA[<p>Although MathJax offers LaTeX-like mathematical typesetting for the web, there are some other constructs from LaTeX that would be useful for a mathematical blog. For instance, the <code>amsthm</code> package allows you to define environments for theorems, proofs, lemmas, definitions, and so on. However, MathJax doesn’t implement these higher-level formatting features. And rightly so; any formatting on the web should be done with CSS.</p>
+<!-- more -->
+
+<p>Looking to see if anyone has attacked this problem, I came across <a href="http://boolesrings.org/scoskey/writing-math-on-the-web/" title="Writing math on the web">Samuel Coskey’s post</a> where he suggests using custom HTML tags as a solution. However, it <a href="http://stackoverflow.com/questions/5970093/using-custom-html-tags" title="Using custom HTML tags">seems to be</a> a <a href="http://stackoverflow.com/questions/211394/when-to-use-custom-html-tags" title="When to use custom HTML tags">bad idea</a> to use custom HTML tags. A more robust solution would be to use custom CSS classes instead.</p>
+<p>The CSS I’m using is in <code>theorems.css</code> below. If you prefer an open <a href="http://en.wikipedia.org/wiki/Q.E.D." title="Q.E.D. - Wikipedia">Halmos / QED</a> symbol versus the closed symbol, use <code>\25FB</code> in place of <code>\25FC</code>.</p>
+
+<figure class='code'>
+<figcaption>Theorem-like Environments (theorems.css)<a href='http://drz.ac/downloads/code/css/theorems.css'>view raw</a></figcaption>
+<table class='highlight'><td class='line-numbers' aria-hidden='true'><div><pre class='line-number'>1</pre><pre class='line-number'>2</pre><pre class='line-number'>3</pre><pre class='line-number'>4</pre><pre class='line-number'>5</pre><pre class='line-number'>6</pre><pre class='line-number'>7</pre><pre class='line-number'>8</pre><pre class='line-number'>9</pre><pre class='line-number'>10</pre><pre class='line-number'>11</pre><pre class='line-number'>12</pre><pre class='line-number'>13</pre><pre class='line-number'>14</pre><pre class='line-number'>15</pre><pre class='line-number'>16</pre><pre class='line-number'>17</pre><pre class='line-number'>18</pre><pre class='line-number'>19</pre><pre class='line-number'>20</pre><pre class='line-number'>21</pre><pre class='line-number'>22</pre><pre class='line-number'>23</pre><pre class='line-number'>24</pre><pre class='line-number'>25</pre><pre class='line-number'>26</pre><pre class='line-number'>27</pre><pre class='line-number'>28</pre><pre class='line-number'>29</pre><pre class='line-number'>30</pre><pre class='line-number'>31</pre><pre class='line-number'>32</pre><pre class='line-number'>33</pre><pre class='line-number'>34</pre><pre class='line-number'>35</pre><pre class='line-number'>36</pre><pre class='line-number'>37</pre><pre class='line-number'>38</pre><pre class='line-number'>39</pre><pre class='line-number'>40</pre><pre class='line-number'>41</pre><pre class='line-number'>42</pre><pre class='line-number'>43</pre><pre class='line-number'>44</pre><pre class='line-number'>45</pre><pre class='line-number'>46</pre></div></td><td class='main  css'><div><pre data-line='line 1' class='line'><span class="nc">.theorem</span> <span class="p">{</span>
+</pre><pre data-line='line 2' class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+</pre><pre data-line='line 3' class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">12px</span> <span class="m">0</span><span class="p">;</span>
+</pre><pre data-line='line 4' class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span><span class="p">;</span>
+</pre><pre data-line='line 5' class='line'><span class="p">}</span>
+</pre><pre data-line='line 6' class='line'><span class="nc">.theorem</span><span class="nd">:before</span> <span class="p">{</span>
+</pre><pre data-line='line 7' class='line'>    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;Theorem.&quot;</span><span class="p">;</span>
+</pre><pre data-line='line 8' class='line'>    <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+</pre><pre data-line='line 9' class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+</pre><pre data-line='line 10' class='line'><span class="p">}</span>
+</pre><pre data-line='line 11' class='line'>
+</pre><pre data-line='line 12' class='line'><span class="nc">.lemma</span> <span class="p">{</span>
+</pre><pre data-line='line 13' class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+</pre><pre data-line='line 14' class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">12px</span> <span class="m">0</span><span class="p">;</span>
+</pre><pre data-line='line 15' class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span><span class="p">;</span>
+</pre><pre data-line='line 16' class='line'><span class="p">}</span>
+</pre><pre data-line='line 17' class='line'><span class="nc">.lemma</span><span class="nd">:before</span> <span class="p">{</span>
+</pre><pre data-line='line 18' class='line'>    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;Lemma.&quot;</span><span class="p">;</span>
+</pre><pre data-line='line 19' class='line'>    <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+</pre><pre data-line='line 20' class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+</pre><pre data-line='line 21' class='line'><span class="p">}</span>
+</pre><pre data-line='line 22' class='line'>
+</pre><pre data-line='line 23' class='line'><span class="nc">.proof</span> <span class="p">{</span>
+</pre><pre data-line='line 24' class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+</pre><pre data-line='line 25' class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">12px</span> <span class="m">0</span><span class="p">;</span>
+</pre><pre data-line='line 26' class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+</pre><pre data-line='line 27' class='line'><span class="p">}</span>
+</pre><pre data-line='line 28' class='line'><span class="nc">.proof</span><span class="nd">:before</span> <span class="p">{</span>
+</pre><pre data-line='line 29' class='line'>    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;Proof.&quot;</span><span class="p">;</span>
+</pre><pre data-line='line 30' class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span><span class="p">;</span>
+</pre><pre data-line='line 31' class='line'><span class="p">}</span>
+</pre><pre data-line='line 32' class='line'><span class="nc">.proof</span><span class="nd">:after</span> <span class="p">{</span>
+</pre><pre data-line='line 33' class='line'>    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\25FC&quot;</span><span class="p">;</span>
+</pre><pre data-line='line 34' class='line'>    <span class="k">float</span><span class="o">:</span><span class="k">right</span><span class="p">;</span>
+</pre><pre data-line='line 35' class='line'><span class="p">}</span>
+</pre><pre data-line='line 36' class='line'>
+</pre><pre data-line='line 37' class='line'><span class="nc">.definition</span> <span class="p">{</span>
+</pre><pre data-line='line 38' class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+</pre><pre data-line='line 39' class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">12px</span> <span class="m">0</span><span class="p">;</span>
+</pre><pre data-line='line 40' class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+</pre><pre data-line='line 41' class='line'><span class="p">}</span>
+</pre><pre data-line='line 42' class='line'><span class="nc">.definition</span><span class="nd">:before</span> <span class="p">{</span>
+</pre><pre data-line='line 43' class='line'>    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;Definition.&quot;</span><span class="p">;</span>
+</pre><pre data-line='line 44' class='line'>    <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+</pre><pre data-line='line 45' class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+</pre><pre data-line='line 46' class='line'><span class="p">}</span>
+</pre></div></td></tr></table></figure>
+
+<p>If you happen to be using Octopress, which uses Sass, this code can be appended to <code>/sass/custom/_styles.scss</code>.</p>
+<p>And now to see this in action. The markdown (with inline HTML)</p>
+
+<figure class='code'>
+<figcaption>Definition Example (theoremsexample.md)<a href='http://drz.ac/downloads/code/md/theoremsexample.md'>view raw</a></figcaption>
+<table class='highlight'><td class='line-numbers' aria-hidden='true'><div><pre class='line-number'>1</pre><pre class='line-number'>2</pre><pre class='line-number'>3</pre><pre class='line-number'>4</pre><pre class='line-number'>5</pre><pre class='line-number'>6</pre><pre class='line-number'>7</pre><pre class='line-number'>8</pre><pre class='line-number'>9</pre><pre class='line-number'>10</pre><pre class='line-number'>11</pre></div></td><td class='main  html'><div><pre data-line='line 1' class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;definition&quot;</span><span class="nt">&gt;</span>
+</pre><pre data-line='line 2' class='line'>A set $C$ is *convex* if for all $x,y \in C$
+</pre><pre data-line='line 3' class='line'>and for all $\alpha \in [0,1]$ the point
+</pre><pre data-line='line 4' class='line'>$\alpha x + (1-\alpha) y \in C$.
+</pre><pre data-line='line 5' class='line'><span class="nt">&lt;/div&gt;</span>
+</pre><pre data-line='line 6' class='line'>
+</pre><pre data-line='line 7' class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;theorem&quot;</span><span class="nt">&gt;</span>
+</pre><pre data-line='line 8' class='line'>There are no natural numbers $\naturals = (1, 2, 3, \ldots)$
+</pre><pre data-line='line 9' class='line'>$x$, $y$, and $z$ such that $x^n + y^n = z^n$,
+</pre><pre data-line='line 10' class='line'>in which $n$ is a natural number greater than 2.
+</pre><pre data-line='line 11' class='line'><span class="nt">&lt;/div&gt;</span>
+</pre></div></td></tr></table></figure>
+
+<p>will produce the following:</p>
+<div class="definition">
+A set \(C\) is <em>convex</em> if for all \(x,y \in C\) and for all \(\alpha \in [0,1]\) the point \(\alpha x + (1-\alpha) y \in C\).
+</div>
+
+<div class="theorem">
+There are no natural numbers \(\naturals = (1, 2, 3, \ldots)\) \(x\), \(y\), and \(z\) such that \(x^n + y^n = z^n\), in which \(n\) is a natural number greater than 2.
+</div>
+
+<p>One improvement would be to allow theorem names and numbering (with subsequent referencing), but I think for now this is a nice solution.</p>]]></content>
+    </entry>
   
     <entry>
       
