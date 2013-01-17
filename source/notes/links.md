@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Convex Sets
+title: Links
 comments: false
 sharing: false
 footer: false
@@ -12,11 +12,8 @@ MathJax.js?config=TeX-AMS-MML_HTMLorMML,
 file:///users/zac/Dropbox/MathJax/MathJaxLocal.js">
 </script>
 
-Convex sets are useful. Here we define them, and show some examples.
+## Octopress ##
 
-<div class="definition">
-A set $C$ is *convex* if for all $x,y \in C$ and for all $\alpha \in [0,1]$ the point $\alpha x + (1-\alpha) y \in C$.
-</div>
-
+- [Octopress Cheat Sheet](http://dreamrunner.org/wiki/public_html/docs/Web/octopress.html)
 
 

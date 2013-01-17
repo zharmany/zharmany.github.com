@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Convex Sets
+title: Style Guide
 comments: false
 sharing: false
 footer: false
@@ -12,11 +12,11 @@ MathJax.js?config=TeX-AMS-MML_HTMLorMML,
 file:///users/zac/Dropbox/MathJax/MathJaxLocal.js">
 </script>
 
-Convex sets are useful. Here we define them, and show some examples.
+## Capitalization ##
 
-<div class="definition">
-A set $C$ is *convex* if for all $x,y \in C$ and for all $\alpha \in [0,1]$ the point $\alpha x + (1-\alpha) y \in C$.
-</div>
+Capitalize the following abbreviations:
 
+- CSS
+- HTML
 
 
