@@ -4,7 +4,6 @@ title: Code
 comments: false
 sharing: false
 footer: false
-sidebar: false
 body_id: archive
 ---
 

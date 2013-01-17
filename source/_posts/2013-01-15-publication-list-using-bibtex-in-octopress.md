@@ -47,6 +47,7 @@ And now it works, no troubles. For instance the example
 {% endbibtex %}
 
 was generated using
+{% raw %}
 
     {% bibtex %}
     @article{brothman1991orders,
@@ -58,6 +59,8 @@ was generated using
       year={1991}
     }
     {% endbibtex %}
+
+{% endraw %}
 
 Although it seems that to make a longer list I need to enclose each item in it's own liquid block. So for now, it's not the greatest solution.
 

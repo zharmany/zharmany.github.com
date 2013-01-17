@@ -4,7 +4,6 @@ title: Biography
 comments: false
 sharing: false
 footer: false
-sidebar: false
 body_id: archive
 ---
 
