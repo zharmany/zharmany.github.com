@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/feed.atom" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2013-01-17T08:12:32-06:00</updated>
+  <updated>2013-01-17T08:14:38-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -76,7 +76,7 @@
 </pre><pre data-line='line 46' class='line'><span class="p">}</span>
 </pre></div></td></tr></table></figure>
 
-<p>If you happen to be using Octopress, which uses Sass, this code can be appended to <code>/sass/custom/_styles.scss</code>.</p>
+<p>If you happen to be using Octopress, which uses <a href="http://sass-lang.com/" title="Sass">Sass</a>, this code can be appended to <code>/sass/custom/_styles.scss</code>.</p>
 <p>And now to see this in action. The markdown (with inline HTML)</p>
 
 <figure class='code'>
