@@ -3,7 +3,7 @@
   <title><![CDATA[DrZ.ac]]></title>
   <link href="http://drz.ac/feed.atom" rel="self"/>
   <link href="http://drz.ac/"/>
-  <updated>2013-01-19T02:58:51-06:00</updated>
+  <updated>2013-01-19T13:26:25-06:00</updated>
   <id>http://drz.ac/</id>
   <author>
     <name><![CDATA[Zachary T. Harmany, PhD]]></name>
@@ -18,7 +18,7 @@
 <link href="http://samwize.com/2012/09/24/octopress-table-stylesheet/"/>
 <updated>2013-01-19T02:54:00-06:00</updated>
 <id>http://drz.ac/2013/01/19/octopress-table-styling</id>
-<category term="css" /><category term="octopress" />
+<category term="css" /><category term="external" /><category term="octopress" />
 
       <content type="html"><![CDATA[<p>It seems that by default, Octopress has very minimal table styling. This post shows you how to tweak the CSS styling. Note that a better place for the CSS code would be to append <code>sass/custom/_styles.scss</code>.</p><p><a rel="bookmark" href="http://drz.ac/2013/01/19/octopress-table-styling/">permalink</a></p>]]></content>
     </entry>
@@ -167,7 +167,7 @@ citation:
 <link href="http://drz.ac/2013/01/14/matching-content-to-mathjax/"/>
 <updated>2013-01-14T18:15:00-06:00</updated>
 <id>http://drz.ac/2013/01/14/matching-content-to-mathjax</id>
-<category term="MathJax" /><category term="Octopress" />
+<category term="mathjax" /><category term="octopress" />
 
       <content type="html"><![CDATA[<p><a href="http://www.mathjax.org" title="MathJax">MathJax</a> is great, but one small annoyance is when using plain text within an equation (with the <code>\text{}</code> command), the typeface would not match the surrounding content. If you like the MathJax typeface, the easiest way to solve this subtle problem is to use the MathJax typeface for your content.</p>
 <!-- more -->
