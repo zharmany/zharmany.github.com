@@ -4,7 +4,7 @@ title: "Matching Content to MathJax"
 date: 2013-01-14 18:15
 comments: true
 external-url: 
-categories: [MathJax, Octopress]
+categories: [mathjax, octopress]
 ---
 
 [MathJax][MathJax] is great, but one small annoyance is when using plain text within an equation (with the `\text{}` command), the typeface would not match the surrounding content. If you like the MathJax typeface, the easiest way to solve this subtle problem is to use the MathJax typeface for your content. 

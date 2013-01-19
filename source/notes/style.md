@@ -19,4 +19,10 @@ Capitalize the following abbreviations:
 - CSS
 - HTML
 
+## Categories ##
+
+Ensure all categories are lowercase in markdown source.
+
+
+
 

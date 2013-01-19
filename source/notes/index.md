@@ -16,7 +16,7 @@ Welcome to my notes pages. Everything here is a bit formative and may change wit
 # Computing #
 
 - [Links](/notes/links.html)
-
+ 
 # Blogging #
 
 - [Style Guide](/notes/style.html)
