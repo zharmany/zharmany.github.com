@@ -7,7 +7,7 @@ footer: false
 body_id: archive
 ---
 
-# [SPIRAL: Sparse Poisson Intensity Estimation ALgorithms][SPIRALTAP] #
+### [SPIRAL: Sparse Poisson Intensity Estimation ALgorithms][SPIRALTAP] ###
 
 [SPIRAL][SPIRALTAP] is a MATLAB software toolbox for solving Poisson inverse problems. The mathematical details are described in my paper (available on [IEEE Xplore][SPIRALTIP] and [arXiv][SPIRALarXiv]).
 

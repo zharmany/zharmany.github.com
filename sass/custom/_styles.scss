@@ -69,6 +69,11 @@
 }
 
 // ZTH Additions
+figure.code {
+    overflow-x: auto;
+}
+
+
 a[rel=bookmark] { font-family: $sans; text-decoration: none; }
 
 @font-face {
@@ -84,6 +89,35 @@ header[role="banner"] {
      //background-image: url(/images/Randall.jpg);
      background-image: url(/images/Terrace2.jpg);
      background-repeat: no-repeat;
+}
+
+// Publications Formatting
+#publications{
+    // Quotes
+    q:before {
+        content: "\201C";
+    }
+    q:after {
+        content: "\201D";
+    }
+    q {
+        font-style: normal;
+    }
+    // Italics
+    i {
+        font-style: italic;
+    }
+    // Links
+    a:before {
+        content: "(";
+    }
+    a:after {
+        content: ")";
+    }
+    a {
+        font-family: $sans;
+        font-size: 80%;
+    }
 }
 
 // Theorem-like Environments

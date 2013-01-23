@@ -15,6 +15,8 @@ group :development do
   gem 'rake-minify'
   gem 'bibtex-ruby'
   gem 'citeproc-ruby'
+  gem 'jekyll-scholar'
+  gem 'jekyll-scholar-extras'
 end
 
 gem 'sinatra', '~> 1.3.2'

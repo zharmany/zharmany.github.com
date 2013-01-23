@@ -43,8 +43,32 @@ pandoc:
 pygments: false # Jekyll's default Python Pygments have been replaced by pygments.rb. Set to true to use Albino + Pythong Pygments
 # BibTex Citation plugin
 citation:
-    citation_style: plugins/ieee.csl
+    citation_style: _bibtex/ieee.csl
     citation_locale: en
+# Jekyll-scholar plugin
+# This plugin handles my list of publications
+scholar:
+  style: ieee
+#  style: source/_bibtex/custom-hdp.csl  
+  locale: en
+  sort_by: year
+  order: descending
+
+#  source: ./_bibliography
+#  bibliography: references.bib
+
+  source: source/_bibtex
+  bibliography: harmany
+
+  details_dir:    publications
+#  details_layout: details.html
+  details_layout: bibtex.html
+  #details_layout: details.html
+  details_link:   Details
+
+  query: "@*"      
+  #query: "@*[public!=no]"
+
 
 
 paginate: 10          # Posts per page on the blog index
