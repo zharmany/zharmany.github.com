@@ -62,15 +62,19 @@
     </url>
     <url>
         <loc>http://drz.ac/archives/</loc>
-        <lastmod>2013-01-19T13:22:47-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/atom.xml</loc>
         <lastmod>2013-01-03T20:32:35-06:00</lastmod>
     </url>
     <url>
+        <loc>http://drz.ac/bibtest.html</loc>
+        <lastmod>2013-01-22T22:36:52-06:00</lastmod>
+    </url>
+    <url>
         <loc>http://drz.ac/bio/</loc>
-        <lastmod>2013-01-17T05:08:43-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/blog/</loc>
@@ -78,34 +82,46 @@
     </url>
     <url>
         <loc>http://drz.ac/code/</loc>
-        <lastmod>2013-01-17T05:07:21-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/code/spiraltap/</loc>
-        <lastmod>2013-01-17T05:07:41-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/</loc>
-        <lastmod>2013-01-18T22:07:38-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/notes/convexsets.html</loc>
-        <lastmod>2013-01-17T16:06:52-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/notes/</loc>
-        <lastmod>2013-01-19T13:23:05-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/notes/links.html</loc>
-        <lastmod>2013-01-17T08:20:25-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://drz.ac/notes/methodofmultipliers.html</loc>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://drz.ac/notes/multivariatenormal.html</loc>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/notes/style.html</loc>
-        <lastmod>2013-01-19T13:24:47-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
     <url>
         <loc>http://drz.ac/publications/</loc>
-        <lastmod>2013-01-17T05:25:16-06:00</lastmod>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://drz.ac/reftest.html</loc>
+        <lastmod>2013-01-22T22:15:01-06:00</lastmod>
     </url>
 </urlset>
