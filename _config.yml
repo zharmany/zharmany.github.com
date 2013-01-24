@@ -124,9 +124,9 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # To change the layout's default sidebar Add a new sidebar source/_includes/sidebars/your_sidebar.html
 # then make changes below, eg. post_sidebar: your_sidebar.html
-blog_index_sidebar: your_blog_index_default.html
-page_sidebar: page_default.html
-post_sidebar: post_default.html
+blog_index_sidebar: zth_default.html
+page_sidebar: zth_default.html
+post_sidebar: zth_default.html
 
 # ----------------------- #
 #   3rd Party Settings    #
