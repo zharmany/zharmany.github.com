@@ -7,7 +7,7 @@ footer: false
 body_id: archive
 ---
 
-This list is under a little bit of a revision. Check back soon for a cleaner version with links to my papers. For now you can always check out [my Duke website][DukeZTH].
+<!-- Include your PhD Thesis !!! -->
 
 <div id="publications">
     
