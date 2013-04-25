@@ -1,0 +1,100 @@
+---
+layout: default
+comments: false
+sharing: false
+footer: false
+body_id: archive
+---
+
+<div>
+<article role="article">
+    <header>
+    <h1> PhD Dissertation </h1>
+        
+    <h2 class="entry-title">
+        Computational Optical Imaging Systems: <br>
+        Sensing Strategies, Optimization Methods, <br>
+        and Performance Bounds <br>
+    </h2>
+    <h3> 
+        [<a href="ZacharyTHarmanyPhDDissertation.pdf">PDF</a>]&nbsp;
+        [<a href="http://search.proquest.com/docview/1238003234">ProQuest</a>]&nbsp;
+        [<a href="ZacharyTHarmanyPhDDefense.pdf">Defense Slides</a>]
+    </h3>
+</header>
+
+    <h3>Abstract</h3>
+
+    <p> The emerging theory of compressed sensing has been nothing short of a revolution in signal 
+        processing, challenging some of the longest-held ideas in signal processing and leading to
+        the development of exciting new ways to capture and reconstruct signals and images. Although
+        the theoretical promises of compressed sensing are manifold, its implementation in many 
+        practical applications has lagged behind the associated theoretical development. Our goal is 
+        to elevate compressed sensing from an interesting theoretical discussion to a feasible 
+        alternative to conventional imaging, a significant challenge and an exciting topic for 
+        research in signal processing. When applied to imaging, compressed sensing can be thought of 
+        as a particular case of computational imaging, which unites the design of both the sensing 
+        and reconstruction of images under one design paradigm. Computational imaging tightly fuses 
+        modeling of scene content, imaging hardware design, and the subsequent reconstruction 
+        algorithms used to recover the images.</p> 
+
+    <p> This thesis makes important contributions to each of these three areas through two primary
+        research directions. The first direction primarily attacks the challenges associated with
+        designing practical imaging systems that implement incoherent measurements. Our proposed
+        snapshot imaging architecture using compressive coded aperture imaging devices can be
+        practically implemented, and comes equipped with theoretical recovery guarantees. It is also
+        straightforward to extend these ideas to a video setting where careful modeling of the scene
+        can allow for joint spatio-temporal compressive sensing. The second direction develops a host
+        of new computational tools for photon-limited inverse problems. These situations arise with
+        increasing frequency in modern imaging applications as we seek to drive down image
+        acquisition times, limit excitation powers, or deliver less radiation to a patient. By an
+        accurate statistical characterization of the measurement process in optical systems,
+        including the inherent Poisson noise associated with photon detection, our class of
+        algorithms is able to deliver high-fidelity images with a fraction of the required scan time,
+        as well as enable novel methods for tissue quantification from intraoperative microendoscopy
+        data. In short, the contributions of this dissertation are diverse, further the
+        state-of-the-art in computational imaging, elevate compressed sensing from an interesting
+        theory to a practical imaging methodology, and allow for effective image recovery in
+        light-starved applications.
+
+</p>
+    
+    <h3>Citation</h3>
+    <div id="publications">
+        <p> Z. T. Harmany, <i>Computational Optical Imaging Systems:
+            Sensing Strategies, Optimization Methods, and Performance Bounds</i>,
+            PhD thesis, Duke University, 2012.
+        </p>
+    </div>   
+    
+    <h3>BibTeX</h3>
+    {% codeblock lang:latex %}
+    @phdthesis{harmany-2012-phdthesis,
+    title = {Computational Optical Imaging Systems: Sensing Strategies, Optimization Methods, and Performance Bounds},
+    author = {Harmany, Zachary T.},
+    school = {Duke University},
+    year = {2012}}
+    {% endcodeblock %}
+
+
+    {% unless page.footer == false %}
+    <footer>
+        <p class="meta">{% include post/meta.html %}{% include custom/page_meta.html %}</p>
+        {% unless page.sharing == false %}
+        {% include post/sharing.html %}
+        {% endunless %}
+    </footer>
+    {% endunless %}
+</article>
+{% include custom/after_page.html %}
+{% if page.comments == true %}{% include comments.html %}{% endif %}
+</div>
+{% unless page.sidebar == false or site.default_sidebar == false %}
+<aside class="sidebar">
+  {% if page.sidebar == nil or page.sidebar == 'collapse' %}
+    {% include_sidebar site.page_sidebar %}
+  {% else %}
+    {% include_sidebar %}
+  {% endif %}
+</aside>
+{% endunless %}
