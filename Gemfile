@@ -12,11 +12,11 @@ group :development do
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
-  gem 'rake-minify'
-  gem 'bibtex-ruby'
-  gem 'citeproc-ruby'
-  gem 'jekyll-scholar'
-  gem 'jekyll-scholar-extras'
+  gem 'rake-minify', '~> 0.4.0'
+  gem 'bibtex-ruby', '~> 2.0.12'
+  gem 'citeproc-ruby', '~> 0.0.6'
+  gem 'jekyll-scholar', '~> 0.2.0'
+  gem 'jekyll-scholar-extras', '~> 0.0.1'
 end
 
 gem 'sinatra', '~> 1.3.2'
