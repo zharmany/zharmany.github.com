@@ -49,6 +49,7 @@ citation:
 # This plugin handles my list of publications
 scholar:
   style: ieee
+#  style: source/_bibtex/apa.csl  
 #  style: source/_bibtex/custom-hdp.csl  
   locale: en
   sort_by: year
