@@ -7,7 +7,7 @@ footer: false
 body_id: archive
 ---
 
-{% img center http://people.ee.duke.edu/~zth/files/me.jpg 400 400 Me %}
+{% img center images/Me.jpg 400 400 Me %}
 <p style="text-align: center;"> I need a better photo. </p>
 
 <table style="border-width:0px;">

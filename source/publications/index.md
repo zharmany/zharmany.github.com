@@ -9,10 +9,20 @@ body_id: archive
 
 <!-- Include your PhD Thesis !!! -->
 
+# Dissertation #
+
 <div id="publications">
     
-{% bibliography_zth %}
+Z. T. Harmany, *Computational Optical Imaging Systems: Sensing Strategies, Optimization Methods, and Performance Bounds*, PhD thesis, Duke University, 2012.   
+<a href="/publications/thesis.html">Details</a>
+    
+</div>
+
+# Articles #
+
+<div id="publications">
+    
+{% bibliography_zth harmany %}
         
 </div>
 
-[DukeZTH]: http://people.ee.duke.edu/~zth/ "Me at Duke"
