@@ -16,7 +16,7 @@ group :development do
   gem 'bibtex-ruby', '~> 2.0.12'
   gem 'citeproc-ruby', '~> 0.0.6'
   gem 'jekyll-scholar', '~> 0.2.0'
-  gem 'jekyll-scholar-extras', '~> 0.0.1'
+#   gem 'jekyll-scholar-extras', '~> 0.0.1'
 end
 
 gem 'sinatra', '~> 1.3.2'
